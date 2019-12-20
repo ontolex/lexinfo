@@ -38,12 +38,14 @@ values = {
         "PronounPOS": [],
         "SymbolPOS": [],
         "VerbPOS": [],
+        "PartOfSpeech": [],
         "Person": [],
         "ReferentType": [],
         "Tense": [],
         "VerbFormMood": [],
         "Voice": [],
         "TermElement": [],
+        "TermType": [],
         "AbbreviatedForm": [],
         "Frequency": [],
         "NormativeAuthorization": [],
@@ -99,7 +101,11 @@ for subj in subjs:
                 typ == URIRef(LEMON + "equivalent") or
                 typ == URIRef(LEMON + "incompatible") or
                 typ == URIRef(LEMON + "narrower") or
-                typ == URIRef(LEMON + "senseRelation")):
+                typ == URIRef(LEMON + "senseRelation") or
+                typ == URIRef(LEXINFO + "partitiveRelation") or
+                typ == URIRef(LEXINFO + "holonymTerm") or
+                typ == URIRef(LEXINFO + "meronymTerm") or
+                typ == URIRef(LEXINFO + "relatedTerm")):
             if typ == URIRef(LEMON + "senseRelation"):
                 kind = ""
             else:
@@ -140,14 +146,6 @@ for subj in subjs:
                 "defn": str(next(g.objects(subj, RDFS.comment), ""))
                 })
             typed = True
-
-
-
-                
-
-
-            
-
 
     if not typed and subj.n3().startswith("<" + LEXINFO):
         print("Could not understand " + subj.n3())
