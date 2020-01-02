@@ -154,7 +154,15 @@ for subj in subjs:
 with open("data/morphosyntactic_properties.csv", "w") as out:
     writer = csv.writer(out)
     writer.writerow(["ID","Definition"])
+    ms_props.sort(key=lambda x: x["id"])
     for ms_prop in ms_props:
-        writer.writerow([ms_prop["id"],ms_prop["defn"]])
+        if ms_prop["id"] != "morphosyntacticProperty":
+            writer.writerow([ms_prop["id"],ms_prop["defn"]])
 
+with open("data/syntactic_arguments.csv", "w") as out:
+    writer = csv.writer(out)
+    writer.writerow(["ID","Definition","Range","Type"])
+    syn_args.sort(key=lambda x: x["id"])
+    for syn_arg in syn_args:
+        writer.writerow([syn_arg["id"],syn_arg["defn"],syn_arg["range"],syn_arg["kind"]])
 

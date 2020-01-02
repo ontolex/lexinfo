@@ -1,0 +1,42 @@
+ID,Definition,Range,Type
+adjunct,,Adjunct,
+adpositionalObject,,AdpositionalObject,object
+adverbialComplement,,,complement
+attributiveArg,,AttributiveArgument,
+clausalArg,,ClausalArgument,
+comparativeAdjunct,,ComparativeAdjunct,predicativeAdjunct
+complement,"A noun phrase that follows a copula or similar verb, as for example an idiot in the sentence He is an idiot. - A clause that serves as the subject or direct object of a verb or the direct object of a preposition, as for example that he would be early in the sentence I hoped that he would be early",Complement,
+copulativeArg,"Used with copula constructions. This represents the subject/object in a copula construction. As such constructions are reversible this property is used instead of the usual verb subject/object. E,g.,
+
+Barack Obama is the president/The president is Barack Obama",,
+copulativeSubject,"Indicates the subject of a copula construction. It is assumed that by using this the copula construction is not reversible e.g.,
+
+He is happy/*happy is him",,copulativeArg
+copulativeSubject,"Indicates the subject of a copula construction. It is assumed that by using this the copula construction is not reversible e.g.,
+
+He is happy/*happy is him",,subject
+declarativeClause,,,clausalArg
+directObject,"relation between a phrase and a verb, in which the relation is central to the verb",DirectObject,object
+genitiveObject,,GenitiveObject,object
+gerundClause,,,clausalArg
+indirectObject,"An indirect object is a grammatical relation that is one means of expressing the semantic role of goal and other similar roles. It is proposed for languages in which the role is distinct from the direct object and the oblique object on the basis of multiple independent syntactic or morphological criteria, such as the following: - Having a particular case marking, commonly dative - Governing an agreement affix on the verb, such as person or number - Being distinct from oblique relations in that it may be relativized",IndirectObject,object
+infinitiveClause,,,clausalArg
+interrogativeClause,,,clausalArg
+interrogativeInfinitiveClause,,,clausalArg
+object,,Object,
+objectComplement,,ObjectComplement,complement
+possessiveAdjunct,,PossessiveAdjunct,adjunct
+possessiveInfinitiveClause,,,clausalArg
+postPositiveArg,"Indicates an argument of an adjective indicated by post-positive modification. An example in english would be that ""that is something interesting"", where the adjective interesting post-postively modifies something",PostPositiveArgument,
+predicativeAdjective,,PredicativeAdjective,complement
+predicativeAdjunct,,Adjunct,adjunct
+predicativeAdverb,,PredicativeAdverb,complement
+predicativeNominative,,PredicativeNominative,complement
+prepositionalAdjunct,,PrepositionalAdjunct,adjunct
+prepositionalGerundClause,,,clausalArg
+prepositionalInterrogativeClause,,,clausalArg
+prepositionalObject,,PrepositionalObject,adpositionalObject
+sententialClause,,,clausalArg
+subject,"relation between a phrase and a verb, that represents the person or thing that performs the action or about which something is stated",Subject,
+subjunctiveClause,,,clausalArg
+superlativeAdjunct,,SuperlativeAdjunct,predicativeAdjunct
