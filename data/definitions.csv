@@ -1,0 +1,9 @@
+ID,Definition
+description,A description in general prose text of the issues that are indicated by the context. The description field can occur at many different places in a component and profile.
+etymology,Information on the origin of a word and the development of its meaning.
+explanation,"A statement that describes and clarifies a concept and makes it understandable, but does not necessarily differentiate it from other concepts."
+gloss,"In TEI: A phrase or word used to provide a gloss or definition for some other word or phrase.
+In 1951: Any editorial comment."
+note,A statement that provides further information on any part of a language resource entry.
+senseExample,Descriptive material that provides a sample of an object or entity defined in the entry.
+usageNote,A note containing information on the usage of the associated word or term.

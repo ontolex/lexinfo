@@ -89,7 +89,7 @@ for subj in subjs:
             if typ == URIRef(LEMON + "lexicalVariant"):
                 kind = ""
             else:
-                kind = str(type)[len(LEXINFO):]
+                kind = str(typ)[len(LEXINFO):]
             relations.append({
                 "id": subj.n3()[(len(LEXINFO)+1):-1],
                 "defn": str(next(g.objects(subj, RDFS.comment), "")),
@@ -110,7 +110,7 @@ for subj in subjs:
             if typ == URIRef(LEMON + "senseRelation"):
                 kind = ""
             else:
-                kind = str(type)[len(LEXINFO):]
+                kind = str(typ)[len(LEXINFO):]
             relations.append({
                 "id": subj.n3()[(len(LEXINFO)+1):-1],
                 "defn": str(next(g.objects(subj, RDFS.comment), "")),
@@ -172,5 +172,12 @@ with open("data/relations.csv", "w") as out:
     relations.sort(key=lambda x: x["id"])
     for rel in relations:
         writer.writerow([rel["id"],rel["kind"],rel["domain"],rel["defn"]])
+
+with open("data/definitions.csv", "w") as out:
+    writer = csv.writer(out)
+    writer.writerow(["ID","Definition"])
+    definitions.sort(key=lambda x: x["id"])
+    for defn in definitions:
+        writer.writerow([defn["id"],defn["defn"]])
 
 
