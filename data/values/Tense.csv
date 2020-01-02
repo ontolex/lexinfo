@@ -1,6 +1,6 @@
-ID,Definition
-future,Verb tense that indicates action or state of being in the future.
-imperfect,Verb tense that refers to action in the past that is incomplete or ongoing.
-past,Past tense is an absolute tense that refers to a time before the moment of utterance.
-present,Verb tense that indicates action or state of being in the present.
-preterite,"The simple past or preterite as distinct from the perfect form, e.g,, ""showed"" not ""shown"""
+ID,Type,Definition
+future,,Verb tense that indicates action or state of being in the future.
+imperfect,,Verb tense that refers to action in the past that is incomplete or ongoing.
+past,,Past tense is an absolute tense that refers to a time before the moment of utterance.
+present,,Verb tense that indicates action or state of being in the present.
+preterite,,"The simple past or preterite as distinct from the perfect form, e.g,, ""showed"" not ""shown"""

@@ -1,4 +1,4 @@
-ID,Definition
-commonlyUsed,Said of a term that appears frequently.
-infrequentlyUsed,Said of a term that does not appear frequently.
-rarelyUsed,Said of a term that is almost never used.
+ID,Type,Definition
+commonlyUsed,,Said of a term that appears frequently.
+infrequentlyUsed,,Said of a term that does not appear frequently.
+rarelyUsed,,Said of a term that is almost never used.

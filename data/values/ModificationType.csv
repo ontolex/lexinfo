@@ -1,4 +1,4 @@
-ID,Definition
-indifferent,Markup to express that there is not any pertinence.
-postModifier,Situation where the modifier is after the modified.
-preModifier,Situation where the modifier is before the modified.
+ID,Type,Definition
+indifferent,,Markup to express that there is not any pertinence.
+postModifier,,Situation where the modifier is after the modified.
+preModifier,,Situation where the modifier is before the modified.

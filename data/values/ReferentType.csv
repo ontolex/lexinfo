@@ -1,3 +1,3 @@
-ID,Definition
-personal,Property that refers to the person.
-possessive,Relative to the possession or association.
+ID,Type,Definition
+personal,,Property that refers to the person.
+possessive,,Relative to the possession or association.

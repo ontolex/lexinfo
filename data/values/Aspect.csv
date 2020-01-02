@@ -1,6 +1,6 @@
-ID,Definition
-cessative,Aspect that expresses the cessation of an event or state.
-imperfective,"Imperfective aspect is an aspect that expresses an event or state, with respect to its internal structure, instead of expressing it as a simple whole."
-inchoative,Aspect that expresses the beginning of an event or state.
-perfective,"Perfective aspect is an aspect that expresses a temporal view of an event or state as a simple whole, apart from the consideration of the internal structure of the time in which it occurs."
-unaccomplished,aspect that expresses an event or state that is not finished.
+ID,Type,Definition
+cessative,,Aspect that expresses the cessation of an event or state.
+imperfective,,"Imperfective aspect is an aspect that expresses an event or state, with respect to its internal structure, instead of expressing it as a simple whole."
+inchoative,,Aspect that expresses the beginning of an event or state.
+perfective,,"Perfective aspect is an aspect that expresses a temporal view of an event or state as a simple whole, apart from the consideration of the internal structure of the time in which it occurs."
+unaccomplished,,aspect that expresses an event or state that is not finished.

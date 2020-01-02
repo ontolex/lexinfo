@@ -1,8 +1,8 @@
-ID,Definition
-conditional,A conditional relation is a logical relation in which the illocutionary act employing one of a pair of propositions is expressed or implied to be true or in force if the other proposition is true.
-gerundive,
-imperative,Mood used to express an order.
-indicative,Mood value used in the expression of statements and questions.
-infinitive,Mood cited as unmarked or base form.
-participle,Term referring to a word derived from a verb and used as an adjective.
-subjunctive,"Mood often used to express uncertainty, whishes or desires."
+ID,Type,Definition
+conditional,,A conditional relation is a logical relation in which the illocutionary act employing one of a pair of propositions is expressed or implied to be true or in force if the other proposition is true.
+gerundive,,
+imperative,,...
+indicative,,...
+infinitive,,Mood cited as unmarked or base form.
+participle,,Term referring to a word derived from a verb and used as an adjective.
+subjunctive,,"Mood often used to express uncertainty, whishes or desires."

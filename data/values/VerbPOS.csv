@@ -1,8 +1,0 @@
-ID,Definition
-copula,Special word that combines the subject of a sentence and its description.
-deficientVerb,verb lacking certain morphosyntactic properties
-lightVerb,verb participating in a complex predication that has little semantic content of its own.
-mainVerb,Main verb in contrast to a modal or an auxiliary.
-modal,"Verb form that is usually used with another verb to express ideas such as possibilities, permission, or intention."
-plainVerb,verb which has its own semantics
-verb,"Element which, singly or in combination with other verbs is used as the minimal predicate of a sentence, co-occurring with a subject. If the predicate contains other elements (e.g. object, complement), then it is the verb which more than any other is the unit which influences the choice and extent of these elements."

@@ -1,4 +1,4 @@
-ID,Definition
-archaicForm,"A term or lexeme no longer in ordinary use, though retained for special purposes."
-obsoleteForm,A term or lexeme which is no longer in common use.
-outdatedForm,"A term or lexeme that has fallen from fashion, but the meaning of which is readily recognizable."
+ID,Type,Definition
+archaicForm,,"A term or lexeme no longer in ordinary use, though retained for special purposes."
+obsoleteForm,,A term or lexeme which is no longer in common use.
+outdatedForm,,"A term or lexeme that has fallen from fashion, but the meaning of which is readily recognizable."

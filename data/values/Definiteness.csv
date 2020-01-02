@@ -1,5 +1,5 @@
-ID,Definition
-definite,Value referring to the capacity of identification of an entity.
-fullArticle,"For definiteness, when a specific form is the syntactic subject of the clause."
-indefinite,Value related to an entity in a situation where the identification of this entity is not clear cut.
-shortArticle,"For definiteness, when a specific form is not the syntactic subject of the clause."
+ID,Type,Definition
+definite,,Value referring to the capacity of identification of an entity.
+fullArticle,,"For definiteness, when a specific form is the syntactic subject of the clause."
+indefinite,,Value related to an entity in a situation where the identification of this entity is not clear cut.
+shortArticle,,"For definiteness, when a specific form is not the syntactic subject of the clause."

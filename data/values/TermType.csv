@@ -1,33 +1,33 @@
-ID,Definition
-CJK_compound,A lexical unit in a CJKV language that is represented by at least two CJKV characters.
-abbreviatedForm,A term or lexeme resulting from the omission of any part of the full term or lexeme while designating the same concept.
-abbreviation,
-acronym,An abbreviation made up of the initial letters of the components of the full form of the designation or from syllables of the full form and pronounced syllabically.
-appellation,A designation that represents an individual concept.
-clippedTerm,An abbreviation formed by truncating a part of a simple term.
-commonName,A synonym for an international scientific term that is used in general discourse in a given language.
-compound,"A lexical unit that combines two or sometimes more different words, frequently such that the sense of the new lexical unit is not clearly derivable from the combination of its parts."
-contraction,"A lexical unit formed by a shortening of a word, syllable, or word group by omission of a sound or letter."
-entryTerm,A term that heads a terminological entry.
-equation,"An expression used to represent a concept based on a statement that two mathematical expressions are, for instance, equal as identified by the equal sign (=), or assigned to one another by a similar sign."
-expression,A significant word or phrase.
-formula,"Figures, symbols or the like used to express a concept briefly, such as a mathematical or chemical formula."
-fullForm,The complete presentation of a term or lexeme for which there is an abbreviated form.
-idiom,A group of words in a fixed order that have a particular meaning that is different from the meanings of each word understood on its own.
-initialism,An abbreviation made up of the initial letters of the components of the full form of the designation or from syllables of the full form and pronounced letter by letter.
-internationalScientificTerm,A term that is part of an international scientific nomenclature as adopted by an appropriate scientific body.
-internationalism,A term that has the same or nearly identical orthographic or phonemic form in many languages.
-logicalExpression,"An expression used to represent a concept based on mathematical or logical relations, such as statements of inequality, set relationships, boolean operations, and the like."
-nucleus,The component of a multiword or multi-morphemic compound term that is determined or modified by the other components making up the term.
-partNumber,A unique alphanumeric designation assigned to an object in a manufacturing system.
-phraseologicalUnit,"Any group of two or more words that form a unit, the meaning of which frequently cannot be deduced based on the combined sense of the words making up the phrase."
-productName,An attribute assigned to a term indicating that that term is the official designator for a product.
-proverb,A brief popular axiom or saying.
-setPhrase,"A fixed, lexicalized phrase."
-shortForm,A variant of a multiword term or lexeme that includes fewer words than the full form.
-sku,An inventory item identified by a unique alphanumeric designation assigned to an object in an inventory control system.
-standardText,A fixed chunk of recurring text.
-string,"A chunk of text used in a software interface, documentation, help file, or the like."
-stringCategory,A type value assigned to a string.
-symbol,
-transcribedForm,"A form of a term or lexeme resulting from an operation whereby the characters of one writing system are represented by characters from another writing system, taking into account the pronunciation of the characters converted."
+ID,Type,Definition
+CJK_compound,,A lexical unit in a CJKV language that is represented by at least two CJKV characters.
+abbreviatedForm,AbbreviatedForm,A term or lexeme resulting from the omission of any part of the full term or lexeme while designating the same concept.
+abbreviation,AbbreviatedForm,
+acronym,AbbreviatedForm,An abbreviation made up of the initial letters of the components of the full form of the designation or from syllables of the full form and pronounced syllabically.
+appellation,,A designation that represents an individual concept.
+clippedTerm,AbbreviatedForm,An abbreviation formed by truncating a part of a simple term.
+commonName,,A synonym for an international scientific term that is used in general discourse in a given language.
+compound,,"A lexical unit that combines two or sometimes more different words, frequently such that the sense of the new lexical unit is not clearly derivable from the combination of its parts."
+contraction,AbbreviatedForm,"A lexical unit formed by a shortening of a word, syllable, or word group by omission of a sound or letter."
+entryTerm,,A term that heads a terminological entry.
+equation,,"An expression used to represent a concept based on a statement that two mathematical expressions are, for instance, equal as identified by the equal sign (=), or assigned to one another by a similar sign."
+expression,,A significant word or phrase.
+formula,,"Figures, symbols or the like used to express a concept briefly, such as a mathematical or chemical formula."
+fullForm,,The complete presentation of a term or lexeme for which there is an abbreviated form.
+idiom,,A group of words in a fixed order that have a particular meaning that is different from the meanings of each word understood on its own.
+initialism,AbbreviatedForm,An abbreviation made up of the initial letters of the components of the full form of the designation or from syllables of the full form and pronounced letter by letter.
+internationalScientificTerm,,A term that is part of an international scientific nomenclature as adopted by an appropriate scientific body.
+internationalism,,A term that has the same or nearly identical orthographic or phonemic form in many languages.
+logicalExpression,,"An expression used to represent a concept based on mathematical or logical relations, such as statements of inequality, set relationships, boolean operations, and the like."
+nucleus,,The component of a multiword or multi-morphemic compound term that is determined or modified by the other components making up the term.
+partNumber,,A unique alphanumeric designation assigned to an object in a manufacturing system.
+phraseologicalUnit,,"Any group of two or more words that form a unit, the meaning of which frequently cannot be deduced based on the combined sense of the words making up the phrase."
+productName,,An attribute assigned to a term indicating that that term is the official designator for a product.
+proverb,,A brief popular axiom or saying.
+setPhrase,,"A fixed, lexicalized phrase."
+shortForm,,A variant of a multiword term or lexeme that includes fewer words than the full form.
+sku,,An inventory item identified by a unique alphanumeric designation assigned to an object in an inventory control system.
+standardText,,A fixed chunk of recurring text.
+string,,"A chunk of text used in a software interface, documentation, help file, or the like."
+stringCategory,,A type value assigned to a string.
+symbol,,
+transcribedForm,,"A form of a term or lexeme resulting from an operation whereby the characters of one writing system are represented by characters from another writing system, taking into account the pronunciation of the characters converted."

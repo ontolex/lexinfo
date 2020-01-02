@@ -1,4 +1,4 @@
-ID,Definition
-comparative,Comparative is the comparison where only two entites are involved.
-positive,Value used in a comparison relationship when no comparison is involved.
-superlative,Value used in a comparison between more than two entities.
+ID,Type,Definition
+comparative,,Comparative is the comparison where only two entites are involved.
+positive,,Value used in a comparison relationship when no comparison is involved.
+superlative,,Value used in a comparison between more than two entities.

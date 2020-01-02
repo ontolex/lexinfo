@@ -1,4 +1,4 @@
-ID,Definition
-firstPerson,"First person deixis is deictic reference that refers to the speaker, or both the speaker and referents grouped with the speaker"
-secondPerson,Second person deixis is deictic reference to a person or persons identified as addressee.
-thirdPerson,Third person deixis is deictic reference to a referent(s) not identified as the speaker or addressee.
+ID,Type,Definition
+firstPerson,,"First person deixis is deictic reference that refers to the speaker, or both the speaker and referents grouped with the speaker"
+secondPerson,,Second person deixis is deictic reference to a person or persons identified as addressee.
+thirdPerson,,Third person deixis is deictic reference to a referent(s) not identified as the speaker or addressee.

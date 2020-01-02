@@ -145,10 +145,36 @@ for subj in subjs:
         if typ == URIRef('http://www.w3.org/2002/07/owl#Class'):
             typed = True
         elif (str(typ).startswith(LEXINFO) and str(typ)[len(LEXINFO):] in values):
-            values[str(typ)[len(LEXINFO):]].append({
-                "id": subj.n3()[(len(LEXINFO)+1):-1],
-                "defn": str(next(g.objects(subj, RDFS.comment), ""))
-                })
+            if str(typ).endswith("POS"):
+                kind = str(typ)[len(LEXINFO):-3]
+                val_id = subj.n3()[(len(LEXINFO)+1):-1]
+                if [x for x in values["PartOfSpeech"] if x["id"] == val_id]:
+                    [x for x in values["PartOfSpeech"] if x["id"] == val_id][0]["kind"] = kind
+                else:
+                    values["PartOfSpeech"].append({
+                        "id": val_id,
+                        "defn": str(next(g.objects(subj, RDFS.comment), "")),
+                        "kind": kind
+                        })
+            elif str(typ).endswith("AbbreviatedForm"):
+                kind = str(typ)[len(LEXINFO):]
+                val_id = subj.n3()[(len(LEXINFO)+1):-1]
+                if [x for x in values["TermType"] if x["id"] == val_id]:
+                    [x for x in values["TermType"] if x["id"] == val_id][0]["kind"] = kind
+                else:
+                    values["TermType"].append({
+                        "id": val_id,
+                        "defn": str(next(g.objects(subj, RDFS.comment), "")),
+                        "kind": kind
+                        })
+
+            else:
+                val_id = subj.n3()[(len(LEXINFO)+1):-1]
+                if not [x for x in values[str(typ)[len(LEXINFO):]] if x["id"] == val_id]:
+                    values[str(typ)[len(LEXINFO):]].append({
+                        "id": subj.n3()[(len(LEXINFO)+1):-1],
+                        "defn": str(next(g.objects(subj, RDFS.comment), ""))
+                        })
             typed = True
 
     if not typed and subj.n3().startswith("<" + LEXINFO):
@@ -191,11 +217,12 @@ with open("data/representations.csv", "w") as out:
         writer.writerow([rep["id"],rep["defn"]])
 
 for k,v in values.items():
-    with open("data/values/%s.csv" % k, "w") as out:
-        writer = csv.writer(out)
-        writer.writerow(["ID","Definition"])
-        v.sort(key=lambda x: x["id"])
-        for w in v:
-            writer.writerow([w["id"],w["defn"]])
+    if len(v) > 0:
+        with open("data/values/%s.csv" % k, "w") as out:
+            writer = csv.writer(out)
+            writer.writerow(["ID","Type","Definition"])
+            v.sort(key=lambda x: x["id"])
+            for w in v:
+                writer.writerow([w["id"],w.get("kind",""),w["defn"]])
 
 

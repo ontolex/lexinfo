@@ -1,114 +1,117 @@
-ID,Definition
-adjective,Part of speech related to attributes of noun.
-adposition,"Part of speech that occurs before/inside/after a complement composed of a noun phrase, noun, pronoun or clause that functions as a noun phrase and form a single structure with the complement to express its grammatical and semantic relation to another unit."
-adverb,Part of speech to refer to an heterogeneous group of words whose most frequent function is to specify the mode of action of the verb.
-adverbialPronoun,()
-affirmativeParticle,Particle used to express affirmation.
-affixedPersonalPronoun,"Personnal pronoun that is affixed, i.e. added as an affix to another word."
-allusivePronoun,Pronoun that refers to something characterized by allusions.
-article,...
-bullet,Sign used to mark an item in a list.
-cardinalNumeral,A word denoting a number.
-circumposition,Adposition which consists of two parts which are positioned ahead and after the adpositional foci.
-closeParenthesis,End of a parenthesis pair.
-collectivePronoun,A pronoun that refers to all elements of a set.
-colon,"Sign with two vertical points that is used in writing and printing to introduce an explanation, example or quotation."
-comma,"Mark (,) used in writing to show a short pause or to separate items in a list."
-commonNoun,Noun that signifies a non-specific member of a group.
-comparativeParticle,Particle used to compare.
-compoundPreposition,Preposition that is a aggregation of words
-conditionalParticle,conditional particule
-conditionalPronoun,conditional pronoun
-conjunction,"Word that syntactically links words or constituents, and expresses a semantic relationship between them."
-coordinatingConjunction,Conjunction that links constituents.
-coordinationParticle,particle for coordination
-copula,Special word that combines the subject of a sentence and its description.
-deficientVerb,verb lacking certain morphosyntactic properties
-definiteArticle,"Article that allows the reference to a specific, identifiable entity (or class of entities)."
-demonstrativeDeterminer,Determiner used to point to an entity in the situation or elsewhere in a sentence.
-demonstrativePronoun,Pronoun used to point to an entity in the situation or elsewhere in a sentence.
-determiner,"Word or affix that belongs to a class of noun modifiers that expresses the reference, including quantity, of a noun."
-diminutiveNoun,diminutive noun
-distinctiveParticle,distinctive particle
-emphaticPronoun,An emphatic pronoun is a personal pronoun that is used to emphasize its referent.
-exclamativeDeterminer,Determiner expressing an emotional utterance and marked with a strong intonation.
-exclamativePoint,Special sign (!) usually used in writing to mark exclamation.
-exclamativePronoun,Pronoun marked with an emotional utterance and/or a strong intonation.
-existentialPronoun,pronoun that indicates the existence of something or someone
-fusedPreposition,Preposition that is the result of a morphological merge from at least two words.
-fusedPrepositionDeterminer,word resulting from the aggregation of a proposition and a determiner
-fusedPrepositionPronoun,word resulting from the aggregation of a preposition and a pronoun
-fusedPronounAuxiliary,word resulting from the aggregation of a pronoun and an auxiliary
-futureParticle,Particle used in order to express future.
-generalAdverb,Adverb belonging to the general class of adverbs
-generalizationWord,"A word that does not carry its own meaning but generalizes the meaning of a neighboring word, adding the &quot;etc.&quot; sense."
-genericNumeral,A numeral used to indicate the number of sets/kinds of objects.
-impersonalPronoun,Pronoun lacking person referent.
-indefiniteArticle,Article not capable of expressing identification.
-indefiniteCardinalNumeral,A word used to express imprecise quantity.
-indefiniteDeterminer,Determiner not capable of identification.
-indefiniteMultiplicativeNumeral,A word indicating imprecise number of times something happened.
-indefiniteOrdinalNumeral,A word used to indicate imprecise rank of an object in a sequence.
-indefinitePronoun,Pronoun that does not allow reference.
-infinitiveParticle,Particle used to express infinitive.
-interjection,Word or sound that expresses an emotion.
-interrogativeCardinalNumeral,An interrogative/relative word used to ask about quantity.
-interrogativeDeterminer,Determiner used to express a question.
-interrogativeMultiplicativeNumeral,An interrogative/relative word used to ask about the number of times something happened.
-interrogativeOrdinalNumeral,An interrogative/relative word used to ask about numeric ranking.
-interrogativeParticle,Particle used to express a question.
-interrogativePronoun,Pronoun used to express a question.
-interrogativeRelativePronoun,pronoun which may act as a relative pronoun or an interrogative one
-invertedComma,Inverted comma.
-irreflexivePersonalPronoun,personal pronoun which is not reflexive
-lightVerb,verb participating in a complex predication that has little semantic content of its own.
-mainVerb,Main verb in contrast to a modal or an auxiliary.
-modal,"Verb form that is usually used with another verb to express ideas such as possibilities, permission, or intention."
-multiplicativeNumeral,A word that expresses the number of times something happened.
-negativeParticle,Particle used to express negation.
-negativePronoun,Pronoun used in a context of a negation or for expressing a negation.
-noun,"Part of speech used to express the name of a person, place, action or thing."
-numeral,Part of speech that expresses a number or the relation to a number.
-numeralFraction,Word used to denote the denominator of a fraction.
-openParenthesis,Beginning of a pair of parenthesis.
-ordinalAdjective,Adjective/numeral/number expressing a numeric ranking.
-participleAdjective,Adjective based on a verb.
-particle,"Word that does not belong to one of the main classes of words, is invariable in form, and typically has grammatical or pragmatic meaning."
-partitiveArticle,Article expressing a part or quantity.
-pastParticipleAdjective,Adjective based on a past participle.
-personalPronoun,Pronoun referring a person.
-plainVerb,verb which has its own semantics
-point,Sign (.) used to expresses the end of a sentence or an abbreviation.
-possessiveAdjective,An adjective derived from a noun and denoting possession by the object described by the noun.
-possessiveDeterminer,Determiner that expresses ownership.
-possessiveParticle,Particle expressing ownship.
-possessivePronoun,"Pronoun that expresses ownership and relationships like ownership, such as kinship, and other forms of association."
-possessiveRelativePronoun,A relative pronoun whose antecedent is the possessor of the subject or object in the relative clause.
-postposition,Adposition that appears at the end of the noun phrase.
-preposition,Adposition placed at the beginning of a noun phrase.
-prepositionalAdverb,adverb which is very similar in its form to a preposition
-presentParticipleAdjective,Adjective based on a present participle.
-presentativePronoun,pronoun that identify the current locative or temporal situation
-pronominalAdverb,adverb formed in replacement of a preposition and a pronoun
-pronoun,Word used in place of a noun or a noun phrase.
-properNoun,A noun or adjective denoting a single object.
-punctuation,Graphical mark used either at word level to indicate an abbreviation or at a text level to separate phrases or sentences.
-qualifierAdjective,Adjective used to qualify.
-questionMark,Sign used to express a question.
-reciprocalPronoun,Pronoun expressing mutual relationship.
-reflexiveDeterminer,Determiner that refers to the same entity.
-reflexivePersonalPronoun,personal pronoun which is reflexive
-reflexivePossessivePronoun,A possessive pronoun that refers to the subject as the possessor.
-relationNoun,relation noun
-relativeDeterminer,Determiner related to a referent.
-relativeParticle,relative particle
-relativePronoun,Pronoun which introduces a relative clause and refers to something that has been said before.
-semiColon,Sign (;) usually used to separate phrases.
-slash,The punctuation sign /
-strongPersonalPronoun,Personal pronoun that can occupy the position after a preposition and/or reinforce a weak personal pronoun.
-subordinatingConjunction,Conjunction that links constructions by making one of them a constituent of another. The subordinating conjunction typically marks the incorporated constituent.
-superlativeParticle,Particle expressing superlative degree. Superlative is the comparison between more than two entities and contrasts with comparative where only two entities are involved and positive where no comparison is implied.
-suspensionPoints,Sequence of three dots having the same meaning as &quot;et cetera&quot; (full form) or &quot;etc&quot; (abbreviated form).
-unclassifiedParticle,Particle that is not covered by other sorts of particle definitions.
-verb,"Element which, singly or in combination with other verbs is used as the minimal predicate of a sentence, co-occurring with a subject. If the predicate contains other elements (e.g. object, complement), then it is the verb which more than any other is the unit which influences the choice and extent of these elements."
-weakPersonalPronoun,Personal pronoun that cannot occupy the position after a preposition and/or reinforce a strong personal pronoun.
+ID,Type,Definition
+adjective,Adjective,Part of speech related to attributes of noun.
+adjective-i,Adjective,Deverbal adjective in Japanese ending with the '-i' suffix in dictionary form
+adjective-na,Adjective,Denominal adjectives in Japanese formed from a noun plus the particle 'na'
+adposition,Adposition,"Part of speech that occurs before/inside/after a complement composed of a noun phrase, noun, pronoun or clause that functions as a noun phrase and form a single structure with the complement to express its grammatical and semantic relation to another unit."
+adverb,Adverb,Part of speech to refer to an heterogeneous group of words whose most frequent function is to specify the mode of action of the verb.
+adverbialPronoun,Pronoun,()
+affirmativeParticle,Particle,Particle used to express affirmation.
+affixedPersonalPronoun,Pronoun,"Personnal pronoun that is affixed, i.e. added as an affix to another word."
+allusivePronoun,Pronoun,Pronoun that refers to something characterized by allusions.
+article,Determiner,...
+bullet,Symbol,Sign used to mark an item in a list.
+cardinalNumeral,Numeral,A word denoting a number.
+circumposition,Adposition,Adposition which consists of two parts which are positioned ahead and after the adpositional foci.
+closeParenthesis,Symbol,End of a parenthesis pair.
+collectivePronoun,Pronoun,A pronoun that refers to all elements of a set.
+colon,Symbol,"Sign with two vertical points that is used in writing and printing to introduce an explanation, example or quotation."
+comma,Symbol,"Mark (,) used in writing to show a short pause or to separate items in a list."
+commonNoun,Noun,A noun or adjective denoting a class of objects.
+comparativeParticle,Particle,Particle used to compare.
+compoundPreposition,Adposition,Preposition that is a aggregation of words
+conditionalParticle,Particle,conditional particule
+conditionalPronoun,Pronoun,conditional pronoun
+conjunction,Conjunction,"Word that syntactically links words or constituents, and expresses a semantic relationship between them."
+coordinatingConjunction,Conjunction,Conjunction that links constituents.
+coordinationParticle,Particle,particle for coordination
+copula,Verb,Special word that combines the subject of a sentence and its description.
+deficientVerb,Verb,verb lacking certain morphosyntactic properties
+definiteArticle,Article,"Article that allows the reference to a specific, identifiable entity (or class of entities)."
+demonstrativeDeterminer,Determiner,Determiner used to point to an entity in the situation or elsewhere in a sentence.
+demonstrativePronoun,Pronoun,Pronoun used to point to an entity in the situation or elsewhere in a sentence.
+determiner,Determiner,"Word or affix that belongs to a class of noun modifiers that expresses the reference, including quantity, of a noun."
+diminutiveNoun,Noun,diminutive noun
+distinctiveParticle,Particle,distinctive particle
+emphaticPronoun,Pronoun,An emphatic pronoun is a personal pronoun that is used to emphasize its referent.
+exclamativeDeterminer,Determiner,Determiner expressing an emotional utterance and marked with a strong intonation.
+exclamativePoint,Symbol,Special sign (!) usually used in writing to mark exclamation.
+exclamativePronoun,Pronoun,Pronoun marked with an emotional utterance and/or a strong intonation.
+existentialPronoun,Pronoun,pronoun that indicates the existence of something or someone
+fusedPreposition,FusedPreposition,Preposition that is the result of a morphological merge from at least two words.
+fusedPrepositionDeterminer,FusedPreposition,word resulting from the aggregation of a proposition and a determiner
+fusedPrepositionPronoun,FusedPreposition,word resulting from the aggregation of a preposition and a pronoun
+fusedPronounAuxiliary,Pronoun,word resulting from the aggregation of a pronoun and an auxiliary
+futureParticle,Particle,Particle used in order to express future.
+generalAdverb,Adverb,Adverb belonging to the general class of adverbs
+generalizationWord,,"A word that does not carry its own meaning but generalizes the meaning of a neighboring word, adding the &quot;etc.&quot; sense."
+genericNumeral,Numeral,A numeral used to indicate the number of sets/kinds of objects.
+impersonalPronoun,Pronoun,Pronoun lacking person referent.
+indefiniteArticle,Determiner,Article not capable of expressing identification.
+indefiniteCardinalNumeral,Numeral,A word used to express imprecise quantity.
+indefiniteDeterminer,Determiner,Determiner not capable of identification.
+indefiniteMultiplicativeNumeral,Numeral,A word indicating imprecise number of times something happened.
+indefiniteOrdinalNumeral,Numeral,A word used to indicate imprecise rank of an object in a sequence.
+indefinitePronoun,Pronoun,Pronoun that does not allow reference.
+infinitiveParticle,Particle,Particle used to express infinitive.
+interjection,,Word or sound that expresses an emotion.
+interrogativeCardinalNumeral,Numeral,An interrogative/relative word used to ask about quantity.
+interrogativeDeterminer,Determiner,Determiner used to express a question.
+interrogativeMultiplicativeNumeral,Numeral,An interrogative/relative word used to ask about the number of times something happened.
+interrogativeOrdinalNumeral,Numeral,An interrogative/relative word used to ask about numeric ranking.
+interrogativeParticle,Particle,Particle used to express a question.
+interrogativePronoun,Pronoun,Pronoun used to express a question.
+interrogativeRelativePronoun,,pronoun which may act as a relative pronoun or an interrogative one
+invertedComma,Symbol,Inverted comma.
+irreflexivePersonalPronoun,Pronoun,personal pronoun which is not reflexive
+letter,Symbol,
+lightVerb,Verb,verb participating in a complex predication that has little semantic content of its own.
+mainVerb,Verb,Main verb in contrast to a modal or an auxiliary.
+modal,Verb,"Verb form that is usually used with another verb to express ideas such as possibilities, permission, or intention."
+multiplicativeNumeral,Numeral,A word that expresses the number of times something happened.
+negativeParticle,Particle,Particle used to express negation.
+negativePronoun,Pronoun,Pronoun used in a context of a negation or for expressing a negation.
+noun,Noun,"Part of speech used to express the name of a person, place, action or thing."
+numeral,Numeral,Part of speech that expresses a number or the relation to a number.
+numeralFraction,Numeral,Word used to denote the denominator of a fraction.
+openParenthesis,Symbol,Beginning of a pair of parenthesis.
+ordinalAdjective,Adjective,Adjective/numeral/number expressing a numeric ranking.
+participleAdjective,Adjective,Adjective based on a verb.
+particle,Particle,"Word that does not belong to one of the main classes of words, is invariable in form, and typically has grammatical or pragmatic meaning."
+partitiveArticle,Article,Article expressing a part or quantity.
+pastParticipleAdjective,Adjective,Adjective based on a past participle.
+personalPronoun,Pronoun,Pronoun referring a person.
+plainVerb,Verb,verb which has its own semantics
+point,Symbol,Sign (.) used to expresses the end of a sentence or an abbreviation.
+possessiveAdjective,Adjective,An adjective derived from a noun and denoting possession by the object described by the noun.
+possessiveDeterminer,Determiner,Determiner that expresses ownership.
+possessiveParticle,Particle,Particle expressing ownship.
+possessivePronoun,Pronoun,"Pronoun that expresses ownership and relationships like ownership, such as kinship, and other forms of association."
+possessiveRelativePronoun,Pronoun,A relative pronoun whose antecedent is the possessor of the subject or object in the relative clause.
+postposition,Adposition,Adposition that appears at the end of the noun phrase.
+preposition,Adposition,Adposition placed at the beginning of a noun phrase.
+prepositionalAdverb,Adverb,adverb which is very similar in its form to a preposition
+presentParticipleAdjective,Adjective,Adjective based on a present participle.
+presentativePronoun,Pronoun,pronoun that identify the current locative or temporal situation
+pronominalAdverb,Adverb,adverb formed in replacement of a preposition and a pronoun
+pronoun,Pronoun,Word used in place of a noun or a noun phrase.
+properNoun,Noun,A noun or adjective denoting a single object.
+punctuation,Symbol,Graphical mark used either at word level to indicate an abbreviation or at a text level to separate phrases or sentences.
+qualifierAdjective,Adjective,Adjective used to qualify.
+questionMark,Symbol,Sign used to express a question.
+reciprocalPronoun,Pronoun,Pronoun expressing mutual relationship.
+reflexiveDeterminer,Determiner,Determiner that refers to the same entity.
+reflexivePersonalPronoun,Pronoun,personal pronoun which is reflexive
+reflexivePossessivePronoun,Pronoun,A possessive pronoun that refers to the subject as the possessor.
+relationNoun,Noun,relation noun
+relativeDeterminer,Determiner,Determiner related to a referent.
+relativeParticle,Particle,relative particle
+relativePronoun,Pronoun,Pronoun which introduces a relative clause and refers to something that has been said before.
+semiColon,Symbol,Sign (;) usually used to separate phrases.
+slash,Symbol,The punctuation sign /
+strongPersonalPronoun,Pronoun,Personal pronoun that can occupy the position after a preposition and/or reinforce a weak personal pronoun.
+subordinatingConjunction,Conjunction,Conjunction that links constructions by making one of them a constituent of another. The subordinating conjunction typically marks the incorporated constituent.
+superlativeParticle,Particle,Particle expressing superlative degree. Superlative is the comparison between more than two entities and contrasts with comparative where only two entities are involved and positive where no comparison is implied.
+suspensionPoints,Symbol,Sequence of three dots having the same meaning as &quot;et cetera&quot; (full form) or &quot;etc&quot; (abbreviated form).
+unclassifiedParticle,Particle,Particle that is not covered by other sorts of particle definitions.
+verb,Verb,"Element which, singly or in combination with other verbs is used as the minimal predicate of a sentence, co-occurring with a subject. If the predicate contains other elements (e.g. object, complement), then it is the verb which more than any other is the unit which influences the choice and extent of these elements."
+weakPersonalPronoun,Pronoun,Personal pronoun that cannot occupy the position after a preposition and/or reinforce a strong personal pronoun.
