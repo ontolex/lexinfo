@@ -58,7 +58,9 @@ values = {
 subjs = set(g.subjects())
 
 def get_defn(subj):
-    return " // ".join(g.objects(subj, RDFS.comment))
+    ds = list(g.objects(subj, RDFS.comment))
+    ds.sort()
+    return " // ".join(ds)
 
 for subj in subjs:
     typed = False
