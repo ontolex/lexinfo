@@ -1,0 +1,1001 @@
+@base <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <../2.0/lexinfo#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/#> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcr: <http://www.isocat.org/ns/dcr.rdf#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lemon: <http://lemon-model.net/lemon#> .
+
+:AdjectivalComplementFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :predicativeAdjective
+            ]
+        )
+    ] .
+
+:AdjectiveAccusativePostPositiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectivePostPositiveFrame
+            [
+                a owl:Restriction ;
+                owl:onProperty :postPositiveArg ;
+                owl:someValuesFrom :AccusativePostPositiveArgument
+            ]
+        )
+    ] .
+
+:AdjectiveAttributiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectiveFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :attributiveArg
+            ]
+        )
+    ] .
+
+:AdjectiveComparativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectiveFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :comparativeAdjunct
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :copulativeSubject
+            ]
+        )
+    ] .
+
+:AdjectiveDativePostPositiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectivePostPositiveFrame
+            [
+                a owl:Restriction ;
+                owl:onProperty :postPositiveArg ;
+                owl:someValuesFrom :DativePostPositiveArgument
+            ]
+        )
+    ] .
+
+:AdjectiveFrame
+    a owl:Class .
+
+:AdjectiveGenitivePostPositiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectivePostPositiveFrame
+            [
+                a owl:Restriction ;
+                owl:onProperty :postPositiveArg ;
+                owl:someValuesFrom :GenitivePostPositiveArgument
+            ]
+        )
+    ] .
+
+:AdjectiveImpersonalFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectiveFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :object
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "0"^^xsd:nonNegativeInteger ;
+                owl:onProperty :copulativeSubject
+            ]
+        )
+    ] .
+
+:AdjectivePPFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectivePredicativeFrame
+            :PrepositionalFrame
+        )
+    ] .
+
+:AdjectivePostPositiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectiveFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :copulativeArg
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :postPositiveArg
+            ]
+        )
+    ] .
+
+:AdjectivePredicateFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectiveAttributiveFrame
+            :AdjectivePredicativeFrame
+        )
+    ] .
+
+:AdjectivePredicativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectiveFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :copulativeSubject
+            ]
+        )
+    ] .
+
+:AdjectiveScaleFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf ([
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :adverbialComplement
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :copulativeSubject
+            ]
+        )
+    ] .
+
+:AdjectiveSuperlativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectiveFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :superlativeAdjunct
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :copulativeSubject
+            ]
+        )
+    ] .
+
+:AdverbialComplementFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :predicativeAdverb
+            ]
+        )
+    ] .
+
+:ArbitraryControl
+    a owl:Class .
+
+:Control
+    a owl:Class .
+
+:DativeTransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "0"^^xsd:nonNegativeInteger ;
+                owl:onProperty :directObject
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :indirectObject
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+            ]
+        )
+    ] .
+
+:DeclarativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :declarativeClause
+            ]
+        )
+    ] .
+
+:DitransitiveDoubleAccusativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "2"^^xsd:nonNegativeInteger ;
+                owl:onProperty :directObject
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+            ]
+        )
+    ] .
+
+:DitransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :directObject
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :indirectObject
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+            ]
+        )
+    ] .
+
+:DitransitiveFrame_For
+    :languageSpecific "en" ;
+    a owl:Class .
+
+:DitransitiveFrame_To
+    :languageSpecific "en" ;
+    a owl:Class .
+
+:GenitiveDitransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :directObject
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :genitiveObject
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+            ]
+        )
+    ] .
+
+:GenitiveTransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :genitiveObject
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+            ]
+        )
+    ] .
+
+:GerundACFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:ArbitraryControl
+            :GerundFrame
+        )
+    ] .
+
+:GerundFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:onProperty lemon:synArg ;
+                owl:someValuesFrom :Gerund
+            ]
+        )
+    ] .
+
+:GerundOCFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:GerundFrame
+            :ObjectControl
+        )
+    ] .
+
+:GerundSCFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:GerundFrame
+            :SubjectControl
+        )
+    ] .
+
+:ImpersonalFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "0"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+            ]
+        )
+    ] .
+
+:ImpersonalIntransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:ImpersonalFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "0"^^xsd:nonNegativeInteger ;
+                owl:onProperty :object
+            ]
+        )
+    ] .
+
+:ImpersonalIntransitivePPFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:ImpersonalIntransitiveFrame
+            :PrepositionalFrame
+        )
+    ] .
+
+:ImpersonalTransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:ImpersonalFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :directObject
+            ]
+        )
+    ] .
+
+:InfinitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :infinitiveClause
+            ]
+        )
+    ] .
+
+:InterrogativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :interrogativeClause
+            ]
+        )
+    ] .
+
+:InterrogativeInfinitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :interrogativeInfinitiveClause
+            ]
+        )
+    ] .
+
+:IntransitiveAdjectivalComplementFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:IntransitiveFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :predicativeAdjective
+            ]
+        )
+    ] .
+
+:IntransitiveAdverbialComplementFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:IntransitiveFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :predicativeAdverb
+            ]
+        )
+    ] .
+
+:IntransitiveDeclarativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:DeclarativeFrame
+            :IntransitiveFrame
+        )
+    ] .
+
+:IntransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "0"^^xsd:nonNegativeInteger ;
+                owl:onProperty :directObject
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+            ]
+        )
+    ] .
+
+:IntransitiveInfinitiveACFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:ArbitraryControl
+            :InfinitiveFrame
+            :IntransitiveFrame
+        )
+    ] .
+
+:IntransitiveInfinitiveRSFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:InfinitiveFrame
+            :IntransitiveFrame
+            :RaisingSubject
+        )
+    ] .
+
+:IntransitiveInfinitiveSCFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:InfinitiveFrame
+            :IntransitiveFrame
+            :SubjectControl
+        )
+    ] .
+
+:IntransitiveInterrogativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:InterrogativeFrame
+            :IntransitiveFrame
+        )
+    ] .
+
+:IntransitiveInterrogativeInfinitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:InterrogativeInfinitiveFrame
+            :IntransitiveFrame
+        )
+    ] .
+
+:IntransitiveNominalComplementFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:IntransitiveFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :predicativeNominative
+            ]
+        )
+    ] .
+
+:IntransitivePPDeclarativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:DeclarativeFrame
+            :IntransitivePPFrame
+        )
+    ] .
+
+:IntransitivePPFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:IntransitiveFrame
+            :PPFrame
+        )
+    ] .
+
+:IntransitiveSententialFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:IntransitiveFrame
+            :SententialFrame
+        )
+    ] .
+
+:NominalComplementFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :predicativeNominative
+            ]
+        )
+    ] .
+
+:NounFrame
+    a owl:Class .
+
+:NounPPFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:NounPredicateFrame
+            :PrepositionalFrame
+        )
+    ] .
+
+:NounPossessiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:NounFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :copulativeArg
+            ]
+            [
+                a owl:Restriction ;
+                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onClass :PossessiveAdjunct ;
+                owl:onProperty :possessiveAdjunct
+            ]
+        )
+    ] .
+
+:NounPredicateFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:NounFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :copulativeArg
+            ]
+        )
+    ] .
+
+:ObjectControl
+    a owl:Class .
+
+:PPFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:PrepositionalFrame
+            :VerbFrame
+        )
+    ] .
+
+:PrepositionFrame
+    a owl:Class .
+
+:PrepositionalFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onProperty :prepositionalAdjunct
+    ] .
+
+:PrepositionalInterrogativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :prepositionalInterrogativeClause
+            ]
+        )
+    ] .
+
+:PrepositionalPhraseFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:PrepositionFrame
+            [
+                a owl:Restriction ;
+                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onClass :PrepositionalAdjunct ;
+                owl:onProperty :complement
+            ]
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :copulativeSubject
+            ]
+        )
+    ] .
+
+:RaisingSubject
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty :subject ;
+        owl:someValuesFrom :RaisableSubject
+    ] .
+
+:ReciprocalFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "2"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+            ]
+        )
+    ] .
+
+:ReflexiveDativeTransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:DativeTransitiveFrame
+            :ReflexiveFrame
+        )
+    ] .
+
+:ReflexiveDitransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:DitransitiveFrame
+            :ReflexiveFrame
+            [
+                a owl:Restriction ;
+                owl:onProperty :directObject ;
+                owl:someValuesFrom :ReflexiveObject
+            ]
+        )
+    ] .
+
+:ReflexiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:onProperty :object ;
+                owl:someValuesFrom :ReflexiveObject
+            ]
+        )
+    ] .
+
+:ReflexiveReciprocalFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:ReciprocalFrame
+            :ReflexiveFrame
+        )
+    ] .
+
+:ReflexiveTransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:ReflexiveFrame
+            :TransitiveFrame
+        )
+    ] .
+
+:ReflexiveTransitivePPFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:ReflexiveFrame
+            :TransitivePPFrame
+        )
+    ] .
+
+:SententialFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :sententialClause
+            ]
+        )
+    ] .
+
+:SubjectControl
+    a owl:Class .
+
+:SubjectlessFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "0"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+            ]
+        )
+    ] .
+
+:SubjectlessIntransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:SubjectlessFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :indirectObject
+            ]
+        )
+    ] .
+
+:SubjectlessIntransitivePPFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:PPFrame
+            :SubjectlessIntransitiveFrame
+        )
+    ] .
+
+:SubjectlessTransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:SubjectlessFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :directObject
+            ]
+        )
+    ] .
+
+:SubjectlessTransitivePPFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:PPFrame
+            :SubjectlessTransitiveFrame
+        )
+    ] .
+
+:TransitiveAdjectivalComplementFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdjectivalComplementFrame
+            :TransitiveFrame
+        )
+    ] .
+
+:TransitiveAdverbialComplementFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:AdverbialComplementFrame
+            :TransitiveFrame
+        )
+    ] .
+
+:TransitiveDeclarativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:DeclarativeFrame
+            :TransitiveFrame
+        )
+    ] .
+
+:TransitiveFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VerbFrame
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :directObject
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :subject
+            ]
+        )
+    ] .
+
+:TransitiveInfinitiveACFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:ArbitraryControl
+            :InfinitiveFrame
+            :TransitiveFrame
+        )
+    ] .
+
+:TransitiveInfinitiveOCFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:InfinitiveFrame
+            :ObjectControl
+            :TransitiveFrame
+        )
+    ] .
+
+:TransitiveInfinitiveSCFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:InfinitiveFrame
+            :SubjectControl
+            :TransitiveFrame
+        )
+    ] .
+
+:TransitiveInterrogativeFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:InterrogativeFrame
+            :TransitiveFrame
+        )
+    ] .
+
+:TransitiveInterrogativeInfinitiveFrame
+    a owl:Class .
+
+:TransitiveNominalComplementFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:NominalComplementFrame
+            :TransitiveFrame
+        )
+    ] .
+
+:TransitivePPFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:PPFrame
+            :TransitiveFrame
+        )
+    ] .
+
+:TransitiveSententialFrame
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:SententialFrame
+            :TransitiveFrame
+        )
+    ] .
+
+:VerbFrame
+    a owl:Class .
+

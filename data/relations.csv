@@ -18,7 +18,7 @@ geographicalVariant,,LexicalEntry,Description of a specific form used in a certa
 head,,LexicalEntry,
 holonymTerm,partitiveRelation,LexicalSense,Indicates that the referenced element is a part of this object
 homograph,,LexicalEntry,"Word that is written like another, but that has a different pronunciation, meaning, and/or origin."
-homonym,,LexicalEntry,A word that is pronounced like another word and that can be spelled the same way (homograph) or can merely sound the same (homophone).
+homonym,,LexicalEntry,Word that sounds the same and is written the same as another word but is different in meaning.
 homophone,,LexicalEntry,A word that is pronounced in the same way as another word but that is spelled differently.
 hypernym,,LexicalSense,
 hyponym,,LexicalSense,

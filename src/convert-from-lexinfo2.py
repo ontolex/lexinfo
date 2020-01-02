@@ -147,6 +147,8 @@ for subj in subjs:
         elif (str(typ).startswith(LEXINFO) and str(typ)[len(LEXINFO):] in values):
             if str(typ).endswith("POS"):
                 kind = str(typ)[len(LEXINFO):-3]
+                if str(subj).endswith("Article") or str(subj) == LEXINFO + "article":
+                    kind = "Article"
                 val_id = subj.n3()[(len(LEXINFO)+1):-1]
                 if [x for x in values["PartOfSpeech"] if x["id"] == val_id]:
                     [x for x in values["PartOfSpeech"] if x["id"] == val_id][0]["kind"] = kind

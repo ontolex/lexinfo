@@ -5275,7 +5275,6 @@ he GAVE a present TO his mother</example>
         <dc:creator>Wright, Sue Ellen</dc:creator>
         <dc:creator>Francopoulo, Gil</dc:creator>
         <rdfs:comment>Term used in the grammatical classification of words referring to a subclass of determiners which displays a primary role in differentiating the uses of nouns.</rdfs:comment>
-        <rdfs:comment>...</rdfs:comment>
         <owl:versionInfo>1:0</owl:versionInfo>
         <dcr:datcat rdf:resource="http://www.isocat.org/datcat/DC-101"/>
         <dcr:datcat rdf:resource="http://www.isocat.org/datcat/DC-1892"/>
@@ -6497,7 +6496,6 @@ he GAVE a present TO his mother</example>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label>imperative</rdfs:label>
         <dc:creator>Wright, Sue Ellen</dc:creator>
-        <rdfs:comment>...</rdfs:comment>
         <owl:versionInfo>1:0</owl:versionInfo>
         <rdfs:comment>Mood used to express an order.</rdfs:comment>
         <dc:creator>Francopoulo, Gil</dc:creator>
@@ -6723,7 +6721,6 @@ he GAVE a present TO his mother</example>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label>indicative</rdfs:label>
         <dc:creator>Wright, Sue Ellen</dc:creator>
-        <rdfs:comment>...</rdfs:comment>
         <dc:creator>Francopoulo, Gil</dc:creator>
         <rdfs:comment>Mood value used in the expression of statements and questions.</rdfs:comment>
         <owl:versionInfo>1:0</owl:versionInfo>
@@ -8723,7 +8720,6 @@ Note: moved to lexeme element from being an independent element; note that this 
         <rdf:type rdf:resource="&lexinfo;VerbFormMood"/>
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label>subjunctive</rdfs:label>
-        <rdfs:comment>...</rdfs:comment>
         <dc:creator>Francopoulo, Gil</dc:creator>
         <dc:creator>Wright, Sue Ellen</dc:creator>
         <rdfs:comment>Mood often used to express uncertainty, whishes or desires.</rdfs:comment>

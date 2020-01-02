@@ -1,0 +1,63 @@
+Frame,Language,Example
+AdjectiveAccusativePostPositiveFrame,de,wird wurden unseren irrtum GEWAHR
+AdjectiveAttributiveFrame,en,the RED ball
+AdjectiveComparativeFrame,en,new york is BIGGER THAN berlin
+AdjectiveDativePostPositiveFrame,de,er ist seinem bruder ÄHNLICH
+AdjectiveGenitivePostPositiveFrame,de,er ist des hochverrats SCHULDIG
+AdjectiveImpersonalFrame,de,es ist mir HEISS
+AdjectivePPFrame,en,he is RELATED TO her
+AdjectivePostPositiveFrame,en,that is something INTERESTING
+AdjectivePredicativeFrame,en,he is HAPPY
+AdjectiveScaleFrame,en,"Everest is 8,848m HIGH"
+AdjectiveSuperlativeFrame,en,tokyo is the BIGGEST of all metropoles
+DativeTransitiveFrame,de,ich DANKE dir
+DitransitiveDoubleAccusativeFrame,de,das KOSTET ihn sein leben
+DitransitiveFrame,de,mein vater SCHREIBT ihr einen brief
+DitransitiveFrame,en,i GAVE him it
+DitransitiveFrame_For,en,she BOU
+DitransitiveFrame_For,pl,
+DitransitiveFrame_To,en,he GAVE his mother
+DitransitiveFrame_To,th,
+GenitiveDitransitiveFrame,de,man KLAGTE ihn des diebstahls AN
+GenitiveTransitiveFrame,de,wir BEDENKEN jenes mannes
+ImpersonalIntransitivePPFrame,en,it REEKS OF tar
+ImpersonalTransitiveFrame,de,es JUCKT mich
+IntransitiveAdjectivalComplementFrame,en,his reputation SANK low
+IntransitiveAdverbialComplementFrame,en,he SEEMED well
+IntransitiveDeclarativeFrame,en,i KNOW [that is a bad idea]
+IntransitiveFrame,en,he LEFT
+IntransitiveInfinitiveACFrame,en,I HELPED [to save the child]
+IntransitiveInfinitiveRSFrame,en,he SEEMED [to be happy]
+IntransitiveInfinitiveSCFrame,en,I WANTED [to come]
+IntransitiveInterrogativeInfinitiveFrame,en,he ASKED [what to do]
+IntransitiveNominalComplementFrame,en,he SEEMED a fool
+IntransitivePPDeclarativeFrame,en,the SUGGESTED to him [that he should go]
+IntransitivePPFrame,en,he TOOK CARE OF her
+IntransitiveSententialFrame,en,they THOUGHT he was always late
+NounPossessiveFrame,en,the CAPITAL OF france is paris
+NounPredicateFrame,en,he is a MAN
+PrepositionalPhraseFrame,en,he is IN london
+ReciprocalFrame,en,mary and john MET
+ReflexiveDativeTransitiveFrame,de,ich TUE mir WEH
+ReflexiveDitransitiveFrame,de,das habe ich mir EINGEBILDET
+ReflexiveReciprocalFrame,de,hans und marie TREFFEN sich
+ReflexiveTransitiveFrame,de,er ERHOLT sich
+ReflexiveTransitiveFrame,fr,elle se COUCHE
+ReflexiveTransitivePPFrame,de,ich ERRINERE mich AN seinen vater
+ReflexiveTransitivePPFrame,fr,elle se APPROCHE DE la gare
+SubjectlessIntransitiveFrame,de,mir SCHWINDELT
+SubjectlessIntransitivePPFrame,de,mir TRÄUMT VON jener zeit
+SubjectlessTransitiveFrame,de,mich FRIERT
+SubjectlessTransitivePPFrame,de,mich EKELT VOR fleisch
+TransitiveAdjectivalComplementFrame,en,they PAINTED it red
+TransitiveAdverbialComplementFrame,en,she PUT the cheese back
+TransitiveDeclarativeFrame,en,he CONVINCED her [that she should go]
+TransitiveFrame,en,the dog BIT the man
+TransitiveInfinitiveACFrame,en,they CONVINCED him [to go]
+TransitiveInfinitiveOCFrame,en,i WANT john [to go]
+TransitiveInfinitiveSCFrame,en,john PROMISED mary [to resign]
+TransitiveInterrogativeFrame,en,he ASKED her [what he should do]
+TransitiveInterrogativeInfinitiveFrame,en,he ASKED her [what to do]
+TransitiveNominalComplementFrame,en,they ELECTED him president
+TransitivePPFrame,en,she ADDED salt TO the stew
+TransitiveSententialFrame,en,he TOLD the audience he was leaving

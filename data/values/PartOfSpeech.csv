@@ -8,7 +8,7 @@ adverbialPronoun,Pronoun,()
 affirmativeParticle,Particle,Particle used to express affirmation.
 affixedPersonalPronoun,Pronoun,"Personnal pronoun that is affixed, i.e. added as an affix to another word."
 allusivePronoun,Pronoun,Pronoun that refers to something characterized by allusions.
-article,Determiner,...
+article,Article,Term used in the grammatical classification of words referring to a subclass of determiners which displays a primary role in differentiating the uses of nouns.
 bullet,Symbol,Sign used to mark an item in a list.
 cardinalNumeral,Numeral,A word denoting a number.
 circumposition,Adposition,Adposition which consists of two parts which are positioned ahead and after the adpositional foci.
@@ -16,7 +16,7 @@ closeParenthesis,Symbol,End of a parenthesis pair.
 collectivePronoun,Pronoun,A pronoun that refers to all elements of a set.
 colon,Symbol,"Sign with two vertical points that is used in writing and printing to introduce an explanation, example or quotation."
 comma,Symbol,"Mark (,) used in writing to show a short pause or to separate items in a list."
-commonNoun,Noun,A noun or adjective denoting a class of objects.
+commonNoun,Noun,Noun that signifies a non-specific member of a group.
 comparativeParticle,Particle,Particle used to compare.
 compoundPreposition,Adposition,Preposition that is a aggregation of words
 conditionalParticle,Particle,conditional particule
@@ -46,7 +46,7 @@ generalAdverb,Adverb,Adverb belonging to the general class of adverbs
 generalizationWord,,"A word that does not carry its own meaning but generalizes the meaning of a neighboring word, adding the &quot;etc.&quot; sense."
 genericNumeral,Numeral,A numeral used to indicate the number of sets/kinds of objects.
 impersonalPronoun,Pronoun,Pronoun lacking person referent.
-indefiniteArticle,Determiner,Article not capable of expressing identification.
+indefiniteArticle,Article,Article not capable of expressing identification.
 indefiniteCardinalNumeral,Numeral,A word used to express imprecise quantity.
 indefiniteDeterminer,Determiner,Determiner not capable of identification.
 indefiniteMultiplicativeNumeral,Numeral,A word indicating imprecise number of times something happened.
@@ -94,7 +94,7 @@ presentParticipleAdjective,Adjective,Adjective based on a present participle.
 presentativePronoun,Pronoun,pronoun that identify the current locative or temporal situation
 pronominalAdverb,Adverb,adverb formed in replacement of a preposition and a pronoun
 pronoun,Pronoun,Word used in place of a noun or a noun phrase.
-properNoun,Noun,A noun or adjective denoting a single object.
+properNoun,Noun,"Noun that is the name of a specific individual, place, or object."
 punctuation,Symbol,Graphical mark used either at word level to indicate an abbreviation or at a text level to separate phrases or sentences.
 qualifierAdjective,Adjective,Adjective used to qualify.
 questionMark,Symbol,Sign used to express a question.
