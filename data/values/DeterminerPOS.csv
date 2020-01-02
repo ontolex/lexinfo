@@ -1,0 +1,12 @@
+ID,Definition
+article,...
+definiteArticle,"Article that allows the reference to a specific, identifiable entity (or class of entities)."
+demonstrativeDeterminer,Determiner used to point to an entity in the situation or elsewhere in a sentence.
+determiner,"Word or affix that belongs to a class of noun modifiers that expresses the reference, including quantity, of a noun."
+exclamativeDeterminer,Determiner expressing an emotional utterance and marked with a strong intonation.
+indefiniteArticle,Article not capable of expressing identification.
+indefiniteDeterminer,Determiner not capable of identification.
+interrogativeDeterminer,Determiner used to express a question.
+possessiveDeterminer,Determiner that expresses ownership.
+reflexiveDeterminer,Determiner that refers to the same entity.
+relativeDeterminer,Determiner related to a referent.

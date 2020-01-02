@@ -9,10 +9,10 @@ complement,,"A noun phrase that follows a copula or similar verb, as for example
 copulativeArg,,"Used with copula constructions. This represents the subject/object in a copula construction. As such constructions are reversible this property is used instead of the usual verb subject/object. E,g.,
 
 Barack Obama is the president/The president is Barack Obama"
-copulativeSubject,subject,"Indicates the subject of a copula construction. It is assumed that by using this the copula construction is not reversible e.g.,
+copulativeSubject,"copulativeArg,subject","Indicates the subject of a copula construction. It is assumed that by using this the copula construction is not reversible e.g.,
 
 He is happy/*happy is him"
-copulativeSubject,copulativeArg,"Indicates the subject of a copula construction. It is assumed that by using this the copula construction is not reversible e.g.,
+copulativeSubject,"copulativeArg,subject","Indicates the subject of a copula construction. It is assumed that by using this the copula construction is not reversible e.g.,
 
 He is happy/*happy is him"
 declarativeClause,clausalArg,

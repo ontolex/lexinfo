@@ -76,11 +76,14 @@ for subj in subjs:
                 typ == URIRef(LEXINFO + "object") or
                 typ == URIRef(LEXINFO + "adpositionalObject") or
                 typ == URIRef(LEXINFO + "subject")):
+            kind = str(typ)[len(LEXINFO):]
+            if str(subj).endswith("copulativeSubject"):
+                kind = "copulativeArg,subject"
             syn_args.append({
                 "id": subj.n3()[(len(LEXINFO)+1):-1],
                 "defn": str(next(g.objects(subj, RDFS.comment), "")),
                 "range": str(next(g.objects(subj, RDFS.range), LEXINFO))[(len(LEXINFO)):],
-                "kind": str(typ)[len(LEXINFO):]
+                "kind": kind
                 })
             typed = True
         elif (typ == URIRef(LEMON + "lexicalVariant") or
@@ -186,4 +189,13 @@ with open("data/representations.csv", "w") as out:
     representations.sort(key=lambda x: x["id"])
     for rep in representations:
         writer.writerow([rep["id"],rep["defn"]])
+
+for k,v in values.items():
+    with open("data/values/%s.csv" % k, "w") as out:
+        writer = csv.writer(out)
+        writer.writerow(["ID","Definition"])
+        v.sort(key=lambda x: x["id"])
+        for w in v:
+            writer.writerow([w["id"],w["defn"]])
+
 

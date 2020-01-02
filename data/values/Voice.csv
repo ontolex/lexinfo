@@ -1,0 +1,4 @@
+ID,Definition
+activeVoice,Value that expresses the situation where the grammatical subject is also the semantic actor of the verb.
+middleVoice,"Value for middle voice that expresses that the subject is both the agent and object, or that the subject is separate from the agent or that the receiver is the agent him/herself."
+passiveVoice,Term referring to a situation where the grammatical subject is typically the recipient or goal of the action denoted by the verb.

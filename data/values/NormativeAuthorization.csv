@@ -1,0 +1,8 @@
+ID,Definition
+admittedTerm,A term rated according to the scale of a term acceptability rating as a synonym for a preferred term.
+deprecatedTerm,A term rated according to the scale of a term acceptability rating as undesired.
+legalTerm,A term that is legally defined and used in legally binding documents.
+preferredTerm,A term rated according to the scale of a term acceptability rating as the primary term for a given concept.
+regulatedTerm,A term defined by law or government regulation.
+standardizedTerm,A term that has been standardized by a standardizing body.
+supersededTerm,A term that is no longer preferred or admitted.

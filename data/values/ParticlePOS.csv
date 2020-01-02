@@ -1,0 +1,15 @@
+ID,Definition
+affirmativeParticle,Particle used to express affirmation.
+comparativeParticle,Particle used to compare.
+conditionalParticle,conditional particule
+coordinationParticle,particle for coordination
+distinctiveParticle,distinctive particle
+futureParticle,Particle used in order to express future.
+infinitiveParticle,Particle used to express infinitive.
+interrogativeParticle,Particle used to express a question.
+negativeParticle,Particle used to express negation.
+particle,"Word that does not belong to one of the main classes of words, is invariable in form, and typically has grammatical or pragmatic meaning."
+possessiveParticle,Particle expressing ownship.
+relativeParticle,relative particle
+superlativeParticle,Particle expressing superlative degree. Superlative is the comparison between more than two entities and contrasts with comparative where only two entities are involved and positive where no comparison is implied.
+unclassifiedParticle,Particle that is not covered by other sorts of particle definitions.

@@ -1,0 +1,14 @@
+ID,Definition
+affix,
+baseElement,The root form of a word or term that is used as the formal dictionary entry for the term.
+infix,
+inflectionElement,"An element of language used to change the form of a word (noun, adjective) by declension, and (verbs) by conjugation."
+morphologicalElement,"Unit resulting from the division of words into their smallest meaningful parts.
+Note: moved to lexeme element from being an independent element; note that this is currently an independent element in 12620"
+optionalElement,"1951: An optional part of a headword.
+1951; examples? The question arises whether these are true options or whether the options reflect synonyms or hyponyms (e.g., barrage, barrage de retenue). The question is not whether 1951 should use this markup, but rather how to map this markup in a global environment."
+prefix,
+radical,"A basic identifiable component of every CJKV character, often found on the left side of the character, that sometimes gives a rough indication of meaning and is used for collating lexical and terminological resources."
+suffix,
+syllable,A unit of spoken language that is next bigger than a speech sound and consists of one or more vowel sounds alone or of a syllabic consonant alone or of either with one or more consonant sounds preceding or following.
+wordElement,Any lexeme element in a compound lexical unit that is itself a word.

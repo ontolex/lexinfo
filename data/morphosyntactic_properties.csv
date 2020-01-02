@@ -12,7 +12,7 @@ gender,A grammatical category that indicates grammatical relationships between w
 modificationType,Refers to the prenominal or postnominal positions of determiners which distinguish different forms.
 mood,"In TEI: contains information about the grammatical mood of verbs (e.g. indicative, subjunctive, imperative)."
 negative,denotes the negation or the absence
-number,"In many languages, the grammatical distinction that indicates the number of objects referred to by the term or word."
+number,"Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to."
 partOfSpeech,A category assigned to a word based on its grammatical and semantic properties.
 person,"Indication of grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form."
 referentType,Type of concrete object or concept (the referent) that an expression represents (the reference).
