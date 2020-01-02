@@ -161,7 +161,7 @@ with open("data/morphosyntactic_properties.csv", "w") as out:
 
 with open("data/syntactic_arguments.csv", "w") as out:
     writer = csv.writer(out)
-    writer.writerow(["ID","Subproperty Of","Definition","Range"])
+    writer.writerow(["ID","Subproperty Of","Definition"])
     syn_args.sort(key=lambda x: x["id"])
     for syn_arg in syn_args:
         writer.writerow([syn_arg["id"],syn_arg["kind"],syn_arg["defn"]])
