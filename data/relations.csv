@@ -1,0 +1,41 @@
+ID,Subproperty Of,Target,Definition
+abbreviationFor,,LexicalEntry,A linking element used to identify a relation between an abbreviation and its full or expanded form.
+acronymFor,,LexicalEntry,A linking element used to identify a relation between an acronym and its full or expanded form.
+antonym,,LexicalSense,A term or lexeme whose concept or sense constitutes the opposite of the concept represented by a second term or lexeme.
+approximate,,LexicalSense,Property used to qualify something similar but not exactly the same
+approximateSynonym,,LexicalSense,
+associativeRelation,,LexicalSense,A relation between two concepts having a non-hierarchical thematic connection by virtue of experience.
+causallyRelatedConcept,,LexicalSense,A concept that is related to another concept by virtue of the fact that it plays a causative role with respect to that concept.
+clippedTermFor,,LexicalEntry,A linking element used to identify a relation between a clipped term and its full or expanded form.
+collocation,,LexicalSense,
+contractionFor,,LexicalEntry,The full form that corresponds to a contracted form.
+coordinateConcept,,LexicalSense,A subordinate concept having the same nearest superordinate concept and same criterion of subdivision as some other concept in a given concept system.
+derivedForm,,LexicalEntry,
+etymologicalRoot,,LexicalEntry,Morpheme that has a particular status with regards to the word's etymology.
+exact,,LexicalSense,Completely correct in every detail
+fullFormFor,,LexicalEntry,A linking element used to identify a relation between any full form of a term or lexical unit and its abbreviated form.
+geographicalVariant,,LexicalEntry,Description of a specific form used in a certain region as opposed to another form used in another region
+head,,LexicalEntry,
+holonymTerm,,LexicalSense,Indicates that the referenced element is a part of this object
+homograph,,LexicalEntry,"A word that is spelled like another, but that has a different pronunciation, meaning, and/or origin."
+homonym,,LexicalEntry,Word that sounds the same and is written the same as another word but is different in meaning.
+homophone,,LexicalEntry,A word that is pronounced in the same way as another word but that is spelled differently.
+hypernym,,LexicalSense,
+hyponym,,LexicalSense,
+initialismFor,,LexicalEntry,A linking element used to identify a relation between an initialism and its full or expanded form.
+memberHolonym,,LexicalSense,Indicates the object is a member of this
+memberMeronym,,LexicalSense,Indicates this is an element of the other
+meronymTerm,,LexicalSense,Indicates this is a part of another concept
+partHolonym,,LexicalSense,Indicates a part of this object
+partMeronym,,LexicalSense,Indicates this a component of the other concept
+participleFormOf,,LexicalEntry,"Indicates that one lexical entry is the participle form of another, e.g., the adjective 'reassuring' is the participle of 'to reassure'"
+partitiveRelation,,LexicalSense,A relation between two concepts where one of the concepts constitutes the whole and the other concept a part of that whole.
+pertainsTo,,LexicalSense,
+quasiEquivalent,,LexicalSense,
+relatedTerm,,LexicalSense,A term connected to another term by a coordinate or associative relation.
+root,,LexicalEntry,base of a word
+shortFormFor,,LexicalEntry,A linking element used to identify a relation between a short form and its full or expanded form.
+substanceHolonym,,LexicalSense,Indicates what this is composed of
+substanceMeronym,,LexicalSense,Indicates this is a substance that composes the other
+synonym,,LexicalSense,
+translation,,LexicalSense,
