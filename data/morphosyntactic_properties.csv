@@ -1,0 +1,24 @@
+ID,Definition
+aspect,Category associated to verbs and referring to the way the grammar marks the duration or type of temporal activity.
+mood,"In TEI: contains information about the grammatical mood of verbs (e.g. indicative, subjunctive, imperative)."
+termType,An attribute assigned to a lexeme or a term.
+negative,denotes the negation or the absence
+voice,"Way sentences may alter the relationship between the subject and object of a verb, without changing the meaning of the sentence."
+person,"Indication of grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form."
+frequency,The relative commonness with which a term occurs.
+definiteness,Property about the possiblity to identify an entity.
+morphosyntacticProperty,
+animacy,"The characteristic of a word indicating that in a given discourse community, its referent is considered to be alive or to possess a quality of volition or consciousness."
+verbFormMood,"One of a set of distinctive forms that are used to signal modality. Modality is a facet of illocutionary point or general intent of a speaker, or a speaker's degree of commitment to the expressed proposition's believability, obligatoriness, desirability or reality."
+tense,Property referring to the way the grammar marks the time at which the action denoted by the verb took place.
+dating,Indication specifying whether the usage is old or modern.
+gender,A grammatical category that indicates grammatical relationships between words in sentences.
+case,"In a given sentence, the way in which the form of a word changes in order to express a relationship with one or several words of the sentence. The morphological modification may apply to nouns, pronouns noun phrase constituents, such as adjectives or numerals."
+cliticness,Categorization of the different types of clitics
+referentType,Type of concrete object or concept (the referent) that an expression represents (the reference).
+number,"In many languages, the grammatical distinction that indicates the number of objects referred to by the term or word."
+degree,Property concerning comparison.
+termElement,Any logically significant portion of a larger term or lexeme.
+modificationType,Refers to the prenominal or postnominal positions of determiners which distinguish different forms.
+partOfSpeech,Term used to describe how a particular word is used in a sentence.
+finiteness,Property referring to finite and non-finite status of a verbal form.

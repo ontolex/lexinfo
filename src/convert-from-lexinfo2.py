@@ -1,4 +1,5 @@
 from rdflib import Graph, RDF, URIRef, RDFS
+import csv
 
 g = Graph()
 g.parse("lexinfo2.owl")
@@ -150,4 +151,10 @@ for subj in subjs:
     if not typed and subj.n3().startswith("<" + LEXINFO):
         print("Could not understand " + subj.n3())
 
-print(syn_args)
+with open("data/morphosyntactic_properties.csv", "w") as out:
+    writer = csv.writer(out)
+    writer.writerow(["ID","Definition"])
+    for ms_prop in ms_props:
+        writer.writerow([ms_prop["id"],ms_prop["defn"]])
+
+
