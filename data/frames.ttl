@@ -1,16 +1,9 @@
 @base <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <../2.0/lexinfo#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/#> .
-@prefix ns: <http://creativecommons.org/ns#> .
-@prefix terms: <http://purl.org/dc/terms/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix dcr: <http://www.isocat.org/ns/dcr.rdf#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix : <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix lemon: <http://lemon-model.net/lemon#> .
+@prefix synsem: <http://www.w3.org/ns/lemon/synsem#> .
 
 :AdjectivalComplementFrame
     a owl:Class ;
@@ -33,7 +26,7 @@
             [
                 a owl:Restriction ;
                 owl:onProperty :postPositiveArg ;
-                owl:someValuesFrom :AccusativePostPositiveArgument
+                owl:someValuesFrom :AccusativePostPositiveArg
             ]
         )
     ] .
@@ -77,7 +70,7 @@
             [
                 a owl:Restriction ;
                 owl:onProperty :postPositiveArg ;
-                owl:someValuesFrom :DativePostPositiveArgument
+                owl:someValuesFrom :DativePostPositiveArg
             ]
         )
     ] .
@@ -93,7 +86,7 @@
             [
                 a owl:Restriction ;
                 owl:onProperty :postPositiveArg ;
-                owl:someValuesFrom :GenitivePostPositiveArgument
+                owl:someValuesFrom :GenitivePostPositiveArg
             ]
         )
     ] .
@@ -361,8 +354,8 @@
         owl:intersectionOf (:VerbFrame
             [
                 a owl:Restriction ;
-                owl:onProperty lemon:synArg ;
-                owl:someValuesFrom :Gerund
+                owl:onProperty synsem:synArg ;
+                owl:someValuesFrom :GerundClause
             ]
         )
     ] .

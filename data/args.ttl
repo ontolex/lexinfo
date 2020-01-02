@@ -1,0 +1,83 @@
+@prefix : <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix synsem: <http://www.w3.org/ns/lemon/synsem#> .
+
+:Adjunct 
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty synsem:optional ;
+    owl:hasValue true ] .
+
+:PrepositionalAdjunct
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty synsem:marker ;
+    owl:someValuesFrom :Preposition ] .
+
+:Object
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty synsem:optional ;
+    owl:hasValue false ] .
+
+:AdpositionalObject
+  owl:equivalentClass [
+    owl:intersectionOf (
+      :Object 
+      [ a owl:Restriction ;
+        owl:onProperty synsem:marker ;
+        owl:someValuesFrom :Adposition ] ) ] .
+
+:PrepositionalObject 
+  owl:equivalentClass [
+    owl:intersectionOf (
+      :Object 
+      [ a owl:Restriction ;
+        owl:onProperty synsem:marker ;
+        owl:someValuesFrom :Preposition ] ) ] .
+
+:GenitiveObject  
+  owl:equivalentClass [
+    owl:intersectionOf (
+      :Object 
+      [ a owl:Restriction ;
+        owl:onProperty synsem:marker ;
+        owl:hasValue :genitiveCase ] ) ] .
+
+:AccusativePostPositiveArg
+  owl:subClassOf :PostPositiveArg ;
+  owl:equivalentClass [
+    owl:intersectionOf (
+        :PostPositiveArg
+        [ a owl:Restriction ;
+          owl:onProperty synsem:marker ;
+          owl:hasValue :accusativeCase ] ) ] .
+
+:DativePostPositiveArg
+  owl:subClassOf :PostPositiveArg ;
+  owl:equivalentClass [
+    owl:intersectionOf (
+        :PostPositiveArg
+        [ a owl:Restriction ;
+          owl:onProperty synsem:marker ;
+          owl:hasValue :dativeCase ] ) ] .
+
+:GenitivePostPositiveArg
+  owl:subClassOf :PostPositiveArg ;
+  owl:equivalentClass [
+    owl:intersectionOf (
+        :PostPositiveArg
+        [ a owl:Restriction ;
+          owl:onProperty synsem:marker ;
+          owl:hasValue :genitiveCase ] ) ] .
+
+:RaisableSubject
+  a owl:Class ;
+  owl:equivalentClass [
+    owl:intersectionOf (
+      :RaisableArgument :Subject ) ] .
+
+:RaisableArgument 
+  rdfs:subClassOf synsem:SyntacticArgument ;
+  a owl:Class .

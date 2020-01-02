@@ -36,6 +36,7 @@ prepositionalAdjunct,adjunct,
 prepositionalGerundClause,clausalArg,
 prepositionalInterrogativeClause,clausalArg,
 prepositionalObject,adpositionalObject,
+reflexiveObject,object,
 sententialClause,clausalArg,
 subject,,"relation between a phrase and a verb, that represents the person or thing that performs the action or about which something is stated"
 subjunctiveClause,clausalArg,

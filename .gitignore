@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 *.swp
+catalog-v001.xml

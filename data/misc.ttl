@@ -1,6 +1,36 @@
 @prefix : <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+
+<http://www.lexinfo.net/ontology/3.0/lexinfo> 
+  a owl:Ontology ;
+  rdfs:label "LexInfo"@en ;
+  terms:issued "2010-11-22"^^xsd:date ;
+  terms:modified "2014-06-14"^^xsd:date ;
+  vann:preferredNamespaceUri "http://www.lexinfo.net/ontology/3.0/lexinfo#"^^xsd:anyURI ;
+  owl:versionInfo "3.0" ;
+  rdfs:comment "An ontology of types, values and properties to be used with the OntoLex-Lemon model"@en ;
+  terms:description "An ontology of types, values and properties to be used with the OntoLex-Lemon model"@en ;
+  terms:title "LexInfo"@en ;
+  vann:preferredNamespacePrefix "lexinfo" ; 
+  terms:rights "Copyright 2020 W3C OntoLex Community Group"@en ;
+  terms:publisher <http://john.mccr.ae/> ;
+  terms:creator <http://john.mccr.ae/> ;
+  terms:contributor <http://john.mccr.ae/> ,
+                    <http://www.cimiano.de/philipp> ,
+                    <http://www.paulbuitelaar.net/> ;
+  owl:imports <http://www.w3.org/ns/lemon/ontolex> ,
+              <http://www.w3.org/ns/lemon/synsem> ,
+              <http://www.w3.org/ns/lemon/decomp> ,
+              <http://www.w3.org/ns/lemon/vartrans> ,
+              <http://www.w3.org/ns/lemon/lime> ;
+  terms:rights <https://creativecommons.org/licenses/by/4.0/> ;
+  cc:license <https://creativecommons.org/licenses/by/4.0/> .
 
 :example
   a owl:AnnotationProperty ;
@@ -21,4 +51,9 @@
   rdfs:label "translation confidence"@en ;
   rdfs:comment "The confidence in a given translation."@en .
 
+:AbbreviatedForm 
+  a owl:Class ;
+  rdfs:subClassOf :TermType .
 
+# As asserted in LexInfo 2
+:Symbol rdfs:subClassOf ontolex:Word .

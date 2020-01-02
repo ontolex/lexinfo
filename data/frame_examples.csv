@@ -14,10 +14,8 @@ DativeTransitiveFrame,de,ich DANKE dir
 DitransitiveDoubleAccusativeFrame,de,das KOSTET ihn sein leben
 DitransitiveFrame,de,mein vater SCHREIBT ihr einen brief
 DitransitiveFrame,en,i GAVE him it
-DitransitiveFrame_For,en,she BOU
-DitransitiveFrame_For,pl,
-DitransitiveFrame_To,en,he GAVE his mother
-DitransitiveFrame_To,th,
+DitransitiveFrame_For,en,"she BOUGHT him it, she BOUGHT it FOR him"
+DitransitiveFrame_To,en,"he GAVE his mother, he GAVE a present TO his mother"
 GenitiveDitransitiveFrame,de,man KLAGTE ihn des diebstahls AN
 GenitiveTransitiveFrame,de,wir BEDENKEN jenes mannes
 ImpersonalIntransitivePPFrame,en,it REEKS OF tar

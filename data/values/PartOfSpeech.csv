@@ -8,7 +8,7 @@ adverbialPronoun,Pronoun,()
 affirmativeParticle,Particle,Particle used to express affirmation.
 affixedPersonalPronoun,Pronoun,"Personnal pronoun that is affixed, i.e. added as an affix to another word."
 allusivePronoun,Pronoun,Pronoun that refers to something characterized by allusions.
-article,Article,Term used in the grammatical classification of words referring to a subclass of determiners which displays a primary role in differentiating the uses of nouns.
+article,Determiner,Term used in the grammatical classification of words referring to a subclass of determiners which displays a primary role in differentiating the uses of nouns.
 bullet,Symbol,Sign used to mark an item in a list.
 cardinalNumeral,Numeral,A word denoting a number.
 circumposition,Adposition,Adposition which consists of two parts which are positioned ahead and after the adpositional foci.
