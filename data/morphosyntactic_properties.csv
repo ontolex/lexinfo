@@ -13,7 +13,7 @@ modificationType,Refers to the prenominal or postnominal positions of determiner
 mood,"In TEI: contains information about the grammatical mood of verbs (e.g. indicative, subjunctive, imperative)."
 negative,denotes the negation or the absence
 number,"In many languages, the grammatical distinction that indicates the number of objects referred to by the term or word."
-partOfSpeech,A category assigned to a word based on its grammatical and semantic properties.
+partOfSpeech,Term used to describe how a particular word is used in a sentence.
 person,"Indication of grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form."
 referentType,Type of concrete object or concept (the referent) that an expression represents (the reference).
 tense,Property referring to the way the grammar marks the time at which the action denoted by the verb took place.

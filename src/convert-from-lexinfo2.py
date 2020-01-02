@@ -166,3 +166,11 @@ with open("data/syntactic_arguments.csv", "w") as out:
     for syn_arg in syn_args:
         writer.writerow([syn_arg["id"],syn_arg["kind"],syn_arg["defn"]])
 
+with open("data/relations.csv", "w") as out:
+    writer = csv.writer(out)
+    writer.writerow(["ID","Subproperty Of","Target","Definition"])
+    relations.sort(key=lambda x: x["id"])
+    for rel in relations:
+        writer.writerow([rel["id"],rel["kind"],rel["domain"],rel["defn"]])
+
+
