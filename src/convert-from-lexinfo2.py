@@ -180,4 +180,10 @@ with open("data/definitions.csv", "w") as out:
     for defn in definitions:
         writer.writerow([defn["id"],defn["defn"]])
 
+with open("data/representations.csv", "w") as out:
+    writer = csv.writer(out)
+    writer.writerow(["ID","Definition"])
+    representations.sort(key=lambda x: x["id"])
+    for rep in representations:
+        writer.writerow([rep["id"],rep["defn"]])
 

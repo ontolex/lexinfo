@@ -17,7 +17,7 @@ fullFormFor,,LexicalEntry,A linking element used to identify a relation between 
 geographicalVariant,,LexicalEntry,Description of a specific form used in a certain region as opposed to another form used in another region
 head,,LexicalEntry,
 holonymTerm,partitiveRelation,LexicalSense,Indicates that the referenced element is a part of this object
-homograph,,LexicalEntry,"Word that is written like another, but that has a different pronunciation, meaning, and/or origin."
+homograph,,LexicalEntry,"A word that is spelled like another, but that has a different pronunciation, meaning, and/or origin."
 homonym,,LexicalEntry,A word that is pronounced like another word and that can be spelled the same way (homograph) or can merely sound the same (homophone).
 homophone,,LexicalEntry,"Word that sounds like another word, but is different in writiing or meaning."
 hypernym,,LexicalSense,
