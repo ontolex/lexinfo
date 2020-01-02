@@ -1,0 +1,24 @@
+@prefix : <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:example
+  a owl:AnnotationProperty ;
+  rdfs:label "example"@en ;
+  rdfs:comment "An example of the usage of a frame"@en .
+
+:languageSpecific 
+  a owl:AnnotationProperty .
+
+:confidence
+  a owl:DatatypeProperty ;
+  rdfs:label "confidence"@en ;
+  rdfs:comment "The confidence in a given relationship."@en .
+
+:translationConfidence
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf :confidence ;
+  rdfs:label "translation confidence"@en ;
+  rdfs:comment "The confidence in a given translation."@en .
+
+

@@ -12,6 +12,7 @@ syn_args = []
 relations = []
 definitions = []
 representations = []
+usages = []
 values = {
         "Dating": [],
         "Animacy": [],
@@ -56,6 +57,9 @@ values = {
 
 subjs = set(g.subjects())
 
+def get_defn(subj):
+    return " // ".join(g.objects(subj, RDFS.comment))
+
 for subj in subjs:
     typed = False
     for typ in g.objects(subj, RDFS.subPropertyOf):
@@ -81,7 +85,7 @@ for subj in subjs:
                 kind = "copulativeArg,subject"
             syn_args.append({
                 "id": subj.n3()[(len(LEXINFO)+1):-1],
-                "defn": str(next(g.objects(subj, RDFS.comment), "")),
+                "defn": get_defn(subj),
                 "range": str(next(g.objects(subj, RDFS.range), LEXINFO))[(len(LEXINFO)):],
                 "kind": kind
                 })
@@ -95,7 +99,7 @@ for subj in subjs:
                 kind = str(typ)[len(LEXINFO):]
             relations.append({
                 "id": subj.n3()[(len(LEXINFO)+1):-1],
-                "defn": str(next(g.objects(subj, RDFS.comment), "")),
+                "defn": get_defn(subj),
                 "domain": "LexicalEntry",
                 "range": "LexicalEntry",
                 "kind": kind 
@@ -116,7 +120,7 @@ for subj in subjs:
                 kind = str(typ)[len(LEXINFO):]
             relations.append({
                 "id": subj.n3()[(len(LEXINFO)+1):-1],
-                "defn": str(next(g.objects(subj, RDFS.comment), "")),
+                "defn": get_defn(subj),
                 "domain": "LexicalSense",
                 "range": "LexicalSense",
                 "kind": kind
@@ -125,20 +129,26 @@ for subj in subjs:
         elif (typ == URIRef(LEMON + "definition")):
             definitions.append({
                 "id": subj.n3()[(len(LEXINFO)+1):-1],
-                "defn": str(next(g.objects(subj, RDFS.comment), ""))
+                "defn": get_defn(subj),
                 })
             typed = True
         elif (typ == URIRef(LEXINFO + "morphosyntacticProperty") or
                 typ == URIRef(LEMON + "property")):
             ms_props.append({
                 "id": subj.n3()[(len(LEXINFO)+1):-1],
-                "defn": str(next(g.objects(subj, RDFS.comment), ""))
+                "defn": get_defn(subj),
                 })
             typed = True
         elif typ == URIRef(LEMON + "representation"):
             representations.append({
                 "id": subj.n3()[(len(LEXINFO)+1):-1],
-                "defn": str(next(g.objects(subj, RDFS.comment), ""))
+                "defn": get_defn(subj),
+                })
+            typed = True
+        elif typ == URIRef(LEMON + "context"):
+            usages.append({
+                "id": subj.n3()[(len(LEXINFO)+1):-1],
+                "defn": get_defn(subj),
                 })
             typed = True
     for typ in g.objects(subj, RDF.type):
@@ -155,7 +165,7 @@ for subj in subjs:
                 else:
                     values["PartOfSpeech"].append({
                         "id": val_id,
-                        "defn": str(next(g.objects(subj, RDFS.comment), "")),
+                        "defn": get_defn(subj),
                         "kind": kind
                         })
             elif str(typ).endswith("AbbreviatedForm"):
@@ -166,7 +176,7 @@ for subj in subjs:
                 else:
                     values["TermType"].append({
                         "id": val_id,
-                        "defn": str(next(g.objects(subj, RDFS.comment), "")),
+                        "defn": get_defn(subj),
                         "kind": kind
                         })
 
@@ -175,11 +185,13 @@ for subj in subjs:
                 if not [x for x in values[str(typ)[len(LEXINFO):]] if x["id"] == val_id]:
                     values[str(typ)[len(LEXINFO):]].append({
                         "id": subj.n3()[(len(LEXINFO)+1):-1],
-                        "defn": str(next(g.objects(subj, RDFS.comment), ""))
+                        "defn": get_defn(subj),
                         })
             typed = True
 
-    if not typed and subj.n3().startswith("<" + LEXINFO):
+    if (not typed and subj.n3().startswith("<" + LEXINFO) 
+        and not subj.n3().endswith("Form>") 
+        and not subj.n3().endswith("Variant>")):
         print("Could not understand " + subj.n3())
 
 with open("data/morphosyntactic_properties.csv", "w") as out:
@@ -217,6 +229,15 @@ with open("data/representations.csv", "w") as out:
     representations.sort(key=lambda x: x["id"])
     for rep in representations:
         writer.writerow([rep["id"],rep["defn"]])
+
+with open("data/usages.csv", "w") as out:
+    writer = csv.writer(out)
+    writer.writerow(["ID","Definition"])
+    usages.sort(key=lambda x: x["id"])
+    for usage in usages:
+        writer.writerow([usage["id"],usage["defn"]])
+
+
 
 for k,v in values.items():
     if len(v) > 0:

@@ -16,7 +16,7 @@ closeParenthesis,Symbol,End of a parenthesis pair.
 collectivePronoun,Pronoun,A pronoun that refers to all elements of a set.
 colon,Symbol,"Sign with two vertical points that is used in writing and printing to introduce an explanation, example or quotation."
 comma,Symbol,"Mark (,) used in writing to show a short pause or to separate items in a list."
-commonNoun,Noun,Noun that signifies a non-specific member of a group.
+commonNoun,Noun,Noun that signifies a non-specific member of a group. // A noun or adjective denoting a class of objects.
 comparativeParticle,Particle,Particle used to compare.
 compoundPreposition,Adposition,Preposition that is a aggregation of words
 conditionalParticle,Particle,conditional particule
@@ -94,7 +94,7 @@ presentParticipleAdjective,Adjective,Adjective based on a present participle.
 presentativePronoun,Pronoun,pronoun that identify the current locative or temporal situation
 pronominalAdverb,Adverb,adverb formed in replacement of a preposition and a pronoun
 pronoun,Pronoun,Word used in place of a noun or a noun phrase.
-properNoun,Noun,"Noun that is the name of a specific individual, place, or object."
+properNoun,Noun,"Noun that is the name of a specific individual, place, or object. // A noun or adjective denoting a single object."
 punctuation,Symbol,Graphical mark used either at word level to indicate an abbreviation or at a text level to separate phrases or sentences.
 qualifierAdjective,Adjective,Adjective used to qualify.
 questionMark,Symbol,Sign used to express a question.

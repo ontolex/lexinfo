@@ -1,12 +1,12 @@
 ID,Type,Definition
-benchLevelRegister,,Register of terms used in applications-oriented as opposed to theoretical or academic levels of language.
+benchLevelRegister,,Register of terms used in applications-oriented as opposed to theoretical or academic levels of language. // The register of terms used in applications-oriented as opposed to theoretical or academic levels of language.
 dialectRegister,,
 facetiousRegister,,
 formalRegister,,
-inHouseRegister,,Register of terms that are company-specific and not readily recognized outside this environment.
+inHouseRegister,,The register of terms that are company-specific and not readily recognized outside this environment. // Register of terms that are company-specific and not readily recognized outside this environment.
 ironicRegister,,
 neutralRegister,,The register appropriate to general texts or discourse.
 slangRegister,,"An extremely informal register of a word, term, or text that is used in spoken and everyday language and less commonly in documents."
 tabooRegister,,
 technicalRegister,,The register appropriate to scientific texts or special languages.
-vulgarRegister,,Register of a term or text type that can be characterized as profane or socially unacceptable.
+vulgarRegister,,Register of a term or text type that can be characterized as profane or socially unacceptable. // The register of a term or text type that can be characterized as profane or socially unacceptable.
