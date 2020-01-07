@@ -11,16 +11,20 @@ g = Graph()
 
 # Define namespaces
 lexinfo = Namespace("http://www.lexinfo.net/ontology/3.0/lexinfo#")
+lexinfo2 = Namespace("http://www.lexinfo.net/ontology/2.0/lexinfo#")
 ontolex = Namespace("http://www.w3.org/ns/lemon/ontolex#")
 synsem = Namespace("http://www.w3.org/ns/lemon/synsem#")
 vartrans = Namespace("http://www.w3.org/ns/lemon/vartrans#")
 SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
 g.namespace_manager.bind("owl", OWL)
 g.namespace_manager.bind("lexinfo", lexinfo)
+g.namespace_manager.bind("lexinfo2", lexinfo2)
 g.namespace_manager.bind("ontolex", ontolex)
 g.namespace_manager.bind("synsem", synsem)
 g.namespace_manager.bind("vartrans", vartrans)
 g.namespace_manager.bind("skos", SKOS)
+
+lexinfo_ids = set()
 
 def decamelcase(name):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1 \2', name)
@@ -34,12 +38,14 @@ with open("data/definitions.csv") as inp:
         g.add((lexinfo[row[0]], RDFS.label, Literal(decamelcase(row[0]), lang="en")))
         g.add((lexinfo[row[0]], RDFS.comment, Literal(row[1], lang="en")))
         g.add((lexinfo[row[0]], RDFS.subPropertyOf, SKOS.definition))
+        lexinfo_ids.add(row[0])
 
 with open("data/frame_examples.csv") as inp:
     reader = csv.reader(inp)
     next(reader)
     for row in reader:
         g.add((lexinfo[row[0]], lexinfo.example, Literal(row[2], lang=row[1])))
+        lexinfo_ids.add(row[0])
 
 with open("data/frames.csv") as inp:
     reader = csv.reader(inp)
@@ -53,10 +59,14 @@ with open("data/frames.csv") as inp:
             g.add((lexinfo[row[0]], RDFS.subClassOf, synsem.SyntacticFrame))
         if row[2]:
             g.add((lexinfo[row[0]], RDFS.comment, Literal(row[2], lang="en")))
+        lexinfo_ids.add(row[0])
 
 g.parse("data/frames.ttl", format="turtle")
 g.parse("data/misc.ttl", format="turtle")
 g.parse("data/args.ttl", format="turtle")
+
+# Elements that generate `formXVariant` and `XYForm` properties
+form_variants = set()
 
 with open("data/morphosyntactic_properties.csv") as inp:
     reader = csv.reader(inp)
@@ -67,6 +77,16 @@ with open("data/morphosyntactic_properties.csv") as inp:
         if row[1]:
             g.add((lexinfo[row[0]], RDFS.comment, Literal(row[1], lang="en")))
         g.add((lexinfo[row[0]], RDFS.subPropertyOf, lexinfo.morphosyntacticProperty))
+        if row[2] == "Yes":
+            form_variants.add(row[0].lower())
+            prop_name = "form%s%sVariant" % (row[0][0].upper(), row[0][1:])
+            g.add((lexinfo[prop_name], RDF.type, OWL.ObjectProperty))
+            g.add((lexinfo[prop_name], RDFS.label, Literal("form %s variant" % decamelcase(row[0]), lang="en")))
+            g.add((lexinfo[prop_name], RDFS.domain, ontolex.Form))
+            g.add((lexinfo[prop_name], RDFS.range, ontolex.Form))
+            lexinfo_ids.add(prop_name)
+        lexinfo_ids.add(row[0])
+
 
 with open("data/relations.csv") as inp:
     reader = csv.reader(inp)
@@ -85,6 +105,7 @@ with open("data/relations.csv") as inp:
             g.add((lexinfo[row[0]], RDFS.range, ontolex[row[2]]))
         if row[3]:
             g.add((lexinfo[row[0]], RDFS.comment, Literal(row[3], lang="en")))
+        lexinfo_ids.add(row[0])
 
 with open("data/representations.csv") as inp:
     reader = csv.reader(inp)
@@ -95,6 +116,7 @@ with open("data/representations.csv") as inp:
         g.add((lexinfo[row[0]], RDFS.subPropertyOf, ontolex.representation))
         if row[1]:
             g.add((lexinfo[row[0]], RDFS.comment, Literal(row[1], lang="en")))
+        lexinfo_ids.add(row[0])
 
 
 with open("data/syntactic_arguments.csv") as inp:
@@ -116,6 +138,8 @@ with open("data/syntactic_arguments.csv") as inp:
         if row[2]:
             g.add((lexinfo[row[0]], RDFS.comment, Literal(row[2], lang="en")))
             g.add((lexinfo[classid], RDFS.comment, Literal(row[2], lang="en")))
+        lexinfo_ids.add(classid)
+        lexinfo_ids.add(row[0])
 
 with open("data/usages.csv") as inp:
     reader = csv.reader(inp)
@@ -126,12 +150,15 @@ with open("data/usages.csv") as inp:
         if row[1]:
             g.add((lexinfo[row[0]], RDFS.comment, Literal(row[1], lang="en")))
         g.add((lexinfo[row[0]], RDFS.subPropertyOf, ontolex.usage))
+        lexinfo_ids.add(row[0])
 
 non_leaf_poses = set()
 pos_types = set()
 
 for f in glob("data/values/*.csv"):
     classname = f[12:-4]
+    g.add((lexinfo[classname], RDF.type, OWL.Class))
+    g.add((lexinfo[classname], RDFS.label, Literal(decamelcase(classname), lang="en")))
     with open(f) as inp:
         reader = csv.reader(inp)
         next(reader)
@@ -147,6 +174,22 @@ for f in glob("data/values/*.csv"):
                 if row[1]:
                     non_leaf_poses.add(row[1])
                 pos_types.add(row[0])
+            if classname.lower() in form_variants:
+                if row[0].endswith(classname):
+                    prop_name = row[0] + "Form"
+                elif classname == "Negative":
+                    if row[0] == "yes":
+                        prop_name = "positiveForm"
+                    elif row[0] == "no":
+                        prop_name = "negativeForm"
+                else:
+                    prop_name = row[0] + classname + "Form"
+                g.add((lexinfo[prop_name], RDF.type, OWL.ObjectProperty))
+                g.add((lexinfo[prop_name], RDFS.label, Literal(decamelcase(prop_name), lang="en")))
+                g.add((lexinfo[prop_name], RDFS.subPropertyOf, lexinfo["form%sVariant" % classname]))
+                lexinfo_ids.add(prop_name)
+            lexinfo_ids.add(row[0])
+
 
 with open("data/values/PartOfSpeech.csv") as inp:
     reader = csv.reader(inp)
@@ -171,12 +214,38 @@ with open("data/values/PartOfSpeech.csv") as inp:
             g.add((b, RDF.type, OWL.Restriction))
             g.add((b, OWL.onProperty, lexinfo.partOfSpeech))
             g.add((b, OWL.someValuesFrom, lexinfo[classid + "POS"]))
+            lexinfo_ids.add(classid + "POS")
         else:
             b = BNode()
             g.add((lexinfo[classid], OWL.equivalentClass, b))
             g.add((b, RDF.type, OWL.Restriction))
             g.add((b, OWL.onProperty, lexinfo.partOfSpeech))
             g.add((b, OWL.hasValue, lexinfo[row[0]]))
+        lexinfo_ids.add(classid)
+
+
+with open("data/translations.csv") as inp:
+    reader = csv.reader(inp)
+    next(reader)
+    for row in reader:
+        for s in lexinfo_ids:
+            if s.lower() == row[0].lower():
+                if row[1] == "label":
+                    g.add((lexinfo[s], RDFS.label, Literal(row[3], lang=row[2])))
+                elif row[1] == "description":
+                    g.add((lexinfo[s], RDFS.comment, Literal(row[3], lang=row[2])))
+                else:
+                    sys.stderr.write("Bad translation type:" + row[1])
+
+with open("data/backlinks.csv") as inp:
+    reader = csv.reader(inp)
+    next(reader)
+    for row in reader:
+        if row[0] in lexinfo_ids:
+            if row[1]:
+                g.add((lexinfo[row[0]], OWL.priorVersion, lexinfo2[row[1]]))
+        else:
+            sys.stderr.write("Backlink from non-existant value: " + row[0])
 
 sys.stdout.buffer.write(g.serialize(format="pretty-xml"))
 

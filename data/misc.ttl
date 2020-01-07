@@ -57,3 +57,61 @@
 
 # As asserted in LexInfo 2
 :Symbol rdfs:subClassOf ontolex:Word .
+
+:AdjectivePhrase a owl:Class ;
+  rdfs:label "adjective phrase"@en ;
+  rdfs:subClassOf ontolex:MultiwordExpression ;
+  owl:equivalentClass [
+    owl:intersectionOf (
+      ontolex:MultiwordExpression 
+      [ 
+        a owl:Restriction ;
+        owl:onProperty :head ;
+        owl:someValuesFrom :Adjective ])] .
+
+:NounPhrase a owl:Class ;
+  rdfs:label "adjective phrase"@en ;
+  rdfs:subClassOf ontolex:MultiwordExpression ;
+  owl:equivalentClass [
+    owl:intersectionOf (
+      ontolex:MultiwordExpression 
+      [ 
+        a owl:Restriction ;
+        owl:onProperty :head ;
+        owl:someValuesFrom :Noun ])] .
+
+:PrepositionPhrase a owl:Class ;
+  rdfs:label "adjective phrase"@en ;
+  rdfs:subClassOf ontolex:MultiwordExpression ;
+  owl:equivalentClass [
+    owl:intersectionOf (
+      ontolex:MultiwordExpression 
+      [ 
+        a owl:Restriction ;
+        owl:onProperty :head ;
+        owl:someValuesFrom :Preposition ])] .
+
+:VerbPhrase a owl:Class ;
+  rdfs:label "adjective phrase"@en ;
+  rdfs:subClassOf ontolex:MultiwordExpression ;
+  owl:equivalentClass [
+    owl:intersectionOf (
+      ontolex:MultiwordExpression 
+      [ 
+        a owl:Restriction ;
+        owl:onProperty :head ;
+        owl:someValuesFrom :Verb ])] .
+
+:Infix a owl:Class ;
+  rdfs:label "infix"@en ;
+  rdfs:subClassOf ontolex:Affix .
+
+:Prefix a owl:Class ;
+  rdfs:label "infix"@en ;
+  rdfs:subClassOf ontolex:Affix .
+
+:Suffix a owl:Class ;
+  rdfs:label "infix"@en ;
+  rdfs:subClassOf ontolex:Affix .
+
+

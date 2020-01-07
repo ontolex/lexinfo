@@ -1,23 +1,23 @@
-ID,Definition
-animacy,"The characteristic of a word indicating that in a given discourse community, its referent is considered to be alive or to possess a quality of volition or consciousness."
-aspect,Category associated to verbs and referring to the way the grammar marks the duration or type of temporal activity.
-case,"In a given sentence, the way in which the form of a word changes in order to express a relationship with one or several words of the sentence. The morphological modification may apply to nouns, pronouns noun phrase constituents, such as adjectives or numerals."
-cliticness,Categorization of the different types of clitics
-dating,Indication specifying whether the usage is old or modern.
-definiteness,Property about the possiblity to identify an entity.
-degree,Property concerning comparison.
-finiteness,Property referring to finite and non-finite status of a verbal form.
-frequency,The relative commonness with which a term occurs.
-gender,A grammatical category that indicates grammatical relationships between words in sentences.
-modificationType,Refers to the prenominal or postnominal positions of determiners which distinguish different forms.
-mood,"In TEI: contains information about the grammatical mood of verbs (e.g. indicative, subjunctive, imperative)."
-negative,denotes the negation or the absence
-number,"Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to. // In many languages, the grammatical distinction that indicates the number of objects referred to by the term or word."
-partOfSpeech,A category assigned to a word based on its grammatical and semantic properties. // Term used to describe how a particular word is used in a sentence.
-person,"Indication of grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form."
-referentType,Type of concrete object or concept (the referent) that an expression represents (the reference).
-tense,Property referring to the way the grammar marks the time at which the action denoted by the verb took place.
-termElement,Any logically significant portion of a larger term or lexeme.
-termType,An attribute assigned to a lexeme or a term.
-verbFormMood,"One of a set of distinctive forms that are used to signal modality. Modality is a facet of illocutionary point or general intent of a speaker, or a speaker's degree of commitment to the expressed proposition's believability, obligatoriness, desirability or reality."
-voice,"Way sentences may alter the relationship between the subject and object of a verb, without changing the meaning of the sentence."
+ID,Definition,FormVariants
+animacy,"The characteristic of a word indicating that in a given discourse community, its referent is considered to be alive or to possess a quality of volition or consciousness.",No
+aspect,Category associated to verbs and referring to the way the grammar marks the duration or type of temporal activity.,No
+case,"In a given sentence, the way in which the form of a word changes in order to express a relationship with one or several words of the sentence. The morphological modification may apply to nouns, pronouns noun phrase constituents, such as adjectives or numerals.",Yes
+cliticness,Categorization of the different types of clitics,No
+dating,Indication specifying whether the usage is old or modern.,No
+definiteness,Property about the possiblity to identify an entity.,No
+degree,Property concerning comparison.,Yes
+finiteness,Property referring to finite and non-finite status of a verbal form.,No
+frequency,The relative commonness with which a term occurs.,No
+gender,A grammatical category that indicates grammatical relationships between words in sentences.,No
+modificationType,Refers to the prenominal or postnominal positions of determiners which distinguish different forms.,No
+mood,"In TEI: contains information about the grammatical mood of verbs (e.g. indicative, subjunctive, imperative).",Yes
+negative,denotes the negation or the absence,Yes
+number,"Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to. // In many languages, the grammatical distinction that indicates the number of objects referred to by the term or word.",Yes
+partOfSpeech,A category assigned to a word based on its grammatical and semantic properties. // Term used to describe how a particular word is used in a sentence.,No
+person,"Indication of grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form.",Yes
+referentType,Type of concrete object or concept (the referent) that an expression represents (the reference).,No
+tense,Property referring to the way the grammar marks the time at which the action denoted by the verb took place.,Yes
+termElement,Any logically significant portion of a larger term or lexeme.,No
+termType,An attribute assigned to a lexeme or a term.,No
+verbFormMood,"One of a set of distinctive forms that are used to signal modality. Modality is a facet of illocutionary point or general intent of a speaker, or a speaker's degree of commitment to the expressed proposition's believability, obligatoriness, desirability or reality.",No
+voice,"Way sentences may alter the relationship between the subject and object of a verb, without changing the meaning of the sentence.",No
