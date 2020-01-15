@@ -9,6 +9,7 @@ affirmativeParticle,Particle,Particle used to express affirmation.
 affixedPersonalPronoun,Pronoun,"Personnal pronoun that is affixed, i.e. added as an affix to another word."
 allusivePronoun,Pronoun,Pronoun that refers to something characterized by allusions.
 article,Determiner,Term used in the grammatical classification of words referring to a subclass of determiners which displays a primary role in differentiating the uses of nouns.
+auxiliary,Verb,"a verb that adds functional or grammatical meaning to the clause in which it appears, so as to express tense, aspect, modality, voice, emphasis, etc."
 bullet,Symbol,Sign used to mark an item in a list.
 cardinalNumeral,Numeral,A word denoting a number.
 circumposition,Adposition,Adposition which consists of two parts which are positioned ahead and after the adpositional foci.
@@ -112,6 +113,7 @@ strongPersonalPronoun,Pronoun,Personal pronoun that can occupy the position afte
 subordinatingConjunction,Conjunction,Conjunction that links constructions by making one of them a constituent of another. The subordinating conjunction typically marks the incorporated constituent.
 superlativeParticle,Particle,Particle expressing superlative degree. Superlative is the comparison between more than two entities and contrasts with comparative where only two entities are involved and positive where no comparison is implied.
 suspensionPoints,Symbol,Sequence of three dots having the same meaning as &quot;et cetera&quot; (full form) or &quot;etc&quot; (abbreviated form).
+symbol,,"A character or glyph representing an idea, concept or object"
 unclassifiedParticle,Particle,Particle that is not covered by other sorts of particle definitions.
 verb,Verb,"Element which, singly or in combination with other verbs is used as the minimal predicate of a sentence, co-occurring with a subject. If the predicate contains other elements (e.g. object, complement), then it is the verb which more than any other is the unit which influences the choice and extent of these elements."
 weakPersonalPronoun,Pronoun,Personal pronoun that cannot occupy the position after a preposition and/or reinforce a strong personal pronoun.
