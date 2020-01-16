@@ -2,3 +2,12 @@ ID,Definition
 normativeAuthorization,"A term status qualifier assigned by an authoritative body, such as a standards body or a governmental entity with a regulatory function."
 register,Classification indicating the relative level of language individually assigned to a lexeme or term or to a text type.
 temporalQualifier,An attribution of a term or lexeme with respect to its use over time.
+geographic,"usage marker which identifies the place or region where a lexical unit is mainly used"
+socioCultural,"usage marker which identifies the use of a given lexical unit by particular social groups and/or in certain types of communicative situations depending on their level of formality"
+domain,"usage marker which identifies the specialized field of knowledge in which a lexical unit is mainly used"
+frequencyUsage,"usage marker which identifies the relative rate of occurrence of a lexical unit in a given textual context"
+attitude,"usage marker which identifies the speaker’s subjective point of view, positive or negative, regarding the object referred to by a given lexical unit"
+normativity,"usage marker which identifies the use of a given lexical unit which is in some aspect considered to be non-standard or incorrect"
+meaningType,"usage marker which identifies a semantic extension of the sense of a given lexical unit"
+textType,"usage marker which identifies the typical use of a lexical unit in a particular discourse type or genre"
+hint,"usage marker which cannot be classified otherwise"
