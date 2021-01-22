@@ -159,6 +159,8 @@ for f in glob("data/values/*.csv"):
     classname = f[12:-4]
     g.add((lexinfo[classname], RDF.type, OWL.Class))
     g.add((lexinfo[classname], RDFS.label, Literal(decamelcase(classname), lang="en")))
+    g.add((lexinfo[classname[0].lower() + classname[1:]], RDFS.range, lexinfo[classname]))
+    lexinfo_ids.add(classname)
     with open(f) as inp:
         reader = csv.reader(inp)
         next(reader)
@@ -245,7 +247,7 @@ with open("data/backlinks.csv") as inp:
             if row[1]:
                 g.add((lexinfo[row[0]], OWL.priorVersion, lexinfo2[row[1]]))
         else:
-            sys.stderr.write("Backlink from non-existant value: " + row[0])
+            sys.stderr.write("Backlink from non-existant value: " + row[0] + "\n")
 
 sys.stdout.buffer.write(g.serialize(format="pretty-xml"))
 
