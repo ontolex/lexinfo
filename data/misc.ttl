@@ -115,3 +115,5 @@
   rdfs:subClassOf ontolex:Affix .
 
 
+:morphosyntacticProperty a owl:ObjectProperty ;
+  rdfs:label "morphosyntactic property"@en .
