@@ -71,6 +71,8 @@ form_variants = set()
 with open("data/morphosyntactic_properties.csv") as inp:
     reader = csv.reader(inp)
     next(reader)
+    g.add((lexinfo.morphosyntacticProperty, RDF.type, OWL.ObjectProperty))
+    g.add((lexinfo.morphosyntacticProperty, RDFS.label, Literal("morphosyntactic property", lang="en")))
     for row in reader:
         g.add((lexinfo[row[0]], RDF.type, OWL.ObjectProperty))
         g.add((lexinfo[row[0]], RDFS.label, Literal(decamelcase(row[0]), lang="en")))
