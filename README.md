@@ -1,7 +1,7 @@
 # LexInfo
 
 LexInfo is the data category ontology for 
-[https://www.w3.org/2016/05/ontolex/](OntoLex-Lemon), which provides description
+[https://www.w3.org/2016/05/ontolex/](https://www.w3.org/2016/05/ontolex/), which provides description
 of lexicographic resources in RDF relative to ontologies
 
 ## Building
