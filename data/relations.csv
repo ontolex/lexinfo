@@ -3,7 +3,7 @@ abbreviationFor,contractionFor,LexicalEntry,A linking element used to identify a
 acronymFor,contractionFor,LexicalEntry,A linking element used to identify a relation between an acronym and its full or expanded form.,N,N,
 antonym,,LexicalSense,A term or lexeme whose concept or sense constitutes the opposite of the concept represented by a second term or lexeme.,Y,N,
 approximate,,LexicalSense,Property used to qualify something similar but not exactly the same,Y,N,
-approximateSynonym,,LexicalSense,Y,N,
+approximateSynonym,,LexicalSense,A synonym that differs in some minor way,Y,N,
 associativeRelation,relatedTerm,LexicalSense,A relation between two concepts having a non-hierarchical thematic connection by virtue of experience.,Y,N,
 causallyRelatedConcept,,LexicalSense,A concept that is related to another concept by virtue of the fact that it plays a causative role with respect to that concept.,N,N,
 clippedTermFor,derivedForm,LexicalEntry,A linking element used to identify a relation between a clipped term and its full or expanded form.,N,N,
