@@ -1,41 +1,41 @@
-ID,Subproperty Of,Target,Definition
-abbreviationFor,contractionFor,LexicalEntry,A linking element used to identify a relation between an abbreviation and its full or expanded form.
-acronymFor,contractionFor,LexicalEntry,A linking element used to identify a relation between an acronym and its full or expanded form.
-antonym,,LexicalSense,A term or lexeme whose concept or sense constitutes the opposite of the concept represented by a second term or lexeme.
-approximate,,LexicalSense,Property used to qualify something similar but not exactly the same
-approximateSynonym,,LexicalSense,
-associativeRelation,relatedTerm,LexicalSense,A relation between two concepts having a non-hierarchical thematic connection by virtue of experience.
-causallyRelatedConcept,,LexicalSense,A concept that is related to another concept by virtue of the fact that it plays a causative role with respect to that concept.
-clippedTermFor,derivedForm,LexicalEntry,A linking element used to identify a relation between a clipped term and its full or expanded form.
-collocation,,LexicalSense,
-contractionFor,derivedForm,LexicalEntry,The full form that corresponds to a contracted form.
-coordinateConcept,relatedTerm,LexicalSense,A subordinate concept having the same nearest superordinate concept and same criterion of subdivision as some other concept in a given concept system.
-derivedForm,,LexicalEntry,
-etymologicalRoot,,LexicalEntry,Morpheme that has a particular status with regards to the word's etymology.
-exact,,LexicalSense,Completely correct in every detail
-fullFormFor,,LexicalEntry,A linking element used to identify a relation between any full form of a term or lexical unit and its abbreviated form.
-geographicalVariant,,LexicalEntry,Description of a specific form used in a certain region as opposed to another form used in another region
-head,,LexicalEntry,
-holonymTerm,partitiveRelation,LexicalSense,Indicates that the referenced element is a part of this object
-homograph,,LexicalEntry,"A word that is spelled like another, but that has a different pronunciation, meaning, and/or origin. // Word that is written like another, but that has a different pronunciation, meaning, and/or origin."
-homonym,,LexicalEntry,A word that is pronounced like another word and that can be spelled the same way (homograph) or can merely sound the same (homophone). // Word that sounds the same and is written the same as another word but is different in meaning.
-homophone,,LexicalEntry,"A word that is pronounced in the same way as another word but that is spelled differently. // Word that sounds like another word, but is different in writiing or meaning."
-hypernym,,LexicalSense,
-hyponym,,LexicalSense,
-initialismFor,contractionFor,LexicalEntry,A linking element used to identify a relation between an initialism and its full or expanded form.
-memberHolonym,holonymTerm,LexicalSense,Indicates the object is a member of this
-memberMeronym,meronymTerm,LexicalSense,Indicates this is an element of the other
-meronymTerm,partitiveRelation,LexicalSense,Indicates this is a part of another concept
-partHolonym,holonymTerm,LexicalSense,Indicates a part of this object
-partMeronym,meronymTerm,LexicalSense,Indicates this a component of the other concept
-participleFormOf,derivedForm,LexicalEntry,"Indicates that one lexical entry is the participle form of another, e.g., the adjective 'reassuring' is the participle of 'to reassure'"
-partitiveRelation,,LexicalSense,A relation between two concepts where one of the concepts constitutes the whole and the other concept a part of that whole.
-pertainsTo,,LexicalSense,
-quasiEquivalent,,LexicalSense,
-relatedTerm,,LexicalSense,A term connected to another term by a coordinate or associative relation.
-root,,LexicalEntry,base of a word
-shortFormFor,contractionFor,LexicalEntry,A linking element used to identify a relation between a short form and its full or expanded form.
-substanceHolonym,holonymTerm,LexicalSense,Indicates what this is composed of
-substanceMeronym,meronymTerm,LexicalSense,Indicates this is a substance that composes the other
-synonym,,LexicalSense,
-translation,,LexicalSense,
+ID,Subproperty Of,Target,Definition,Symmetric,Transitive,Inverse
+abbreviationFor,contractionFor,LexicalEntry,A linking element used to identify a relation between an abbreviation and its full or expanded form.,N,N,
+acronymFor,contractionFor,LexicalEntry,A linking element used to identify a relation between an acronym and its full or expanded form.,N,N,
+antonym,,LexicalSense,A term or lexeme whose concept or sense constitutes the opposite of the concept represented by a second term or lexeme.,Y,N,
+approximate,,LexicalSense,Property used to qualify something similar but not exactly the same,Y,N,
+approximateSynonym,,LexicalSense,Y,N,
+associativeRelation,relatedTerm,LexicalSense,A relation between two concepts having a non-hierarchical thematic connection by virtue of experience.,Y,N,
+causallyRelatedConcept,,LexicalSense,A concept that is related to another concept by virtue of the fact that it plays a causative role with respect to that concept.,N,N,
+clippedTermFor,derivedForm,LexicalEntry,A linking element used to identify a relation between a clipped term and its full or expanded form.,N,N,
+collocation,,LexicalSense,Two terms that occur together far more frequently than chance,N,N,
+contractionFor,derivedForm,LexicalEntry,The full form that corresponds to a contracted form.,N,N,fullFormFor
+coordinateConcept,relatedTerm,LexicalSense,A subordinate concept having the same nearest superordinate concept and same criterion of subdivision as some other concept in a given concept system.,N,N,
+derivedForm,,LexicalEntry,A form that is derived morphosyntactically from another form,N,N,
+etymologicalRoot,,LexicalEntry,Morpheme that has a particular status with regards to the word's etymology.,N,N,
+exact,,LexicalSense,Completely equal in every detail,Y,Y,
+fullFormFor,,LexicalEntry,A linking element used to identify a relation between any full form of a term or lexical unit and its abbreviated form.,N,N,contractionFor
+geographicalVariant,,LexicalEntry,Description of a specific form used in a certain region as opposed to another form used in another region,N,N,
+head,,LexicalEntry,Indicates the head element of a phrase,N,N,
+holonymTerm,partitiveRelation,LexicalSense,Indicates that the referenced element is a part of this object,N,Y,meronymTerm
+homograph,,LexicalEntry,"A word that is spelled like another, but that has a different pronunciation, meaning, and/or origin. // Word that is written like another, but that has a different pronunciation, meaning, and/or origin.",Y,N,
+homonym,,LexicalEntry,A word that is pronounced like another word and that can be spelled the same way (homograph) or can merely sound the same (homophone). // Word that sounds the same and is written the same as another word but is different in meaning.,Y,N,
+homophone,,LexicalEntry,"A word that is pronounced in the same way as another word but that is spelled differently. // Word that sounds like another word, but is different in writiing or meaning.",Y,N,
+hypernym,,LexicalSense,A term with a broader meaning,N,Y,hyponym
+hyponym,,LexicalSense,A term with a narrower meaning,N,Y,hypernym
+initialismFor,contractionFor,LexicalEntry,A linking element used to identify a relation between an initialism and its full or expanded form.,N,N,
+memberHolonym,holonymTerm,LexicalSense,Indicates the object is a member of this,N,Y,memberMeronym
+memberMeronym,meronymTerm,LexicalSense,Indicates this is an element of the other,N,Y,memberHolonym
+meronymTerm,partitiveRelation,LexicalSense,Indicates this is a part of another concept,N,Y,holonymTerm
+partHolonym,holonymTerm,LexicalSense,Indicates a part of this object,N,Y,partMeronym
+partMeronym,meronymTerm,LexicalSense,Indicates this a component of the other concept,N,Y,partHolonym
+participleFormOf,derivedForm,LexicalEntry,"Indicates that one lexical entry is the participle form of another, e.g., the adjective 'reassuring' is the participle of 'to reassure'",N,N,
+partitiveRelation,,LexicalSense,A relation between two concepts where one of the concepts constitutes the whole and the other concept a part of that whole.,N,Y,
+pertainsTo,,LexicalSense,"Indicates that a term is the adjectival form of a word with a meaning of 'of or pertaining to X'",N,N,
+quasiEquivalent,,LexicalSense,A term that is very similar but with some differences,Y,N,
+relatedTerm,,LexicalSense,A term connected to another term by a coordinate or associative relation.,Y,N,
+root,,LexicalEntry,base of a word,N,N,
+shortFormFor,contractionFor,LexicalEntry,A linking element used to identify a relation between a short form and its full or expanded form.,N,N,
+substanceHolonym,holonymTerm,LexicalSense,Indicates what this is composed of,N,Y,substanceMeronym
+substanceMeronym,meronymTerm,LexicalSense,Indicates this is a substance that composes the other,N,Y,substanceHolonym
+synonym,,LexicalSense,Indicates the the terms have the same meaning lexicographically,Y,N,
+translation,,LexicalSense,"Indicates that two terms are translations of one another; this is the same as interlingual synonymy",Y,N,

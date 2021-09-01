@@ -107,6 +107,12 @@ with open("data/relations.csv") as inp:
             g.add((lexinfo[row[0]], RDFS.range, ontolex[row[2]]))
         if row[3]:
             g.add((lexinfo[row[0]], RDFS.comment, Literal(row[3], lang="en")))
+        if len(row) > 4  and row[4] == "Y":
+            g.add((lexinfo[row[0]], RDF.type, OWL.SymmetricProperty))
+        if len(row) > 5 and row[5] == "Y":
+            g.add((lexinfo[row[0]], RDF.type, OWL.TransitiveProperty))
+        if len(row) > 6 and row[6]:
+            g.add((lexinfo[row[0]], OWL.inverseOf, lexinfo[row[6]]))
         lexinfo_ids.add(row[0])
 
 with open("data/representations.csv") as inp:
