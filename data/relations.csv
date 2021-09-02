@@ -37,5 +37,5 @@ root,,LexicalEntry,base of a word,N,N,
 shortFormFor,contractionFor,LexicalEntry,A linking element used to identify a relation between a short form and its full or expanded form.,N,N,
 substanceHolonym,holonymTerm,LexicalSense,Indicates what this is composed of,N,Y,substanceMeronym
 substanceMeronym,meronymTerm,LexicalSense,Indicates this is a substance that composes the other,N,Y,substanceHolonym
-synonym,,LexicalSense,Indicates the the terms have the same meaning lexicographically,Y,N,
+synonym,,LexicalSense,Indicates the the terms have the same meaning lexicographically,Y,Y,
 translation,,LexicalSense,"Indicates that two terms are translations of one another; this is the same as interlingual synonymy",Y,N,
