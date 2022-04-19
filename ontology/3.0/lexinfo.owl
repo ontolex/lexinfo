@@ -1718,7 +1718,7 @@ He is happy/*happy is him</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="http://www.lexinfo.net/ontology/3.0/lexinfo#GenitiveTransitiveFrame">
     <owl:priorVersion rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#GenitiveTransitiveFrame"/>
-    <example xml:lang="de">wir BEDENKEN jenes mannes</example>
+    <example xml:lang="de">wir GEDENKEN jenes mannes</example>
     <rdfs:label xml:lang="en">genitive transitive frame</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo#VerbFrame"/>
     <owl:equivalentClass>

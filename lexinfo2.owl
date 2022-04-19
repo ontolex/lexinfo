@@ -3031,7 +3031,7 @@ In 1951: Any editorial comment.</rdfs:comment>
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
-    <example xml:lang="de">wir BEDENKEN jenes mannes</example>
+    <example xml:lang="de">wir GEDENKEN jenes mannes</example>
     <rdfs:label xml:lang="en">genitive transitive frame</rdfs:label>
     <owl:priorVersion rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#GenitiveTransitiveFrame"/>
     <rdfs:subClassOf rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo#VerbFrame"/>
