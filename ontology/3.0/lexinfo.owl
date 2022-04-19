@@ -1501,7 +1501,6 @@ He is happy/*happy is him</rdfs:comment>
   <owl:Class rdf:about="http://www.lexinfo.net/ontology/3.0/lexinfo#ReflexiveDativeTransitiveFrame">
     <rdfs:label xml:lang="en">reflexive dative transitive frame</rdfs:label>
     <example xml:lang="de">ich TUE mir WEH</example>
-    <rdfs:comment xml:lang="en">ist diese frame echt?</rdfs:comment>
     <owl:priorVersion rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#ReflexiveDativeTransitiveFrame"/>
     <owl:equivalentClass>
       <owl:Class rdf:nodeID="ub1bL743C25">

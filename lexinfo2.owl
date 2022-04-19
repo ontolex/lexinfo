@@ -676,7 +676,6 @@
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
-    <rdfs:comment xml:lang="en">ist diese frame echt?</rdfs:comment>
     <example xml:lang="de">ich TUE mir WEH</example>
     <owl:priorVersion rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#ReflexiveDativeTransitiveFrame"/>
     <rdfs:label xml:lang="en">reflexive dative transitive frame</rdfs:label>
