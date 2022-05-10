@@ -1,0 +1,873 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY lmf "http://www.lexinfo.net/lmf#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY lexinfo "http://www.lexinfo.net/lexinfo#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.lexinfo.net/lexinfo#"
+     xml:base="http://www.lexinfo.net/lexinfo"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:lexinfo="http://www.lexinfo.net/lexinfo#"
+     xmlns:lmf="http://www.lexinfo.net/lmf#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.lexinfo.net/lmf"/>
+    </owl:Ontology>
+    <owl:Ontology rdf:about="http://www.lexinfo.net/lmf">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >Lexical Markup Framework V0.3 (modified LMF version by P. Cimiano).</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#contextSense -->
+
+    <owl:ObjectProperty rdf:about="#contextSense">
+        <rdfs:domain rdf:resource="#PropertyPredicativeRepresentation"/>
+        <rdfs:range rdf:resource="&lmf;Sense"/>
+        <rdfs:subPropertyOf rdf:resource="&lmf;isAssociated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#hasSyntacticProperty -->
+
+    <owl:ObjectProperty rdf:about="#hasSyntacticProperty">
+        <rdfs:range rdf:resource="#SyntacticProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&lmf;isAssociated"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&lmf;GrammaticalFeatures"/>
+                    <rdf:Description rdf:about="&lmf;LexicalEntry"/>
+                    <rdf:Description rdf:about="&lmf;MWELex"/>
+                    <rdf:Description rdf:about="&lmf;MWENode"/>
+                    <rdf:Description rdf:about="&lmf;SyntacticArgument"/>
+                    <rdf:Description rdf:about="&lmf;WordForm"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#head -->
+
+    <owl:ObjectProperty rdf:about="#head">
+        <rdfs:domain rdf:resource="#Phrase"/>
+        <rdfs:range rdf:resource="&lmf;LexicalEntry"/>
+        <rdfs:subPropertyOf rdf:resource="&lmf;isAssociated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#preposition -->
+
+    <owl:ObjectProperty rdf:about="#preposition">
+        <rdfs:domain rdf:resource="#PObject"/>
+        <rdfs:range rdf:resource="#Preposition"/>
+        <rdfs:subPropertyOf rdf:resource="&lmf;isAssociated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#property -->
+
+    <owl:ObjectProperty rdf:about="#property">
+        <rdfs:domain rdf:resource="#PropertyPredicate"/>
+        <rdfs:range rdf:resource="&lmf;Sense"/>
+        <rdfs:subPropertyOf rdf:resource="&lmf;isAssociated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#usesAffix -->
+
+    <owl:ObjectProperty rdf:about="#usesAffix">
+        <rdfs:domain rdf:resource="#AddAffix"/>
+        <rdfs:range rdf:resource="&lmf;Affix"/>
+        <rdfs:subPropertyOf rdf:resource="&lmf;isAssociated"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#hasListOfComponents -->
+
+    <owl:ObjectProperty rdf:about="&lmf;hasListOfComponents"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#hasPredicate -->
+
+    <owl:ObjectProperty rdf:about="&lmf;hasPredicate"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#hasSemanticArgument -->
+
+    <owl:ObjectProperty rdf:about="&lmf;hasSemanticArgument"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#hasSyntacticArgument -->
+
+    <owl:ObjectProperty rdf:about="&lmf;hasSyntacticArgument"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#isAssociated -->
+
+    <owl:ObjectProperty rdf:about="&lmf;isAssociated"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#dataValue -->
+
+    <owl:DatatypeProperty rdf:about="#dataValue">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#PropertyPredicativeRepresentation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#pattern -->
+
+    <owl:DatatypeProperty rdf:about="#pattern">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#LemmaCondition"/>
+                    <rdf:Description rdf:about="#TransformLemma"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#polarity -->
+
+    <owl:DatatypeProperty rdf:about="#polarity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ScalarPropertyPredicativeRepresentation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#synPropName -->
+
+    <owl:DatatypeProperty rdf:about="#synPropName">
+        <rdfs:domain rdf:resource="#SyntacticProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#synPropValue -->
+
+    <owl:DatatypeProperty rdf:about="#synPropValue">
+        <rdfs:domain rdf:resource="#SyntacticProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#order -->
+
+    <owl:DatatypeProperty rdf:about="&lmf;order"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#AddAffix -->
+
+    <owl:Class rdf:about="#AddAffix">
+        <rdfs:subClassOf rdf:resource="&lmf;Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;order"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#usesAffix"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A subclass of process indicating that the affix should be inserted</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#AddLemma -->
+
+    <owl:Class rdf:about="#AddLemma">
+        <rdfs:subClassOf rdf:resource="&lmf;Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;order"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A subclass of process indicating the lemma should be inserted</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Adjective -->
+
+    <owl:Class rdf:about="#Adjective">
+        <rdfs:subClassOf rdf:resource="&lmf;LexicalEntry"/>
+        <rdfs:comment
+            >A subclass of lexical entry for the part-of-speech adjective</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#AdjectiveMod -->
+
+    <owl:Class rdf:about="#AdjectiveMod">
+        <rdfs:subClassOf rdf:resource="&lmf;SubcategorizationFrame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:someValuesFrom rdf:resource="#Mod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#AdjectivePhrase -->
+
+    <owl:Class rdf:about="#AdjectivePhrase">
+        <rdfs:subClassOf rdf:resource="#Phrase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#head"/>
+                <owl:someValuesFrom rdf:resource="#Adjective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A phrase with an adjective at the head</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Adverb -->
+
+    <owl:Class rdf:about="#Adverb">
+        <rdfs:subClassOf rdf:resource="&lmf;LexicalEntry"/>
+        <rdfs:comment
+            >A subclass of lexical entry for the part-of-speech adverb.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#ClassPredicate -->
+
+    <owl:Class rdf:about="#ClassPredicate">
+        <rdfs:subClassOf rdf:resource="&lmf;SemanticPredicate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#contextSense"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSemanticArgument"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#RangeOfProperty"/>
+                            <rdf:Description rdf:about="#Self"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A semantic predicate denoting a class of the given ontology. An argument can either be the class itself (`Self&#39;) or the range of a certain property (`RangeOfProperty). This corresponds to a view of concepts as `frames&#39; and properties as `slots&#39; thereof.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#ClassPredicativeRepresentation -->
+
+    <owl:Class rdf:about="#ClassPredicativeRepresentation">
+        <rdfs:subClassOf rdf:resource="&lmf;PredicativeRepresentation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasPredicate"/>
+                <owl:allValuesFrom rdf:resource="#ClassPredicate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasPredicate"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >ClassPredicateRepresentation is a subclass of PredicativeRepresentation which represents predicates related to a specific class in the ontology.
+A ClassPredicateRepresentation has an associated predicate of type ClassPredicate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Domain -->
+
+    <owl:Class rdf:about="#Domain">
+        <rdfs:subClassOf rdf:resource="&lmf;SemanticArgument"/>
+        <rdfs:comment
+            >The subclass of semantic argument indicating the object (&quot;domain&quot;) of an object or datatype property</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#IntransitivePP -->
+
+    <owl:Class rdf:about="#IntransitivePP">
+        <rdfs:subClassOf rdf:resource="&lmf;SubcategorizationFrame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:someValuesFrom rdf:resource="#Subject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:someValuesFrom rdf:resource="#PObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A class representing a subcategorization frame for an intransitive verb subcategorizing a specific prepositional object, e.g. &quot;a river (subj) flows through a city (prepositional object)&quot;. Every subcategorization frame of type intransitivePP has exactly two syntactic arguments: one subject and one prepositional object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#LemmaCondition -->
+
+    <owl:Class rdf:about="#LemmaCondition">
+        <rdfs:subClassOf rdf:resource="&lmf;Condition"/>
+        <rdfs:comment
+            >This is a condition that is dependent on the relevant Lemma form of the associated lexical entry. This normally uses a (regular expression) pattern to perform this check</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#LiteralPropertyPredicativeRepresentation -->
+
+    <owl:Class rdf:about="#LiteralPropertyPredicativeRepresentation">
+        <rdfs:subClassOf rdf:resource="#PropertyPredicativeRepresentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Mod -->
+
+    <owl:Class rdf:about="#Mod">
+        <rdfs:subClassOf rdf:resource="&lmf;SyntacticArgument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Noun -->
+
+    <owl:Class rdf:about="#Noun">
+        <rdfs:subClassOf rdf:resource="&lmf;LexicalEntry"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A subclass of LexicalEntry for the part-of-speech noun.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Noun2PP -->
+
+    <owl:Class rdf:about="#Noun2PP">
+        <rdfs:subClassOf rdf:resource="&lmf;SubcategorizationFrame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#NounPP -->
+
+    <owl:Class rdf:about="#NounPP">
+        <rdfs:subClassOf rdf:resource="&lmf;SubcategorizationFrame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:someValuesFrom rdf:resource="#PObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:someValuesFrom rdf:resource="#Subject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >NounPP represents a nominal subcategorization frame in which a noun subcategorizes a certain prepositional object, as in &quot;capital of&quot;. In  many cases such nominal subcategorization frames are realized in the form of a copula construct, e.g. &quot;Berlin is the capital of Germany&quot;, such that we distinguish between Subject as syntactic argument (&quot;Berlin&quot; in the example) as well as the prepositional object (&quot;Germany&quot; in the above case).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#NounPhrase -->
+
+    <owl:Class rdf:about="#NounPhrase">
+        <rdfs:subClassOf rdf:resource="#Phrase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#head"/>
+                <owl:someValuesFrom rdf:resource="#Noun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A phrase with a noun at the head</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Object -->
+
+    <owl:Class rdf:about="#Object">
+        <rdfs:subClassOf rdf:resource="&lmf;SyntacticArgument"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Object is a subclass of SyntacticArgument representing the Object of a given Subcategorization Frame.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#PObject -->
+
+    <owl:Class rdf:about="#PObject">
+        <rdfs:subClassOf rdf:resource="&lmf;SyntacticArgument"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >PObject is a subclass of SyntacticArgument representing the Prepositional Object of a given Subcategorization Frame.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Phrase -->
+
+    <owl:Class rdf:about="#Phrase">
+        <rdfs:subClassOf rdf:resource="&lmf;LexicalEntry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#head"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasListOfComponents"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A subclass of lexical entry indicating this lexical entry refers to a multi-word expression</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Preposition -->
+
+    <owl:Class rdf:about="#Preposition">
+        <rdfs:subClassOf rdf:resource="&lmf;LexicalEntry"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The class containing all the elements with part-of-speech &quot;preposition&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#ProperNoun -->
+
+    <owl:Class rdf:about="#ProperNoun">
+        <rdfs:subClassOf rdf:resource="&lmf;LexicalEntry"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The class NamedEntity is a subclass of LexicalEntry and represents the class of named entities, which semantically point to an individual in the ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#ProperNounPhrase -->
+
+    <owl:Class rdf:about="#ProperNounPhrase">
+        <rdfs:subClassOf rdf:resource="#Phrase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#head"/>
+                <owl:someValuesFrom rdf:resource="#ProperNoun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A phrase with a proper noun at the head</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#PropertyPredicate -->
+
+    <owl:Class rdf:about="#PropertyPredicate">
+        <rdfs:subClassOf rdf:resource="&lmf;SemanticPredicate"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A semantic predicate denoting a property of the given ontology. An argument can either be the domain or range of this property.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#PropertyPredicativeRepresentation -->
+
+    <owl:Class rdf:about="#PropertyPredicativeRepresentation">
+        <rdfs:subClassOf rdf:resource="&lmf;PredicativeRepresentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Range -->
+
+    <owl:Class rdf:about="#Range">
+        <rdfs:subClassOf rdf:resource="&lmf;SemanticArgument"/>
+        <rdfs:comment
+            >The subclass of argument representing the object (&quot;range&quot;) of an object property</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#RangeOfProperty -->
+
+    <owl:Class rdf:about="#RangeOfProperty">
+        <rdfs:subClassOf rdf:resource="&lmf;SemanticArgument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#ScalarPropertyPredicativeRepresentation -->
+
+    <owl:Class rdf:about="#ScalarPropertyPredicativeRepresentation">
+        <rdfs:subClassOf rdf:resource="#PropertyPredicativeRepresentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Self -->
+
+    <owl:Class rdf:about="#Self">
+        <rdfs:subClassOf rdf:resource="&lmf;SemanticArgument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Subject -->
+
+    <owl:Class rdf:about="#Subject">
+        <rdfs:subClassOf rdf:resource="&lmf;SyntacticArgument"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Subject is a subclass of SyntacticArgument representing the Subject of a given Subcategorization Frame.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#SyntacticProperty -->
+
+    <owl:Class rdf:about="#SyntacticProperty">
+        <rdfs:subClassOf rdf:resource="&lmf;LMFClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#synPropName"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#synPropValue"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >SyntatcticProperty is a class representing a single pair of values, that are a syntactic property of a lexical entry etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#TransformLemma -->
+
+    <owl:Class rdf:about="#TransformLemma">
+        <rdfs:subClassOf rdf:resource="&lmf;Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#pattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&rdf;XMLLiteral"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;order"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A subclass of process indicating that lemma should be transformed (using a regular expression pattern) and then inserted</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Transitive -->
+
+    <owl:Class rdf:about="#Transitive">
+        <rdfs:subClassOf rdf:resource="&lmf;SubcategorizationFrame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:someValuesFrom rdf:resource="#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:someValuesFrom rdf:resource="#Subject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A class representing a subcategorization frame for a transitive verb, e.g. &quot;a person (subject) loves another person (object)&quot;. Every transitive subcategorization frame has exactly two syntactic arguments: one subject and one object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#TransitivePP -->
+
+    <owl:Class rdf:about="#TransitivePP">
+        <rdfs:subClassOf rdf:resource="&lmf;SubcategorizationFrame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:someValuesFrom rdf:resource="#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:someValuesFrom rdf:resource="#Subject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&lmf;hasSyntacticArgument"/>
+                <owl:someValuesFrom rdf:resource="#PObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >TransitivePP is the class of subcategorization frames for transitive verbs additionally requiring a prepositional object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#Verb -->
+
+    <owl:Class rdf:about="#Verb">
+        <rdfs:subClassOf rdf:resource="&lmf;LexicalEntry"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Verb is a specific subclass of LexicalEntry representing the part-of-speech verb.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#VerbPhrase -->
+
+    <owl:Class rdf:about="#VerbPhrase">
+        <rdfs:subClassOf rdf:resource="#Phrase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#head"/>
+                <owl:someValuesFrom rdf:resource="#Verb"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A phrase with a verb at the head</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#Affix -->
+
+    <owl:Class rdf:about="&lmf;Affix"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#Condition -->
+
+    <owl:Class rdf:about="&lmf;Condition"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#GrammaticalFeatures -->
+
+    <owl:Class rdf:about="&lmf;GrammaticalFeatures"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#LMFClass -->
+
+    <owl:Class rdf:about="&lmf;LMFClass"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#LexicalEntry -->
+
+    <owl:Class rdf:about="&lmf;LexicalEntry"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#MWELex -->
+
+    <owl:Class rdf:about="&lmf;MWELex"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#MWENode -->
+
+    <owl:Class rdf:about="&lmf;MWENode"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#PredicativeRepresentation -->
+
+    <owl:Class rdf:about="&lmf;PredicativeRepresentation"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#Process -->
+
+    <owl:Class rdf:about="&lmf;Process"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#SemanticArgument -->
+
+    <owl:Class rdf:about="&lmf;SemanticArgument"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#SemanticPredicate -->
+
+    <owl:Class rdf:about="&lmf;SemanticPredicate"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#Sense -->
+
+    <owl:Class rdf:about="&lmf;Sense"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#SubcategorizationFrame -->
+
+    <owl:Class rdf:about="&lmf;SubcategorizationFrame"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#SyntacticArgument -->
+
+    <owl:Class rdf:about="&lmf;SyntacticArgument"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#WordForm -->
+
+    <owl:Class rdf:about="&lmf;WordForm"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

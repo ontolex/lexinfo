@@ -1,0 +1,1302 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY lmf "http://www.lexinfo.net/lmf#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY lexinfo "http://www.lexinfo.net/lexinfo#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY lexinfo-en "http://www.lexinfo.net/lexinfo-en#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.lexinfo.net/lexinfo-en#"
+     xml:base="http://www.lexinfo.net/lexinfo-en"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:lexinfo-en="http://www.lexinfo.net/lexinfo-en#"
+     xmlns:lexinfo="http://www.lexinfo.net/lexinfo#"
+     xmlns:lmf="http://www.lexinfo.net/lmf#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.lexinfo.net/lexinfo"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&lexinfo;defaultFor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#hasSyntacticProperty -->
+
+    <owl:ObjectProperty rdf:about="&lexinfo;hasSyntacticProperty"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#usesAffix -->
+
+    <owl:ObjectProperty rdf:about="&lexinfo;usesAffix"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#hasAffix -->
+
+    <owl:ObjectProperty rdf:about="&lmf;hasAffix"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#hasAllomorph -->
+
+    <owl:ObjectProperty rdf:about="&lmf;hasAllomorph"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#hasCondition -->
+
+    <owl:ObjectProperty rdf:about="&lmf;hasCondition"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#hasGrammaticalFeatures -->
+
+    <owl:ObjectProperty rdf:about="&lmf;hasGrammaticalFeatures"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#hasProcess -->
+
+    <owl:ObjectProperty rdf:about="&lmf;hasProcess"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#hasTransformSet -->
+
+    <owl:ObjectProperty rdf:about="&lmf;hasTransformSet"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#pattern -->
+
+    <owl:DatatypeProperty rdf:about="&lexinfo;pattern"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#synPropName -->
+
+    <owl:DatatypeProperty rdf:about="&lexinfo;synPropName"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#synPropValue -->
+
+    <owl:DatatypeProperty rdf:about="&lexinfo;synPropValue"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#order -->
+
+    <owl:DatatypeProperty rdf:about="&lmf;order"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#writtenForm -->
+
+    <owl:DatatypeProperty rdf:about="&lmf;writtenForm"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#AddAffix -->
+
+    <owl:Class rdf:about="&lexinfo;AddAffix"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#AddLemma -->
+
+    <owl:Class rdf:about="&lexinfo;AddLemma"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#LemmaCondition -->
+
+    <owl:Class rdf:about="&lexinfo;LemmaCondition"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#SyntacticProperty -->
+
+    <owl:Class rdf:about="&lexinfo;SyntacticProperty"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo#TransformLemma -->
+
+    <owl:Class rdf:about="&lexinfo;TransformLemma"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#Affix -->
+
+    <owl:Class rdf:about="&lmf;Affix"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#AffixAllomorph -->
+
+    <owl:Class rdf:about="&lmf;AffixAllomorph"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#GrammaticalFeatures -->
+
+    <owl:Class rdf:about="&lmf;GrammaticalFeatures"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#MorphologicalPattern -->
+
+    <owl:Class rdf:about="&lmf;MorphologicalPattern"/>
+    
+
+
+    <!-- http://www.lexinfo.net/lmf#TransformSet -->
+
+    <owl:Class rdf:about="&lmf;TransformSet"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#NonInflectingEnglishAdjectivePattern -->
+
+    <owl:Thing rdf:about="#NonInflectingEnglishAdjectivePattern">
+        <rdf:type rdf:resource="&lmf;MorphologicalPattern"/>
+        <rdfs:comment
+            >This is a pattern is used to describe adjective that do not inflect, for example colourful, which has no form &quot;colourfuller&quot;. Although the extensional semantics of this form are the same as not assigning a morphological pattern (i.e., the same set of forms are generated), this shows intensionally that this adjective is not irregular.</rdfs:comment>
+        <lmf:hasTransformSet rdf:resource="#en_positive_adjective_transformSet"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#RegularEnglishAdjectivePattern -->
+
+    <owl:Thing rdf:about="#RegularEnglishAdjectivePattern">
+        <rdf:type rdf:resource="&lmf;MorphologicalPattern"/>
+        <lexinfo:defaultFor>Adjective</lexinfo:defaultFor>
+        <rdfs:comment
+            >This is the standard pattern for adjectives consisting of a single syllable or which otherwise follow the &quot;-er&quot;, &quot;-est&quot; inflection pattern. They follow  the consonant doubling patterns if the lemma ends CONSONANT VERB [b,d,fg,l,m,n,p,r,s or t]
+
+Forms:
+Positive: &quot;yellow&quot;, &quot;orange&quot;,&quot;red&quot;
+Comparative: &quot;yellower&quot;, &quot;oranger&quot;,&quot;redder&quot;
+Superlative: &quot;yellowest&quot;, &quot;orangest&quot;,&quot;reddest&quot;</rdfs:comment>
+        <lmf:hasAffix rdf:resource="#en_comparative_adjective_affix"/>
+        <lmf:hasTransformSet rdf:resource="#en_comparative_adjective_transformSet"/>
+        <lmf:hasTransformSet rdf:resource="#en_positive_adjective_transformSet"/>
+        <lmf:hasAffix rdf:resource="#en_superlative_adjective_affix"/>
+        <lmf:hasTransformSet rdf:resource="#en_superlative_adjective_transformSet"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#RegularEnglishNounPattern -->
+
+    <owl:Thing rdf:about="#RegularEnglishNounPattern">
+        <rdf:type rdf:resource="&lmf;MorphologicalPattern"/>
+        <lexinfo:defaultFor>Noun</lexinfo:defaultFor>
+        <rdfs:comment
+            >The standard pattern for regular English nouns.
+
+Forms:
+Singular: &quot;cat&quot;, &quot;kiss&quot;,&quot;leaf&quot;,&quot;cherry&quot;,&quot;crisis&quot;
+Plural:&quot;cats&quot;,&quot;kisses&quot;,&quot;leaves&quot;,&quot;cherries&quot;,&quot;crises&quot;</rdfs:comment>
+        <lmf:hasAffix rdf:resource="#en_plural_noun_affix"/>
+        <lmf:hasTransformSet rdf:resource="#en_plural_noun_transformSet"/>
+        <lmf:hasTransformSet rdf:resource="#en_singular_noun_transformset"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#RegularEnglishVerbPattern -->
+
+    <lmf:MorphologicalPattern rdf:about="#RegularEnglishVerbPattern">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:defaultFor>Verb</lexinfo:defaultFor>
+        <rdfs:comment
+            >The standard pattern for English verbs. This models four forms and applies consonant doubling if the verb&#39;s lemma ends in ...
+
+Forms:
+Plain: &quot;play&quot;,&quot;supply&quot;,&quot;use&quot;,&quot;chop&quot;
+3PS: &quot;plays&quot;,&quot;supplies&quot;&quot;uses&quot;,&quot;chops&quot;
+Past: &quot;played&quot;,&quot;supplied&quot;,&quot;used&quot;,&quot;chopped&quot;
+Gerund: &quot;playing&quot;,&quot;supplying&quot;,&quot;using&quot;,&quot;chopping&quot;</rdfs:comment>
+        <lmf:hasAffix rdf:resource="#en_3ps_verb_affix"/>
+        <lmf:hasTransformSet rdf:resource="#en_3ps_verb_transformSet"/>
+        <lmf:hasAffix rdf:resource="#en_gerund_verb_affix"/>
+        <lmf:hasTransformSet rdf:resource="#en_gerund_verb_transformSet"/>
+        <lmf:hasAffix rdf:resource="#en_past_verb_affix"/>
+        <lmf:hasTransformSet rdf:resource="#en_past_verb_transformSet"/>
+        <lmf:hasTransformSet rdf:resource="#en_plain_verb_transformSet"/>
+    </lmf:MorphologicalPattern>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#StrongEnglishVerbPattern -->
+
+    <lmf:MorphologicalPattern rdf:about="#StrongEnglishVerbPattern">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:comment
+            >This pattern is used to describe strong english verbs, as these verbs are essentially irregular in all but the 3rd Person Singular Present form only this form and the plain form is specified.</rdfs:comment>
+        <lmf:hasAffix rdf:resource="#en_3ps_verb_affix"/>
+        <lmf:hasTransformSet rdf:resource="#en_3ps_verb_transformSet"/>
+        <lmf:hasAffix rdf:resource="#en_gerund_verb_affix"/>
+        <lmf:hasTransformSet rdf:resource="#en_gerund_verb_transformSet"/>
+        <lmf:hasTransformSet rdf:resource="#en_plain_verb_transformSet"/>
+    </lmf:MorphologicalPattern>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#degree_comparative -->
+
+    <owl:Thing rdf:about="#degree_comparative">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropValue>comparative</lexinfo:synPropValue>
+        <lexinfo:synPropName>degree</lexinfo:synPropName>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#degree_positive -->
+
+    <lexinfo:SyntacticProperty rdf:about="#degree_positive">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:synPropName>degree</lexinfo:synPropName>
+        <lexinfo:defaultFor>Adjective</lexinfo:defaultFor>
+        <lexinfo:synPropValue>positive</lexinfo:synPropValue>
+    </lexinfo:SyntacticProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#degree_superlative -->
+
+    <owl:Thing rdf:about="#degree_superlative">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropName>degree</lexinfo:synPropName>
+        <lexinfo:synPropValue>superlative</lexinfo:synPropValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_3ps_verb_addAffix -->
+
+    <owl:Thing rdf:about="#en_3ps_verb_addAffix">
+        <rdf:type rdf:resource="&lexinfo;AddAffix"/>
+        <lmf:order rdf:datatype="&xsd;int">2</lmf:order>
+        <lexinfo:usesAffix rdf:resource="#en_3ps_verb_affix"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_3ps_verb_addLemma -->
+
+    <lexinfo:AddLemma rdf:about="#en_3ps_verb_addLemma">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+    </lexinfo:AddLemma>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_3ps_verb_affix -->
+
+    <lmf:Affix rdf:about="#en_3ps_verb_affix">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:writtenForm>s</lmf:writtenForm>
+        <lmf:hasAllomorph rdf:resource="#en_3ps_verb_affixAllomorph_es"/>
+    </lmf:Affix>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_3ps_verb_affixAllomorph_es -->
+
+    <owl:Thing rdf:about="#en_3ps_verb_affixAllomorph_es">
+        <rdf:type rdf:resource="&lmf;AffixAllomorph"/>
+        <lmf:writtenForm>es</lmf:writtenForm>
+        <lmf:hasCondition rdf:resource="#en_3ps_verb_affixAllomorph_es_condition"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_3ps_verb_affixAllomorph_es_condition -->
+
+    <lexinfo:LemmaCondition rdf:about="#en_3ps_verb_affixAllomorph_es_condition">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:pattern
+            >(ch|x|[^i]s|sh|z|o|[bcdfghjklmnpqrstvwxyz]y)$</lexinfo:pattern>
+    </lexinfo:LemmaCondition>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_3ps_verb_grammaticalFeatures -->
+
+    <owl:Thing rdf:about="#en_3ps_verb_grammaticalFeatures">
+        <rdf:type rdf:resource="&lmf;GrammaticalFeatures"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#number_singular"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#person_third"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#tense_present"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#verbform_indicative"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_3ps_verb_transformLemma -->
+
+    <owl:Thing rdf:about="#en_3ps_verb_transformLemma">
+        <rdf:type rdf:resource="&lexinfo;TransformLemma"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+        <lexinfo:pattern>y$/i</lexinfo:pattern>
+        <lmf:hasCondition rdf:resource="#en_3ps_verb_transformLemma_conditon"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_3ps_verb_transformLemma_conditon -->
+
+    <lexinfo:LemmaCondition rdf:about="#en_3ps_verb_transformLemma_conditon">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:pattern
+            >[bcdfghjklmnpqrstvwxz]y$</lexinfo:pattern>
+    </lexinfo:LemmaCondition>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_3ps_verb_transformSet -->
+
+    <owl:Thing rdf:about="#en_3ps_verb_transformSet">
+        <rdf:type rdf:resource="&lmf;TransformSet"/>
+        <lmf:hasProcess rdf:resource="#en_3ps_verb_addAffix"/>
+        <lmf:hasProcess rdf:resource="#en_3ps_verb_addLemma"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_3ps_verb_grammaticalFeatures"/>
+        <lmf:hasProcess rdf:resource="#en_3ps_verb_transformLemma"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_adjective_allomorph_condition -->
+
+    <lexinfo:LemmaCondition rdf:about="#en_adjective_allomorph_condition">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:pattern>e$</lexinfo:pattern>
+    </lexinfo:LemmaCondition>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_comparative_adjective_addAffix -->
+
+    <owl:Thing rdf:about="#en_comparative_adjective_addAffix">
+        <rdf:type rdf:resource="&lexinfo;AddAffix"/>
+        <lmf:order rdf:datatype="&xsd;int">2</lmf:order>
+        <lexinfo:usesAffix rdf:resource="#en_comparative_adjective_affix"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_comparative_adjective_addLemma -->
+
+    <lexinfo:AddLemma rdf:about="#en_comparative_adjective_addLemma">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+    </lexinfo:AddLemma>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_comparative_adjective_affix -->
+
+    <lmf:Affix rdf:about="#en_comparative_adjective_affix">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:writtenForm>er</lmf:writtenForm>
+        <lmf:hasAllomorph rdf:resource="#en_comparative_adjective_affixAllomorph_r"/>
+    </lmf:Affix>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_comparative_adjective_affixAllomorph_r -->
+
+    <owl:Thing rdf:about="#en_comparative_adjective_affixAllomorph_r">
+        <rdf:type rdf:resource="&lmf;AffixAllomorph"/>
+        <lmf:writtenForm>r</lmf:writtenForm>
+        <lmf:hasCondition rdf:resource="#en_adjective_allomorph_condition"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_comparative_adjective_grammaticalFeatures -->
+
+    <owl:Thing rdf:about="#en_comparative_adjective_grammaticalFeatures">
+        <rdf:type rdf:resource="&lmf;GrammaticalFeatures"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#degree_comparative"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_comparative_adjective_transformSet -->
+
+    <lmf:TransformSet rdf:about="#en_comparative_adjective_transformSet">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:hasProcess rdf:resource="#en_comparative_adjective_addAffix"/>
+        <lmf:hasProcess rdf:resource="#en_comparative_adjective_addLemma"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_comparative_adjective_grammaticalFeatures"/>
+        <lmf:hasProcess rdf:resource="#en_consonant_doubling_transformLemma"/>
+    </lmf:TransformSet>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_consonant_doubling_condition -->
+
+    <lexinfo:LemmaCondition rdf:about="#en_consonant_doubling_condition">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:pattern rdf:datatype="&xsd;int"
+            >[bcdfghjklmnpqrstvwxz][aeiou][bdfglmnprst]$</lexinfo:pattern>
+    </lexinfo:LemmaCondition>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_consonant_doubling_transformLemma -->
+
+    <lexinfo:TransformLemma rdf:about="#en_consonant_doubling_transformLemma">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+        <lexinfo:pattern
+            >([bdfglmnprst])$/$1$1</lexinfo:pattern>
+        <lmf:hasCondition rdf:resource="#en_consonant_doubling_condition"/>
+    </lexinfo:TransformLemma>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_gerund_verb_addAffix -->
+
+    <owl:Thing rdf:about="#en_gerund_verb_addAffix">
+        <rdf:type rdf:resource="&lexinfo;AddAffix"/>
+        <lmf:order rdf:datatype="&xsd;int">2</lmf:order>
+        <lexinfo:usesAffix rdf:resource="#en_gerund_verb_affix"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_gerund_verb_addLemma -->
+
+    <lexinfo:AddLemma rdf:about="#en_gerund_verb_addLemma">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+    </lexinfo:AddLemma>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_gerund_verb_affix -->
+
+    <owl:Thing rdf:about="#en_gerund_verb_affix">
+        <rdf:type rdf:resource="&lmf;Affix"/>
+        <lmf:writtenForm>ing</lmf:writtenForm>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_gerund_verb_grammaticalFeatures -->
+
+    <lmf:GrammaticalFeatures rdf:about="#en_gerund_verb_grammaticalFeatures">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#verbform_gerund"/>
+    </lmf:GrammaticalFeatures>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_gerund_verb_transformLemma -->
+
+    <lexinfo:TransformLemma rdf:about="#en_gerund_verb_transformLemma">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+        <lexinfo:pattern>e$/</lexinfo:pattern>
+        <lmf:hasCondition rdf:resource="#en_gerund_verb_transformLemma_condition"/>
+    </lexinfo:TransformLemma>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_gerund_verb_transformLemma_condition -->
+
+    <owl:Thing rdf:about="#en_gerund_verb_transformLemma_condition">
+        <rdf:type rdf:resource="&lexinfo;LemmaCondition"/>
+        <lexinfo:pattern>e$</lexinfo:pattern>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_gerund_verb_transformSet -->
+
+    <owl:Thing rdf:about="#en_gerund_verb_transformSet">
+        <rdf:type rdf:resource="&lmf;TransformSet"/>
+        <lmf:hasProcess rdf:resource="#en_consonant_doubling_transformLemma"/>
+        <lmf:hasProcess rdf:resource="#en_gerund_verb_addAffix"/>
+        <lmf:hasProcess rdf:resource="#en_gerund_verb_addLemma"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_gerund_verb_grammaticalFeatures"/>
+        <lmf:hasProcess rdf:resource="#en_gerund_verb_transformLemma"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_past_verb_addAffix -->
+
+    <owl:Thing rdf:about="#en_past_verb_addAffix">
+        <rdf:type rdf:resource="&lexinfo;AddAffix"/>
+        <lmf:order>2</lmf:order>
+        <lexinfo:usesAffix rdf:resource="#en_past_verb_affix"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_past_verb_addLemma -->
+
+    <lexinfo:AddLemma rdf:about="#en_past_verb_addLemma">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:order>1</lmf:order>
+    </lexinfo:AddLemma>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_past_verb_affix -->
+
+    <lmf:Affix rdf:about="#en_past_verb_affix">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:writtenForm>ed</lmf:writtenForm>
+        <lmf:hasAllomorph rdf:resource="#en_past_verb_affixAllomorph_d"/>
+    </lmf:Affix>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_past_verb_affixAllomorph_d -->
+
+    <owl:Thing rdf:about="#en_past_verb_affixAllomorph_d">
+        <rdf:type rdf:resource="&lmf;AffixAllomorph"/>
+        <lmf:writtenForm>d</lmf:writtenForm>
+        <lmf:hasCondition rdf:resource="#en_past_verb_affixAllomorph_d_conditon"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_past_verb_affixAllomorph_d_conditon -->
+
+    <owl:Thing rdf:about="#en_past_verb_affixAllomorph_d_conditon">
+        <rdf:type rdf:resource="&lexinfo;LemmaCondition"/>
+        <lexinfo:pattern>e$</lexinfo:pattern>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_past_verb_grammaticalFeatures0 -->
+
+    <lmf:GrammaticalFeatures rdf:about="#en_past_verb_grammaticalFeatures0">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#tense_past"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#verbform_indicative"/>
+    </lmf:GrammaticalFeatures>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_past_verb_grammaticalFeatures1 -->
+
+    <lmf:GrammaticalFeatures rdf:about="#en_past_verb_grammaticalFeatures1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#tense_past"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#verbform_participle"/>
+    </lmf:GrammaticalFeatures>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_past_verb_transformLemma -->
+
+    <owl:Thing rdf:about="#en_past_verb_transformLemma">
+        <rdf:type rdf:resource="&lexinfo;TransformLemma"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+        <lexinfo:pattern>y$/i</lexinfo:pattern>
+        <lmf:hasCondition rdf:resource="#en_past_verb_transformLemma_conditon"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_past_verb_transformLemma_conditon -->
+
+    <owl:Thing rdf:about="#en_past_verb_transformLemma_conditon">
+        <rdf:type rdf:resource="&lexinfo;LemmaCondition"/>
+        <lexinfo:pattern
+            >[bcdfghjklmnpqrstvwxz]y$</lexinfo:pattern>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_past_verb_transformSet -->
+
+    <lmf:TransformSet rdf:about="#en_past_verb_transformSet">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:hasProcess rdf:resource="#en_consonant_doubling_transformLemma"/>
+        <lmf:hasProcess rdf:resource="#en_past_verb_addAffix"/>
+        <lmf:hasProcess rdf:resource="#en_past_verb_addLemma"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_past_verb_grammaticalFeatures0"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_past_verb_grammaticalFeatures1"/>
+        <lmf:hasProcess rdf:resource="#en_past_verb_transformLemma"/>
+    </lmf:TransformSet>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plain_verb_addLemma -->
+
+    <owl:Thing rdf:about="#en_plain_verb_addLemma">
+        <rdf:type rdf:resource="&lexinfo;AddLemma"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plain_verb_grammaticalFeatures0 -->
+
+    <owl:Thing rdf:about="#en_plain_verb_grammaticalFeatures0">
+        <rdf:type rdf:resource="&lmf;GrammaticalFeatures"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#number_singular"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#person_first"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#tense_present"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#verbform_indicative"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plain_verb_grammaticalFeatures1 -->
+
+    <owl:Thing rdf:about="#en_plain_verb_grammaticalFeatures1">
+        <rdf:type rdf:resource="&lmf;GrammaticalFeatures"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#number_singular"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#person_second"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#tense_present"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#verbform_indicative"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plain_verb_grammaticalFeatures2 -->
+
+    <owl:Thing rdf:about="#en_plain_verb_grammaticalFeatures2">
+        <rdf:type rdf:resource="&lmf;GrammaticalFeatures"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#number_plural"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#person_first"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#tense_present"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#verbform_indicative"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plain_verb_grammaticalFeatures3 -->
+
+    <owl:Thing rdf:about="#en_plain_verb_grammaticalFeatures3">
+        <rdf:type rdf:resource="&lmf;GrammaticalFeatures"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#number_plural"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#person_second"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#tense_present"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#verbform_indicative"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plain_verb_grammaticalFeatures4 -->
+
+    <lmf:GrammaticalFeatures rdf:about="#en_plain_verb_grammaticalFeatures4">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#number_plural"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#person_third"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#tense_present"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#verbform_indicative"/>
+    </lmf:GrammaticalFeatures>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plain_verb_transformSet -->
+
+    <lmf:TransformSet rdf:about="#en_plain_verb_transformSet">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:hasProcess rdf:resource="#en_plain_verb_addLemma"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_plain_verb_grammaticalFeatures0"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_plain_verb_grammaticalFeatures1"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_plain_verb_grammaticalFeatures2"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_plain_verb_grammaticalFeatures3"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_plain_verb_grammaticalFeatures4"/>
+    </lmf:TransformSet>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_addAffix -->
+
+    <lexinfo:AddAffix rdf:about="#en_plural_noun_addAffix">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:order rdf:datatype="&xsd;int">2</lmf:order>
+        <lexinfo:usesAffix rdf:resource="#en_plural_noun_affix"/>
+    </lexinfo:AddAffix>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_addLemma -->
+
+    <owl:Thing rdf:about="#en_plural_noun_addLemma">
+        <rdf:type rdf:resource="&lexinfo;AddLemma"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_affix -->
+
+    <owl:Thing rdf:about="#en_plural_noun_affix">
+        <rdf:type rdf:resource="&lmf;Affix"/>
+        <lmf:writtenForm>s</lmf:writtenForm>
+        <lmf:hasAllomorph rdf:resource="#en_plural_noun_affixAllomorph_a"/>
+        <lmf:hasAllomorph rdf:resource="#en_plural_noun_affixAllomorph_es"/>
+        <lmf:hasAllomorph rdf:resource="#en_plural_noun_affixAllomorph_null"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_affixAllomorph_a -->
+
+    <owl:Thing rdf:about="#en_plural_noun_affixAllomorph_a">
+        <rdf:type rdf:resource="&lmf;AffixAllomorph"/>
+        <lmf:writtenForm>a</lmf:writtenForm>
+        <lmf:hasCondition rdf:resource="#en_plural_noun_affixAllomorph_a_condition"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_affixAllomorph_a_condition -->
+
+    <lexinfo:LemmaCondition rdf:about="#en_plural_noun_affixAllomorph_a_condition">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:pattern>um$</lexinfo:pattern>
+    </lexinfo:LemmaCondition>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_affixAllomorph_es -->
+
+    <owl:Thing rdf:about="#en_plural_noun_affixAllomorph_es">
+        <rdf:type rdf:resource="&lmf;AffixAllomorph"/>
+        <lmf:writtenForm>es</lmf:writtenForm>
+        <lmf:hasCondition rdf:resource="#en_plural_noun_affixAllomorph_es_conditon"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_affixAllomorph_es_conditon -->
+
+    <owl:Thing rdf:about="#en_plural_noun_affixAllomorph_es_conditon">
+        <rdf:type rdf:resource="&lexinfo;LemmaCondition"/>
+        <lexinfo:pattern
+            >(ch|x|[^i]s|sh|z|o|[bcdfghjklmnpqrstvwxz]y)$</lexinfo:pattern>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_affixAllomorph_null -->
+
+    <lmf:AffixAllomorph rdf:about="#en_plural_noun_affixAllomorph_null">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:writtenForm></lmf:writtenForm>
+        <lmf:hasCondition rdf:resource="#en_plural_noun_affixAllomorph_null_conditon"/>
+    </lmf:AffixAllomorph>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_affixAllomorph_null_conditon -->
+
+    <lexinfo:LemmaCondition rdf:about="#en_plural_noun_affixAllomorph_null_conditon">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:pattern>is$</lexinfo:pattern>
+        <owl:sameAs rdf:resource="#en_plural_noun_transformLemma2_condition"/>
+    </lexinfo:LemmaCondition>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_grammaticalFeatures -->
+
+    <lmf:GrammaticalFeatures rdf:about="#en_plural_noun_grammaticalFeatures">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#number_plural"/>
+    </lmf:GrammaticalFeatures>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_transformLemma0 -->
+
+    <lexinfo:TransformLemma rdf:about="#en_plural_noun_transformLemma0">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+        <lexinfo:pattern>y$/i</lexinfo:pattern>
+        <lmf:hasCondition rdf:resource="#en_plural_noun_transformLemma0_condition"/>
+    </lexinfo:TransformLemma>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_transformLemma0_condition -->
+
+    <owl:Thing rdf:about="#en_plural_noun_transformLemma0_condition">
+        <rdf:type rdf:resource="&lexinfo;LemmaCondition"/>
+        <lexinfo:pattern
+            >[bcdfghjklmnpqrstvwxz]y$</lexinfo:pattern>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_transformLemma1 -->
+
+    <owl:Thing rdf:about="#en_plural_noun_transformLemma1">
+        <rdf:type rdf:resource="&lexinfo;TransformLemma"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+        <lexinfo:pattern>(f|fe)$/ve</lexinfo:pattern>
+        <lmf:hasCondition rdf:resource="#en_plural_noun_transformLemma1_condition"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_transformLemma1_condition -->
+
+    <lexinfo:LemmaCondition rdf:about="#en_plural_noun_transformLemma1_condition">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:pattern>[^f](f|fe)$</lexinfo:pattern>
+    </lexinfo:LemmaCondition>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_transformLemma2 -->
+
+    <owl:Thing rdf:about="#en_plural_noun_transformLemma2">
+        <rdf:type rdf:resource="&lexinfo;TransformLemma"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+        <lexinfo:pattern>is$/es</lexinfo:pattern>
+        <lmf:hasCondition rdf:resource="#en_plural_noun_transformLemma2_condition"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_transformLemma2_condition -->
+
+    <lexinfo:LemmaCondition rdf:about="#en_plural_noun_transformLemma2_condition">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:pattern>is$</lexinfo:pattern>
+    </lexinfo:LemmaCondition>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_transformLemma3 -->
+
+    <lexinfo:TransformLemma rdf:about="#en_plural_noun_transformLemma3">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+        <lexinfo:pattern>um$/</lexinfo:pattern>
+        <lmf:hasCondition rdf:resource="#en_plural_noun_transformLemma3_condition"/>
+    </lexinfo:TransformLemma>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_transformLemma3_condition -->
+
+    <lexinfo:LemmaCondition rdf:about="#en_plural_noun_transformLemma3_condition">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:pattern>um$</lexinfo:pattern>
+    </lexinfo:LemmaCondition>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_plural_noun_transformSet -->
+
+    <lmf:TransformSet rdf:about="#en_plural_noun_transformSet">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:hasProcess rdf:resource="#en_plural_noun_addAffix"/>
+        <lmf:hasProcess rdf:resource="#en_plural_noun_addLemma"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_plural_noun_grammaticalFeatures"/>
+        <lmf:hasProcess rdf:resource="#en_plural_noun_transformLemma0"/>
+        <lmf:hasProcess rdf:resource="#en_plural_noun_transformLemma1"/>
+        <lmf:hasProcess rdf:resource="#en_plural_noun_transformLemma2"/>
+        <lmf:hasProcess rdf:resource="#en_plural_noun_transformLemma3"/>
+    </lmf:TransformSet>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_positive_adjective_addLemma -->
+
+    <owl:Thing rdf:about="#en_positive_adjective_addLemma">
+        <rdf:type rdf:resource="&lexinfo;AddLemma"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_positive_adjective_grammaticalFeatures -->
+
+    <lmf:GrammaticalFeatures rdf:about="#en_positive_adjective_grammaticalFeatures">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#degree_positive"/>
+    </lmf:GrammaticalFeatures>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_positive_adjective_transformSet -->
+
+    <lmf:TransformSet rdf:about="#en_positive_adjective_transformSet">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:hasProcess rdf:resource="#en_positive_adjective_addLemma"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_positive_adjective_grammaticalFeatures"/>
+    </lmf:TransformSet>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_singular_noun_addLemma -->
+
+    <lexinfo:AddLemma rdf:about="#en_singular_noun_addLemma">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+    </lexinfo:AddLemma>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_singular_noun_grammaticalFeature -->
+
+    <owl:Thing rdf:about="#en_singular_noun_grammaticalFeature">
+        <rdf:type rdf:resource="&lmf;GrammaticalFeatures"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#number_singular"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_singular_noun_transformset -->
+
+    <owl:Thing rdf:about="#en_singular_noun_transformset">
+        <rdf:type rdf:resource="&lmf;TransformSet"/>
+        <lmf:hasProcess rdf:resource="#en_singular_noun_addLemma"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_singular_noun_grammaticalFeature"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_superlative_adjective_addAffix -->
+
+    <owl:Thing rdf:about="#en_superlative_adjective_addAffix">
+        <rdf:type rdf:resource="&lexinfo;AddAffix"/>
+        <lmf:order rdf:datatype="&xsd;int">2</lmf:order>
+        <lexinfo:usesAffix rdf:resource="#en_superlative_adjective_affix"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_superlative_adjective_addLemma -->
+
+    <owl:Thing rdf:about="#en_superlative_adjective_addLemma">
+        <rdf:type rdf:resource="&lexinfo;AddLemma"/>
+        <lmf:order rdf:datatype="&xsd;int">1</lmf:order>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_superlative_adjective_affix -->
+
+    <owl:Thing rdf:about="#en_superlative_adjective_affix">
+        <rdf:type rdf:resource="&lmf;Affix"/>
+        <lmf:writtenForm>est</lmf:writtenForm>
+        <lmf:hasAllomorph rdf:resource="#en_superlative_adjective_affixAllomorph_st"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_superlative_adjective_affixAllomorph_st -->
+
+    <owl:Thing rdf:about="#en_superlative_adjective_affixAllomorph_st">
+        <rdf:type rdf:resource="&lmf;AffixAllomorph"/>
+        <lmf:writtenForm>st</lmf:writtenForm>
+        <lmf:hasCondition rdf:resource="#en_adjective_allomorph_condition"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_superlative_adjective_grammaticalFeatures -->
+
+    <lmf:GrammaticalFeatures rdf:about="#en_superlative_adjective_grammaticalFeatures">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:hasSyntacticProperty rdf:resource="#degree_superlative"/>
+    </lmf:GrammaticalFeatures>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#en_superlative_adjective_transformSet -->
+
+    <lmf:TransformSet rdf:about="#en_superlative_adjective_transformSet">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lmf:hasProcess rdf:resource="#en_consonant_doubling_transformLemma"/>
+        <lmf:hasProcess rdf:resource="#en_superlative_adjective_addAffix"/>
+        <lmf:hasProcess rdf:resource="#en_superlative_adjective_addLemma"/>
+        <lmf:hasGrammaticalFeatures rdf:resource="#en_superlative_adjective_grammaticalFeatures"/>
+    </lmf:TransformSet>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#finiteness_finite -->
+
+    <owl:Thing rdf:about="#finiteness_finite">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropName>finiteness</lexinfo:synPropName>
+        <lexinfo:defaultFor>Verb</lexinfo:defaultFor>
+        <lexinfo:synPropValue>finite</lexinfo:synPropValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#finiteness_nonfinite -->
+
+    <owl:Thing rdf:about="#finiteness_nonfinite">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropName>finiteness</lexinfo:synPropName>
+        <lexinfo:synPropValue>non-finite</lexinfo:synPropValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#number_plural -->
+
+    <lexinfo:SyntacticProperty rdf:about="#number_plural">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:synPropName>number</lexinfo:synPropName>
+        <lexinfo:synPropValue>plural</lexinfo:synPropValue>
+        <lexinfo:defaultFor>Noun, Verb</lexinfo:defaultFor>
+    </lexinfo:SyntacticProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#number_singular -->
+
+    <lexinfo:SyntacticProperty rdf:about="#number_singular">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:synPropValue>singular</lexinfo:synPropValue>
+        <lexinfo:synPropName>number</lexinfo:synPropName>
+    </lexinfo:SyntacticProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#person_first -->
+
+    <lexinfo:SyntacticProperty rdf:about="#person_first">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:synPropValue>first</lexinfo:synPropValue>
+        <lexinfo:synPropName>person</lexinfo:synPropName>
+        <lexinfo:defaultFor>Verb</lexinfo:defaultFor>
+    </lexinfo:SyntacticProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#person_second -->
+
+    <lexinfo:SyntacticProperty rdf:about="#person_second">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:synPropName>person</lexinfo:synPropName>
+        <lexinfo:synPropValue>second</lexinfo:synPropValue>
+    </lexinfo:SyntacticProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#person_third -->
+
+    <owl:Thing rdf:about="#person_third">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropName>person</lexinfo:synPropName>
+        <lexinfo:synPropValue>third</lexinfo:synPropValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#tense_future -->
+
+    <owl:Thing rdf:about="#tense_future">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropName>tense</lexinfo:synPropName>
+        <lexinfo:synPropValue>future</lexinfo:synPropValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#tense_imperfect -->
+
+    <owl:Thing rdf:about="#tense_imperfect">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropValue>imperfect</lexinfo:synPropValue>
+        <lexinfo:synPropName>tense</lexinfo:synPropName>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#tense_past -->
+
+    <owl:Thing rdf:about="#tense_past">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropValue>past</lexinfo:synPropValue>
+        <lexinfo:synPropName>tense</lexinfo:synPropName>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#tense_present -->
+
+    <lexinfo:SyntacticProperty rdf:about="#tense_present">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:synPropName>tense</lexinfo:synPropName>
+        <lexinfo:defaultFor>Verb</lexinfo:defaultFor>
+        <lexinfo:synPropValue>present</lexinfo:synPropValue>
+    </lexinfo:SyntacticProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#verbform_gerund -->
+
+    <owl:Thing rdf:about="#verbform_gerund">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropValue>gerund</lexinfo:synPropValue>
+        <lexinfo:synPropName>verbform</lexinfo:synPropName>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#verbform_imperative -->
+
+    <lexinfo:SyntacticProperty rdf:about="#verbform_imperative">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:synPropName>verbform</lexinfo:synPropName>
+        <lexinfo:synPropValue>imperative</lexinfo:synPropValue>
+    </lexinfo:SyntacticProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#verbform_indicative -->
+
+    <lexinfo:SyntacticProperty rdf:about="#verbform_indicative">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:defaultFor>Verb</lexinfo:defaultFor>
+        <lexinfo:synPropName>verbform</lexinfo:synPropName>
+        <lexinfo:synPropValue>indicative</lexinfo:synPropValue>
+    </lexinfo:SyntacticProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#verbform_infinitive -->
+
+    <lexinfo:SyntacticProperty rdf:about="#verbform_infinitive">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:synPropValue>infinitive</lexinfo:synPropValue>
+        <lexinfo:synPropName>verbform</lexinfo:synPropName>
+    </lexinfo:SyntacticProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#verbform_participle -->
+
+    <owl:Thing rdf:about="#verbform_participle">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropName>verbform</lexinfo:synPropName>
+        <lexinfo:synPropValue>participle</lexinfo:synPropValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#verbform_subjunctive -->
+
+    <lexinfo:SyntacticProperty rdf:about="#verbform_subjunctive">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <lexinfo:synPropName>verbform</lexinfo:synPropName>
+        <lexinfo:synPropValue>subjunctive</lexinfo:synPropValue>
+    </lexinfo:SyntacticProperty>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#voice_active -->
+
+    <owl:Thing rdf:about="#voice_active">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropName>voice</lexinfo:synPropName>
+        <lexinfo:defaultFor>Verb</lexinfo:defaultFor>
+        <lexinfo:synPropValue>active</lexinfo:synPropValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.lexinfo.net/lexinfo-en#voice_passive -->
+
+    <owl:Thing rdf:about="#voice_passive">
+        <rdf:type rdf:resource="&lexinfo;SyntacticProperty"/>
+        <lexinfo:synPropValue>passive</lexinfo:synPropValue>
+        <lexinfo:synPropName>voice</lexinfo:synPropName>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
