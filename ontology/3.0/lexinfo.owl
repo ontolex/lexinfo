@@ -263,7 +263,7 @@ He is happy/*happy is him</rdfs:comment>
     <owl:priorVersion rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#IntransitiveInterrogativeFrame"/>
     <rdfs:subClassOf rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo#InterrogativeFrame"/>
     <rdfs:label xml:lang="en">intransitive interrogative frame</rdfs:label>
-    <rdfs:comment xml:lang="en">he ASKED [what he should do]</rdfs:comment>
+    <example xml:lang="en">he ASKED [what he should do]</example>
     <owl:equivalentClass>
       <owl:Class rdf:nodeID="ub1bL552C25">
         <owl:intersectionOf rdf:parseType="Collection">
