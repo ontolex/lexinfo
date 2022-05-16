@@ -4,6 +4,18 @@ LexInfo is the data category ontology for
 [OntoLex-Lemon](https://www.w3.org/2016/05/ontolex/), which provides description
 of lexicographic resources in RDF relative to ontologies
 
+## Installing
+
+Set up the Python environment as follows
+
+    python -m venv env
+    source env/bin/activate
+    pip install -r requirements.txt
+
+For subsequent usages rerun the following command
+
+    source env/bin/activate
+
 ## Building
 
 The ontology can be built with the following command
@@ -11,6 +23,14 @@ The ontology can be built with the following command
     python src/build-ontology.py
 
 The most recent ontology is available at `ontology/3.0/lexinfo.owl`
+
+## Deploying
+
+The following are the steps to deploy the ontology
+
+    python src/build-ontology.py > ontology/3.0/lexinfo.owl
+    cp ontology/3.0/lexinfo.owl docs/ontology/3.0/lexinfo.owl
+    rapper -o turtle docs/ontology/3.0/lexinfo.owl > docs/ontology/3.0/lexinfo.ttl
 
 ## Editing
 

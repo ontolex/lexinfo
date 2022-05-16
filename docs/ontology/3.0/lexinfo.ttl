@@ -1,8 +1,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix : <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 
@@ -227,9 +227,9 @@
 :AdjectivePhrase
     a owl:Class ;
     rdfs:label "adjective phrase"@en ;
-    rdfs:subClassOf <http://www.w3.org/ns/lemon/ontolex#MultiwordExpression> ;
+    rdfs:subClassOf <http://www.w3.org/ns/lemon/ontolex#MultiWordExpression> ;
     owl:equivalentClass [
-        owl:intersectionOf (<http://www.w3.org/ns/lemon/ontolex#MultiwordExpression>
+        owl:intersectionOf (<http://www.w3.org/ns/lemon/ontolex#MultiWordExpression>
             [
                 a owl:Restriction ;
                 owl:onProperty :head ;
@@ -1640,8 +1640,8 @@ He is happy/*happy is him"""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#IntransitiveInfinitiveSCFrame> .
 
 :IntransitiveInterrogativeFrame
+    :example "he ASKED [what he should do]"@en ;
     a owl:Class ;
-    rdfs:comment "he ASKED [what he should do]"@en ;
     rdfs:label "intransitive interrogative frame"@en ;
     rdfs:subClassOf :InterrogativeFrame ;
     owl:equivalentClass [
@@ -1884,10 +1884,10 @@ He is happy/*happy is him"""@en ;
 
 :NounPhrase
     a owl:Class ;
-    rdfs:label "adjective phrase"@en ;
-    rdfs:subClassOf <http://www.w3.org/ns/lemon/ontolex#MultiwordExpression> ;
+    rdfs:label "noun phrase"@en ;
+    rdfs:subClassOf <http://www.w3.org/ns/lemon/ontolex#MultiWordExpression> ;
     owl:equivalentClass [
-        owl:intersectionOf (<http://www.w3.org/ns/lemon/ontolex#MultiwordExpression>
+        owl:intersectionOf (<http://www.w3.org/ns/lemon/ontolex#MultiWordExpression>
             [
                 a owl:Restriction ;
                 owl:onProperty :head ;
@@ -2205,7 +2205,7 @@ He is happy/*happy is him"""@en ;
 
 :Prefix
     a owl:Class ;
-    rdfs:label "infix"@en ;
+    rdfs:label "prefix"@en ;
     rdfs:subClassOf <http://www.w3.org/ns/lemon/ontolex#Affix> .
 
 :Preposition
@@ -2227,10 +2227,10 @@ He is happy/*happy is him"""@en ;
 
 :PrepositionPhrase
     a owl:Class ;
-    rdfs:label "adjective phrase"@en ;
-    rdfs:subClassOf <http://www.w3.org/ns/lemon/ontolex#MultiwordExpression> ;
+    rdfs:label "preposition phrase"@en ;
+    rdfs:subClassOf <http://www.w3.org/ns/lemon/ontolex#MultiWordExpression> ;
     owl:equivalentClass [
-        owl:intersectionOf (<http://www.w3.org/ns/lemon/ontolex#MultiwordExpression>
+        owl:intersectionOf (<http://www.w3.org/ns/lemon/ontolex#MultiWordExpression>
             [
                 a owl:Restriction ;
                 owl:onProperty :head ;
@@ -2799,7 +2799,7 @@ He is happy/*happy is him"""@en ;
 
 :Suffix
     a owl:Class ;
-    rdfs:label "infix"@en ;
+    rdfs:label "suffix"@en ;
     rdfs:subClassOf <http://www.w3.org/ns/lemon/ontolex#Affix> .
 
 :SuperlativeAdjunct
@@ -3064,10 +3064,10 @@ He is happy/*happy is him"""@en ;
 
 :VerbPhrase
     a owl:Class ;
-    rdfs:label "adjective phrase"@en ;
-    rdfs:subClassOf <http://www.w3.org/ns/lemon/ontolex#MultiwordExpression> ;
+    rdfs:label "verb phrase"@en ;
+    rdfs:subClassOf <http://www.w3.org/ns/lemon/ontolex#MultiWordExpression> ;
     owl:equivalentClass [
-        owl:intersectionOf (<http://www.w3.org/ns/lemon/ontolex#MultiwordExpression>
+        owl:intersectionOf (<http://www.w3.org/ns/lemon/ontolex#MultiWordExpression>
             [
                 a owl:Restriction ;
                 owl:onProperty :head ;
@@ -3308,7 +3308,7 @@ He is happy/*happy is him"""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#animate> .
 
 :antonym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:comment "A term or lexeme whose concept or sense constitutes the opposite of the concept represented by a second term or lexeme."@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "antonym"@en ;
@@ -3323,7 +3323,7 @@ He is happy/*happy is him"""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#appellation> .
 
 :approximate
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:comment "Property used to qualify something similar but not exactly the same"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "approximate"@en ;
@@ -3332,7 +3332,8 @@ He is happy/*happy is him"""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#approximate> .
 
 :approximateSynonym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:comment "A synonym that differs in some minor way"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "approximate synonym"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
@@ -3360,7 +3361,7 @@ He is happy/*happy is him"""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#aspect> .
 
 :associativeRelation
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:comment "A relation between two concepts having a non-hierarchical thematic connection by virtue of experience."@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "associative relation"@en ;
@@ -3520,6 +3521,7 @@ He is happy/*happy is him"""@en ;
 
 :collocation
     a owl:ObjectProperty ;
+    rdfs:comment "Two terms that occur together far more frequently than chance"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "collocation"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
@@ -3658,6 +3660,7 @@ He is happy/*happy is him"""@en ;
     rdfs:label "contraction for"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
     rdfs:subPropertyOf :derivedForm ;
+    owl:inverseOf :fullFormFor ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#contractionFor> .
 
 :coordinateConcept
@@ -3796,6 +3799,7 @@ He is happy/*happy is him"""@en ;
 
 :derivedForm
     a owl:ObjectProperty ;
+    rdfs:comment "A form that is derived morphosyntactically from another form"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
     rdfs:label "derived form"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
@@ -3825,6 +3829,16 @@ He is happy/*happy is him"""@en ;
     rdfs:comment "diminutive noun"@en ;
     rdfs:label "diminutive noun"@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#diminutiveNoun> .
+
+:directCase
+    a :Case, owl:Thing ;
+    rdfs:comment "An unmarked case which covers the single argument of a one-place verb and the agent and patient arguments of a transitive verb."@en ;
+    rdfs:label "direct case"@en .
+
+:directCaseForm
+    a owl:ObjectProperty ;
+    rdfs:label "direct case form"@en ;
+    rdfs:subPropertyOf :formCaseVariant .
 
 :directObject
     a owl:ObjectProperty ;
@@ -3936,8 +3950,8 @@ He is happy/*happy is him"""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#etymology> .
 
 :exact
-    a owl:ObjectProperty ;
-    rdfs:comment "Completely correct in every detail"@en ;
+    a owl:ObjectProperty, owl:SymmetricProperty, owl:TransitiveProperty ;
+    rdfs:comment "Completely equal in every detail"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "exact"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
@@ -4115,6 +4129,7 @@ He is happy/*happy is him"""@en ;
     rdfs:label "full form for"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
     rdfs:subPropertyOf <http://www.w3.org/ns/lemon/vartrans#lexicalRel> ;
+    owl:inverseOf :contractionFor ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#fullFormFor> .
 
 :fusedPreposition
@@ -4239,6 +4254,7 @@ In 1951: Any editorial comment."""@en ;
 
 :head
     a owl:ObjectProperty ;
+    rdfs:comment "Indicates the head element of a phrase"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
     rdfs:label "head"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
@@ -4252,16 +4268,17 @@ In 1951: Any editorial comment."""@en ;
     rdfs:subPropertyOf <http://www.w3.org/ns/lemon/ontolex#usage> .
 
 :holonymTerm
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Indicates that the referenced element is a part of this object"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "holonym term"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:subPropertyOf :partitiveRelation ;
+    owl:inverseOf :meronymTerm ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#holonymTerm> .
 
 :homograph
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:comment "A word that is spelled like another, but that has a different pronunciation, meaning, and/or origin. // Word that is written like another, but that has a different pronunciation, meaning, and/or origin."@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
     rdfs:label "homograph"@en ;
@@ -4270,7 +4287,7 @@ In 1951: Any editorial comment."""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#homograph> .
 
 :homonym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:comment "A word that is pronounced like another word and that can be spelled the same way (homograph) or can merely sound the same (homophone). // Word that sounds the same and is written the same as another word but is different in meaning."@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
     rdfs:label "homonym"@en ;
@@ -4279,7 +4296,7 @@ In 1951: Any editorial comment."""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#homonym> .
 
 :homophone
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:comment "A word that is pronounced in the same way as another word but that is spelled differently. // Word that sounds like another word, but is different in writiing or meaning."@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
     rdfs:label "homophone"@en ;
@@ -4288,19 +4305,23 @@ In 1951: Any editorial comment."""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#homophone> .
 
 :hypernym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:comment "A term with a broader meaning"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "hypernym"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:subPropertyOf <http://www.w3.org/ns/lemon/vartrans#senseRel> ;
+    owl:inverseOf :hyponym ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#hypernym> .
 
 :hyponym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:comment "A term with a narrower meaning"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "hyponym"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:subPropertyOf <http://www.w3.org/ns/lemon/vartrans#senseRel> ;
+    owl:inverseOf :hypernym ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#hyponym> .
 
 :idiom
@@ -4680,30 +4701,33 @@ In 1951: Any editorial comment."""@en ;
     rdfs:subPropertyOf <http://www.w3.org/ns/lemon/ontolex#usage> .
 
 :memberHolonym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Indicates the object is a member of this"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "member holonym"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:subPropertyOf :holonymTerm ;
+    owl:inverseOf :memberMeronym ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#memberHolonym> .
 
 :memberMeronym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Indicates this is an element of the other"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "member meronym"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:subPropertyOf :meronymTerm ;
+    owl:inverseOf :memberHolonym ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#memberMeronym> .
 
 :meronymTerm
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Indicates this is a part of another concept"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "meronym term"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:subPropertyOf :partitiveRelation ;
+    owl:inverseOf :holonymTerm ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#meronymTerm> .
 
 :middleVoice
@@ -4956,21 +4980,23 @@ Note: moved to lexeme element from being an independent element; note that this 
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#outdatedForm> .
 
 :partHolonym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Indicates a part of this object"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "part holonym"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:subPropertyOf :holonymTerm ;
+    owl:inverseOf :partMeronym ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#partHolonym> .
 
 :partMeronym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Indicates this a component of the other concept"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "part meronym"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:subPropertyOf :meronymTerm ;
+    owl:inverseOf :partHolonym ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#partMeronym> .
 
 :partNumber
@@ -5032,7 +5058,7 @@ Note: moved to lexeme element from being an independent element; note that this 
     rdfs:subPropertyOf :formCaseVariant .
 
 :partitiveRelation
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "A relation between two concepts where one of the concepts constitutes the whole and the other concept a part of that whole."@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "partitive relation"@en ;
@@ -5103,6 +5129,7 @@ Note: moved to lexeme element from being an independent element; note that this 
 
 :pertainsTo
     a owl:ObjectProperty ;
+    rdfs:comment "Indicates that a term is the adjectival form of a word with a meaning of 'of or pertaining to X'"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "pertains to"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
@@ -5408,7 +5435,8 @@ Note: moved to lexeme element from being an independent element; note that this 
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#qualifierAdjective> .
 
 :quasiEquivalent
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:comment "A term that is very similar but with some differences"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "quasi equivalent"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
@@ -5485,7 +5513,7 @@ Note: moved to lexeme element from being an independent element; note that this 
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#regulatedTerm> .
 
 :relatedTerm
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:comment "A term connected to another term by a coordinate or associative relation."@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "related term"@en ;
@@ -5724,21 +5752,23 @@ Note: moved to lexeme element from being an independent element; note that this 
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#subordinatingConjunction> .
 
 :substanceHolonym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Indicates what this is composed of"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "substance holonym"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:subPropertyOf :holonymTerm ;
+    owl:inverseOf :substanceMeronym ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#substanceHolonym> .
 
 :substanceMeronym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Indicates this is a substance that composes the other"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "substance meronym"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:subPropertyOf :meronymTerm ;
+    owl:inverseOf :substanceHolonym ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#substanceMeronym> .
 
 :suffix
@@ -5806,7 +5836,8 @@ Note: moved to lexeme element from being an independent element; note that this 
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#symbol> .
 
 :synonym
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty, owl:TransitiveProperty ;
+    rdfs:comment "Indicates the the terms have the same meaning lexicographically"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "synonym"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
@@ -5892,7 +5923,8 @@ Note: moved to lexeme element from being an independent element; note that this 
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#transcribedForm> .
 
 :translation
-    a owl:ObjectProperty ;
+    a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:comment "Indicates that two terms are translations of one another; this is the same as interlingual synonymy"@en ;
     rdfs:domain <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
     rdfs:label "translation"@en ;
     rdfs:range <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
