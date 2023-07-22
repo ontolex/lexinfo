@@ -1,10 +1,10 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix : <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
-@prefix terms: <http://purl.org/dc/terms/> .
 @prefix cc: <http://creativecommons.org/ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 
 <http://www.lexinfo.net/ontology/3.0/lexinfo>
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
@@ -29,6 +29,7 @@
     rdfs:subClassOf :TermType .
 
 :AccusativePostPositiveArg
+    rdfs:subClassOf :PostPositiveArg ;
     owl:equivalentClass [
         owl:intersectionOf (:PostPositiveArg
             [
@@ -37,8 +38,7 @@
                 owl:onProperty <http://www.w3.org/ns/lemon/synsem#marker>
             ]
         )
-    ] ;
-    owl:subClassOf :PostPositiveArg .
+    ] .
 
 :AdjectivalComplementFrame
     a owl:Class ;
@@ -726,6 +726,7 @@ He is happy/*happy is him"""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#Dating> .
 
 :DativePostPositiveArg
+    rdfs:subClassOf :PostPositiveArg ;
     owl:equivalentClass [
         owl:intersectionOf (:PostPositiveArg
             [
@@ -734,8 +735,7 @@ He is happy/*happy is him"""@en ;
                 owl:onProperty <http://www.w3.org/ns/lemon/synsem#marker>
             ]
         )
-    ] ;
-    owl:subClassOf :PostPositiveArg .
+    ] .
 
 :DativeTransitiveFrame
     :example "ich DANKE dir"@de ;
@@ -1138,6 +1138,7 @@ He is happy/*happy is him"""@en ;
     owl:priorVersion <http://www.lexinfo.net/ontology/2.0/lexinfo#GenitiveObject> .
 
 :GenitivePostPositiveArg
+    rdfs:subClassOf :PostPositiveArg ;
     owl:equivalentClass [
         owl:intersectionOf (:PostPositiveArg
             [
@@ -1146,8 +1147,7 @@ He is happy/*happy is him"""@en ;
                 owl:onProperty <http://www.w3.org/ns/lemon/synsem#marker>
             ]
         )
-    ] ;
-    owl:subClassOf :PostPositiveArg .
+    ] .
 
 :GenitiveTransitiveFrame
     :example "wir GEDENKEN jenes mannes"@de ;
