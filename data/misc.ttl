@@ -123,7 +123,7 @@
 
 lexinfo:TransfixMorph a owl:Class ;
   rdfs:label "transfix"@en ;
-  rdfs:comment "A transfix is a discontinuous affix that disrupts the base to which it is attached. The term is reserved for true single affixes, rather than combinations of an infix with an independent prefix or suffix. (Broselow, E., 2000. Transfixation. In G. Booij, et al. (eds.), Ein internationales Handbuch zur Flexion und Wortbildung. 1. Halbband. Mouton De Gruyter, New York, Berlin, p. 552-557.) Examples include discontinuous affixes inserted into a word root, as in root-and-pattern systems of several Semitic languages, e.g., in the Arabic word kitaba "writing" from the root k-t-b."@en ;
+  rdfs:comment "A transfix is a discontinuous affix that disrupts the base to which it is attached. The term is reserved for true single affixes, rather than combinations of an infix with an independent prefix or suffix. (Broselow, E., 2000. Transfixation. In G. Booij, et al. (eds.), Ein internationales Handbuch zur Flexion und Wortbildung. 1. Halbband. Mouton De Gruyter, New York, Berlin, p. 552-557.) Examples include discontinuous affixes inserted into a word root, as in root-and-pattern systems of several Semitic languages, e.g., in the Arabic word kitaba \"writing\" from the root k-t-b."@en ;
   rdfs:subClassOf ontolex:Affix .
 
 lexinfo:SimulfixMorph a owl:Class ;
@@ -146,4 +146,4 @@ lexinfo:RootMorph a owl:Class ;
   rdfs:label "morphological root"@en ;
   rdfs:subClassOf ontolex:LexicalEntry ;
   rdfs:comment "A root is the portion of a word that (a) is common to a set of derived or inflected forms, (b) is not further analyzable into meaningful elements, and (c) carries the principle portion of meaning of the words in which it functions (as defined by the SIL Glossary of Linguistic Terms, https://glossary.sil.org/term/root)."@en ;
-  rdfs:comment "After publishing OntoLex-Morph, this should be re-defined as subclass of morph:Morph."@en .
+  rdfs:comment "After publishing OntoLex-Morph, this should be re-defined as a subclass of morph:Morph."@en .
