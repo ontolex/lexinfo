@@ -16,6 +16,7 @@ ontolex = Namespace("http://www.w3.org/ns/lemon/ontolex#")
 synsem = Namespace("http://www.w3.org/ns/lemon/synsem#")
 vartrans = Namespace("http://www.w3.org/ns/lemon/vartrans#")
 SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
+DCT = Namespace("http://purl.org/dc/terms/")
 g.namespace_manager.bind("owl", OWL)
 g.namespace_manager.bind("lexinfo", lexinfo)
 g.namespace_manager.bind("lexinfo2", lexinfo2)
@@ -253,7 +254,7 @@ with open("data/backlinks.csv") as inp:
     for row in reader:
         if row[0] in lexinfo_ids:
             if row[1]:
-                g.add((lexinfo[row[0]], OWL.priorVersion, lexinfo2[row[1]]))
+                g.add((lexinfo[row[0]], DCT.replaces, lexinfo2[row[1]]))
         else:
             sys.stderr.write("Backlink from non-existant value: " + row[0] + "\n")
 

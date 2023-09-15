@@ -1,2 +1,2055 @@
 ID,Type,Language,Text
-noun,label,de,Substantiv
+Adjective,label,be,прыметнік
+Adjective,label,bg,прилагателно име
+Adjective,label,ca,adjectiu
+Adjective,label,cs,přídavné jméno
+Adjective,label,da,tillægsord
+Adjective,label,de,Adjektiv
+Adjective,label,el,επίθετο
+Adjective,label,es,adjetivo
+Adjective,label,et,omadussõna
+Adjective,label,eu,adjektibo
+Adjective,label,fi,adjektiivi
+Adjective,label,fr,adjectif
+Adjective,label,ga,aidiacht
+Adjective,label,gl,adxectivo
+Adjective,label,he,שם תואר
+Adjective,label,hr,pridjevi
+Adjective,label,hu,melléknév
+Adjective,label,is,lýsingarorð
+Adjective,label,it,aggettivo
+Adjective,label,lt,būdvardis
+Adjective,label,lv,īpašības vārds
+Adjective,label,mk,придавка
+Adjective,label,mt,aġġettiv
+Adjective,label,nb,adjektiv
+Adjective,label,nl,bijvoeglijk naamwoord
+Adjective,label,nn,adjektiv
+Adjective,label,pl,przymiotnik
+Adjective,label,pt,adjetivo
+Adjective,label,ro,adjectiv
+Adjective,label,ru,прилагательное
+Adjective,label,sk,prídavné meno
+Adjective,label,sl,pridevnik
+Adjective,label,sq,mbiemri
+Adjective,label,sr,придев
+Adjective,label,sv,adjektiv
+Adjective,label,uk,прикметник
+AdjectivePOS,label,be,прыметнік
+AdjectivePOS,label,bg,прилагателно име
+AdjectivePOS,label,ca,adjectiu
+AdjectivePOS,label,cs,přídavné jméno
+AdjectivePOS,label,da,tillægsord
+AdjectivePOS,label,de,Adjektiv
+AdjectivePOS,label,el,επίθετο
+AdjectivePOS,label,es,adjetivo
+AdjectivePOS,label,et,omadussõna
+AdjectivePOS,label,eu,adjektibo
+AdjectivePOS,label,fi,adjektiivi
+AdjectivePOS,label,fr,adjectif
+AdjectivePOS,label,ga,aidiacht
+AdjectivePOS,label,gl,adxectivo
+AdjectivePOS,label,he,שם תואר
+AdjectivePOS,label,hr,pridjevi
+AdjectivePOS,label,hu,melléknév
+AdjectivePOS,label,is,lýsingarorð
+AdjectivePOS,label,it,aggettivo
+AdjectivePOS,label,lt,būdvardis
+AdjectivePOS,label,lv,īpašības vārds
+AdjectivePOS,label,mk,придавка
+AdjectivePOS,label,mt,aġġettiv
+AdjectivePOS,label,nb,adjektiv
+AdjectivePOS,label,nl,bijvoeglijk naamwoord
+AdjectivePOS,label,nn,adjektiv
+AdjectivePOS,label,pl,przymiotnik
+AdjectivePOS,label,pt,adjetivo
+AdjectivePOS,label,ro,adjectiv
+AdjectivePOS,label,ru,прилагательное
+AdjectivePOS,label,sk,prídavné meno
+AdjectivePOS,label,sl,pridevnik
+AdjectivePOS,label,sq,mbiemri
+AdjectivePOS,label,sr,придев
+AdjectivePOS,label,sv,adjektiv
+AdjectivePOS,label,uk,прикметник
+AdjectivePhrase,label,ca,sintagma adjectival
+AdjectivePhrase,label,de,Adjektivphrase
+AdjectivePhrase,label,es,sintagma adjetivo
+AdjectivePhrase,label,et,Omadussõnafraas
+AdjectivePhrase,label,eu,adjektibo perpaus
+AdjectivePhrase,label,nn,Adjektivfrase
+AdjectivePhrase,label,sv,Adjektivfras
+Adposition,label,ca,adposició
+Adposition,label,cs,záložka
+Adposition,label,da,adposition
+Adposition,label,de,Adposition
+Adposition,label,el,πρόθεση
+Adposition,label,es,adposición
+Adposition,label,et,kaassõna
+Adposition,label,eu,adposizio
+Adposition,label,fi,adpositio
+Adposition,label,fr,adposition
+Adposition,label,he,מילת יחס
+Adposition,label,is,forsetning
+Adposition,label,it,apposizione
+Adposition,label,lt,adpozicija
+Adposition,label,mk,афикс
+Adposition,label,nl,adposition
+Adposition,label,nn,adposisjon
+Adposition,label,pl,przyimek
+Adposition,label,pt,adposição
+Adposition,label,sq,parafjalë
+Adposition,label,sr,адпозиција
+Adposition,label,sv,adposition
+Adposition,label,gl,aposición
+Adposition,label,hu,adpozíció
+Adposition,label,ro,Prepoziție
+Adposition,label,ru,адлог
+AdpositionPOS,label,ca,adposició
+AdpositionPOS,label,cs,záložka
+AdpositionPOS,label,da,adposition
+AdpositionPOS,label,de,Adposition
+AdpositionPOS,label,el,πρόθεση
+AdpositionPOS,label,es,adposición
+AdpositionPOS,label,et,kaassõna
+AdpositionPOS,label,eu,adposizio
+AdpositionPOS,label,fi,adpositio
+AdpositionPOS,label,fr,adposition
+AdpositionPOS,label,he,מילת יחס
+AdpositionPOS,label,is,forsetning
+AdpositionPOS,label,it,apposizione
+AdpositionPOS,label,lt,adpozicija
+AdpositionPOS,label,mk,афикс
+AdpositionPOS,label,nl,adposition
+AdpositionPOS,label,nn,adposisjon
+AdpositionPOS,label,pl,przyimek
+AdpositionPOS,label,pt,adposição
+AdpositionPOS,label,sq,parafjalë
+AdpositionPOS,label,sr,адпозиција
+AdpositionPOS,label,sv,adposition
+AdpositionPOS,label,gl,aposición
+AdpositionPOS,label,hu,adpozíció
+AdpositionPOS,label,ro,Prepoziție
+AdpositionPOS,label,ru,адлог
+Adverb,label,be,прыслоўе
+Adverb,label,bg,наречие
+Adverb,label,ca,adverbi
+Adverb,label,cs,příslovce
+Adverb,label,da,biord
+Adverb,label,de,Adverb
+Adverb,label,el,επίρρημα
+Adverb,label,es,adverbio
+Adverb,label,et,määrsõna
+Adverb,label,eu,adberbio
+Adverb,label,fi,adverbi
+Adverb,label,fr,adverbe
+Adverb,label,ga,dobhriathar
+Adverb,label,gl,adverbio
+Adverb,label,he,תואר פועל
+Adverb,label,hr,prilozi
+Adverb,label,hu,határozószó
+Adverb,label,is,atviksorð
+Adverb,label,it,avverbio
+Adverb,label,lt,prieveiksmis
+Adverb,label,lv,apstākļa vārds
+Adverb,label,mk,прилог
+Adverb,label,mt,avverb
+Adverb,label,nb,adverb
+Adverb,label,nl,bijwoord
+Adverb,label,nn,adverb
+Adverb,label,pl,przysłówek
+Adverb,label,pt,advérbio
+Adverb,label,ro,adverb
+Adverb,label,ru,наречие
+Adverb,label,sk,príslovka
+Adverb,label,sl,prislov
+Adverb,label,sq,ndajfolje
+Adverb,label,sr,прилог
+Adverb,label,sv,adverb
+Adverb,label,uk,прислівник
+AdverbPOS,label,be,прыслоўе
+AdverbPOS,label,bg,наречие
+AdverbPOS,label,ca,adverbi
+AdverbPOS,label,cs,příslovce
+AdverbPOS,label,da,biord
+AdverbPOS,label,de,Adverb
+AdverbPOS,label,el,επίρρημα
+AdverbPOS,label,es,adverbio
+AdverbPOS,label,et,määrsõna
+AdverbPOS,label,eu,adberbio
+AdverbPOS,label,fi,adverbi
+AdverbPOS,label,fr,adverbe
+AdverbPOS,label,ga,dobhriathar
+AdverbPOS,label,gl,adverbio
+AdverbPOS,label,he,תואר פועל
+AdverbPOS,label,hr,prilozi
+AdverbPOS,label,hu,határozószó
+AdverbPOS,label,is,atviksorð
+AdverbPOS,label,it,avverbio
+AdverbPOS,label,lt,prieveiksmis
+AdverbPOS,label,lv,apstākļa vārds
+AdverbPOS,label,mk,прилог
+AdverbPOS,label,mt,avverb
+AdverbPOS,label,nb,adverb
+AdverbPOS,label,nl,bijwoord
+AdverbPOS,label,nn,adverb
+AdverbPOS,label,pl,przysłówek
+AdverbPOS,label,pt,advérbio
+AdverbPOS,label,ro,adverb
+AdverbPOS,label,ru,наречие
+AdverbPOS,label,sk,príslovka
+AdverbPOS,label,sl,prislov
+AdverbPOS,label,sq,ndajfolje
+AdverbPOS,label,sr,прилог
+AdverbPOS,label,sv,adverb
+AdverbPOS,label,uk,прислівник
+AffirmativeParticle,label,es,partícula afirmativa
+AffirmativeParticle,label,eu,baieztapen partikula
+Animacy,label,be,адушаўлёнасць
+Animacy,label,ca,animacitat
+Animacy,label,cs,životnost
+Animacy,label,de,Belebtheitshierarchie
+Animacy,label,es,animacidad
+Animacy,label,eu,biziduntasun
+Animacy,label,fr,animéité
+Animacy,label,he,מונפשות
+Animacy,label,hu,Élőség
+Animacy,label,lt,Gyvumas
+Animacy,label,mk,Животност (граматика)
+Animacy,label,nb,animathet
+Animacy,label,nn,animatum og inanimatum
+Animacy,label,pl,żywotność
+Animacy,label,pt,animacidade (linguística)
+Animacy,label,ro,animat și inanimat
+Animacy,label,ru,одушевлённость
+Animacy,label,sk,životnosť
+Animacy,label,sv,Animacitet
+Animacy,label,uk,назви істот і неістот
+Article,label,pl,przedimek
+Article,label,pt,artigo
+Article,label,ro,articol
+Article,label,ru,артикль
+Article,label,sq,trajta
+Article,label,sr,граматички члан
+Article,label,sv,artikel
+Article,label,uk,артикль
+Article,label,be,артыкль
+Article,label,bg,членуване
+Article,label,ca,article
+Article,label,cs,člen
+Article,label,da,kendeord
+Article,label,de,Artikel
+Article,label,el,άρθρο
+Article,label,es,artículo
+Article,label,eu,artikulu
+Article,label,fi,artikkeli
+Article,label,fr,article
+Article,label,gl,artigo
+Article,label,he,תווית
+Article,label,hr,član
+Article,label,hu,névelő
+Article,label,is,greinir
+Article,label,it,articolo
+Article,label,lb,Artikel
+Article,label,lt,artikelis
+Article,label,lv,artikuls
+Article,label,mk,член
+Article,label,mt,artiklu
+Article,label,nb,artikkel
+Article,label,nl,lidwoord
+Article,label,nn,artikkel
+ArticlePOS,label,pl,przedimek
+ArticlePOS,label,pt,artigo
+ArticlePOS,label,ro,articol
+ArticlePOS,label,ru,артикль
+ArticlePOS,label,sq,trajta
+ArticlePOS,label,sr,граматички члан
+ArticlePOS,label,sv,artikel
+ArticlePOS,label,uk,артикль
+ArticlePOS,label,be,артыкль
+ArticlePOS,label,bg,членуване
+ArticlePOS,label,ca,article
+ArticlePOS,label,cs,člen
+ArticlePOS,label,da,kendeord
+ArticlePOS,label,de,Artikel
+ArticlePOS,label,el,άρθρο
+ArticlePOS,label,es,artículo
+ArticlePOS,label,eu,artikulu
+ArticlePOS,label,fi,artikkeli
+ArticlePOS,label,fr,article
+ArticlePOS,label,gl,artigo
+ArticlePOS,label,he,תווית
+ArticlePOS,label,hr,član
+ArticlePOS,label,hu,névelő
+ArticlePOS,label,is,greinir
+ArticlePOS,label,it,articolo
+ArticlePOS,label,lb,Artikel
+ArticlePOS,label,lt,artikelis
+ArticlePOS,label,lv,artikuls
+ArticlePOS,label,mk,член
+ArticlePOS,label,mt,artiklu
+ArticlePOS,label,nb,artikkel
+ArticlePOS,label,nl,lidwoord
+ArticlePOS,label,nn,artikkel
+Aspect,label,bg,Вид на глагола
+Aspect,label,ca,aspecte gramatical
+Aspect,label,cs,slovesný vid
+Aspect,label,de,Aspekt
+Aspect,label,el,Ποιόν ενέργειας
+Aspect,label,es,aspecto gramatical
+Aspect,label,et,Aspekt
+Aspect,label,fi,aspekti
+Aspect,label,fr,aspect
+Aspect,label,gl,aspecto
+Aspect,label,he,אספקט
+Aspect,label,hu,igeszemlélet
+Aspect,label,it,aspetto
+Aspect,label,lt,veikslas
+Aspect,label,mk,глаголски вид
+Aspect,label,nb,aspekt
+Aspect,label,nl,aspect
+Aspect,label,nn,aspekt
+Aspect,label,pl,aspekt
+Aspect,label,pt,aspecto gramatical
+Aspect,label,ro,Aspect
+Aspect,label,ru,вид глагола
+Aspect,label,sk,Slovesný vid
+Aspect,label,sl,Glagolski vid
+Aspect,label,sv,aspekt
+Aspect,label,uk,вид
+Auxiliary,label,ca,auxiliar
+Auxiliary,label,cs,pomocné sloveso
+Auxiliary,label,da,hjælpeverbum
+Auxiliary,label,de,Hilfsverb
+Auxiliary,label,el,βοηθητικό
+Auxiliary,label,es,verbo auxiliar
+Auxiliary,label,et,abitegusõna
+Auxiliary,label,eu,aditz laguntzaile
+Auxiliary,label,fi,apuverbi
+Auxiliary,label,fr,verbe auxiliaire
+Auxiliary,label,ga,briathar cúnta
+Auxiliary,label,gl,verbo auxiliar
+Auxiliary,label,he,פועל עזר
+Auxiliary,label,hu,segédige
+Auxiliary,label,is,hjálparsögn
+Auxiliary,label,it,ausiliare
+Auxiliary,label,lt,pagalbinis veiksmažodis
+Auxiliary,label,mk,помошен глагол
+Auxiliary,label,mt,verb awżiljarju
+Auxiliary,label,nb,hjelpeverb
+Auxiliary,label,nl,hulpwerkwoord
+Auxiliary,label,nn,hjelpeverb
+Auxiliary,label,pl,czasownik posiłkowy
+Auxiliary,label,pt,verbo auxiliar
+Auxiliary,label,ro,Verb auxiliar
+Auxiliary,label,ru,вспомогательный глагол
+Auxiliary,label,sl,pomožni glagol
+Auxiliary,label,sr,помоћни глагол
+Auxiliary,label,sv,hjälpverb
+Auxiliary,label,uk,допоміжне дієслово
+CardinalNumeral,label,ca,cardinal
+CardinalNumeral,label,cs,číslovka základní
+CardinalNumeral,label,da,mængdetal
+CardinalNumeral,label,de,Kardinalzahl
+CardinalNumeral,label,el,απόλυτος αριθμός
+CardinalNumeral,label,es,adjetivo cardinal
+CardinalNumeral,label,et,põhiarv
+CardinalNumeral,label,eu,zenbatzaile kardinal
+CardinalNumeral,label,hu,tőszámnév
+CardinalNumeral,label,is,frumtala
+CardinalNumeral,label,it,numero cardinale
+CardinalNumeral,label,lt,kiekinis skaitvardis
+CardinalNumeral,label,nb,grunntall
+CardinalNumeral,label,nl,Hoofdtelwoord
+CardinalNumeral,label,pl,liczebnik główny
+CardinalNumeral,label,ro,numeral cardinal
+CardinalNumeral,label,ru,количественное числительное
+CardinalNumeral,label,sl,Glavni števnik
+CardinalNumeral,label,sr,основни број
+CardinalNumeral,label,sv,Grundtal
+CardinalNumeral,label,gl,numeral cardinal
+Case,label,be,склон
+Case,label,bg,падеж
+Case,label,ca,cas gramatical
+Case,label,cs,mluvnický pád
+Case,label,da,kasus
+Case,label,de,Kasus
+Case,label,el,πτώση
+Case,label,es,caso gramatical
+Case,label,et,kääne
+Case,label,eu,kasu gramatikal
+Case,label,fi,sija
+Case,label,fr,cas grammatical
+Case,label,gl,caso gramatical
+Case,label,he,יחסה
+Case,label,hr,padež
+Case,label,hu,eset
+Case,label,is,fall
+Case,label,it,caso
+Case,label,lt,linksnis
+Case,label,lv,locījums
+Case,label,mk,падеж
+Case,label,nb,kasus
+Case,label,nl,naamval
+Case,label,nn,kasus
+Case,label,pl,przypadek
+Case,label,pt,caso gramatical
+Case,label,ro,caz
+Case,label,ru,падеж
+Case,label,sk,pád
+Case,label,sl,sklon
+Case,label,sq,Rasa gramatikore
+Case,label,sr,падеж
+Case,label,sv,kasus
+Case,label,uk,відмінок
+Circumposition,label,es,circumposición
+Circumposition,label,eu,zirkumposizio
+Colon,label,be,двукроп'е
+Colon,label,bg,Двоеточие
+Colon,label,ca,dos punts
+Colon,label,cs,Dvojtečka
+Colon,label,da,kolon
+Colon,label,de,Doppelpunkt
+Colon,label,es,dos puntos
+Colon,label,et,Koolon
+Colon,label,eu,Bi puntu
+Colon,label,fi,Kaksoispiste
+Colon,label,fr,deux-points
+Colon,label,gl,dous puntos
+Colon,label,he,נקודתיים
+Colon,label,hr,Dvotočje
+Colon,label,hu,kettőspont
+Colon,label,it,due punti
+Colon,label,lt,Dvitaškis
+Colon,label,lv,kols
+Colon,label,mk,Две точки
+Colon,label,nb,kolon
+Colon,label,nl,dubbelepunt
+Colon,label,nn,kolon
+Colon,label,pl,Dwukropek
+Colon,label,pt,dois pontos
+Colon,label,ro,Două puncte
+Colon,label,ru,двоеточие
+Colon,label,sk,Dvojbodka
+Colon,label,sl,Dvopičje
+Colon,label,sq,Dy pikat
+Colon,label,sr,Две тачке
+Colon,label,sv,kolon
+Colon,label,uk,двокрапка
+Comma,label,be,коска
+Comma,label,bg,Запетая
+Comma,label,ca,coma
+Comma,label,cs,čárka
+Comma,label,da,Komma
+Comma,label,de,Komma
+Comma,label,el,Κόμμα
+Comma,label,es,coma
+Comma,label,et,Koma
+Comma,label,eu,Koma
+Comma,label,fi,pilkku
+Comma,label,fr,virgule
+Comma,label,ga,Camóg
+Comma,label,gl,Coma
+Comma,label,he,פסיק
+Comma,label,hr,Zarez
+Comma,label,hu,vessző
+Comma,label,is,Komma
+Comma,label,it,virgola
+Comma,label,lt,Kablelis
+Comma,label,lv,Komats
+Comma,label,mk,Запирка
+Comma,label,nb,komma
+Comma,label,nl,komma
+Comma,label,nn,komma
+Comma,label,pl,Przecinek
+Comma,label,pt,vírgula
+Comma,label,ro,Virgulă
+Comma,label,ru,запятая
+Comma,label,sk,Čiarka
+Comma,label,sl,Vejica
+Comma,label,sq,Presja
+Comma,label,sr,Зарез
+Comma,label,sv,kommatecken
+Comma,label,uk,Кома
+CommonNoun,label,be,хадзячая назва
+CommonNoun,label,ca,nom comú
+CommonNoun,label,cs,apelativum
+CommonNoun,label,da,appellativ
+CommonNoun,label,de,Appellativ
+CommonNoun,label,el,ουσιαστικό
+CommonNoun,label,es,nombre común
+CommonNoun,label,et,üldnimi
+CommonNoun,label,eu,izen arrunt
+CommonNoun,label,fi,yleisnimi
+CommonNoun,label,fr,nom commun
+CommonNoun,label,hu,köznév
+CommonNoun,label,is,samnafn
+CommonNoun,label,it,nome comune
+CommonNoun,label,lt,bendrinis daiktavardis
+CommonNoun,label,lv,sugasvārds
+CommonNoun,label,nb,fellesnavn
+CommonNoun,label,nl,soortnaam
+CommonNoun,label,nn,samnamn
+CommonNoun,label,pl,rzeczownik pospolity
+CommonNoun,label,pt,nome comum
+CommonNoun,label,ro,substantiv comun
+CommonNoun,label,ru,имя нарицательное
+CommonNoun,label,sk,všeobecné meno
+CommonNoun,label,sl,občno ime
+CommonNoun,label,sr,заједничка именица
+CommonNoun,label,sv,appellativ
+CommonNoun,label,uk,іменник загальний
+CommonNoun,label,gl,nome común
+ComparativeParticle,label,es,partícula comparativa
+ComparativeParticle,label,eu,partikula konparatibo
+CompoundPreposition,label,es,preposición compleja
+CompoundPreposition,label,eu,preposizio elkartu
+CompoundPreposition,label,ru,составной предлог
+Conjunction,label,sk,spojka
+Conjunction,label,sl,veznik
+Conjunction,label,sq,lidhëza
+Conjunction,label,sr,везник
+Conjunction,label,sv,konjunktion
+Conjunction,label,uk,сполучник
+Conjunction,label,be,злучнік
+Conjunction,label,bg,съюз
+Conjunction,label,ca,conjunció
+Conjunction,label,cs,spojka
+Conjunction,label,da,konjunktion
+Conjunction,label,de,Konjunktion
+Conjunction,label,el,σύνδεσμος
+Conjunction,label,es,conjunción
+Conjunction,label,et,sidesõna
+Conjunction,label,eu,juntagailu
+Conjunction,label,fi,konjunktio
+Conjunction,label,fr,conjonction
+Conjunction,label,gl,conxunción
+Conjunction,label,he,מילת קישור
+Conjunction,label,hr,veznici
+Conjunction,label,hu,kötőszó
+Conjunction,label,is,samtenging
+Conjunction,label,it,congiunzione
+Conjunction,label,lt,jungtukas
+Conjunction,label,lv,saiklis
+Conjunction,label,mk,сврзник
+Conjunction,label,mt,konġunzjoni
+Conjunction,label,nb,konjunksjon
+Conjunction,label,nl,bindvlies
+Conjunction,label,nn,konjunksjon
+Conjunction,label,pl,spójnik
+Conjunction,label,pt,conjunção
+Conjunction,label,ro,conjuncție
+Conjunction,label,ru,союз
+ConjunctionPOS,label,ru,союз
+ConjunctionPOS,label,sk,spojka
+ConjunctionPOS,label,sl,veznik
+ConjunctionPOS,label,sq,lidhëza
+ConjunctionPOS,label,sr,везник
+ConjunctionPOS,label,sv,konjunktion
+ConjunctionPOS,label,uk,сполучник
+ConjunctionPOS,label,be,злучнік
+ConjunctionPOS,label,bg,съюз
+ConjunctionPOS,label,ca,conjunció
+ConjunctionPOS,label,cs,spojka
+ConjunctionPOS,label,da,konjunktion
+ConjunctionPOS,label,de,Konjunktion
+ConjunctionPOS,label,el,σύνδεσμος
+ConjunctionPOS,label,es,conjunción
+ConjunctionPOS,label,et,sidesõna
+ConjunctionPOS,label,eu,juntagailu
+ConjunctionPOS,label,fi,konjunktio
+ConjunctionPOS,label,fr,conjonction
+ConjunctionPOS,label,gl,conxunción
+ConjunctionPOS,label,he,מילת קישור
+ConjunctionPOS,label,hr,veznici
+ConjunctionPOS,label,hu,kötőszó
+ConjunctionPOS,label,is,samtenging
+ConjunctionPOS,label,it,congiunzione
+ConjunctionPOS,label,lt,jungtukas
+ConjunctionPOS,label,lv,saiklis
+ConjunctionPOS,label,mk,сврзник
+ConjunctionPOS,label,mt,konġunzjoni
+ConjunctionPOS,label,nb,konjunksjon
+ConjunctionPOS,label,nl,bindvlies
+ConjunctionPOS,label,nn,konjunksjon
+ConjunctionPOS,label,pl,spójnik
+ConjunctionPOS,label,pt,conjunção
+ConjunctionPOS,label,ro,conjuncție
+CoordinatingConjunction,label,da,sideordnet bindeord
+CoordinatingConjunction,label,de,nebenordnende Konjunktion
+CoordinatingConjunction,label,es,conjunción coordinante
+CoordinatingConjunction,label,eu,emendiozko juntagailu
+CoordinatingConjunction,label,fr,conjonction de coordination
+CoordinatingConjunction,label,it,congiunzione coordinante
+CoordinatingConjunction,label,mt,konġunzjoni koordinanti
+CoordinatingConjunction,label,pt,conjunção coordenativa
+CoordinatingConjunction,label,ru,соединительный союз
+CoordinatingConjunction,label,sk,priraďovacia spojka
+Copula,label,ca,Còpula (lingüística)
+Copula,label,cs,Spona
+Copula,label,de,Kopula
+Copula,label,es,copula
+Copula,label,et,Koopula
+Copula,label,eu,kopula
+Copula,label,fi,Kopula
+Copula,label,fr,copule
+Copula,label,ga,Copail
+Copula,label,he,אוגד
+Copula,label,hu,Kopula
+Copula,label,is,Tengisögn
+Copula,label,it,copula
+Copula,label,nb,kopula
+Copula,label,nl,koppelwerkwoord
+Copula,label,nn,kopula
+Copula,label,pl,copula
+Copula,label,ro,Verb copulativ
+Copula,label,ru,связка
+Copula,label,sl,Vez
+Copula,label,sv,kopula
+DeficientVerb,label,eu,aditz defiziente
+DefiniteArticle,label,ca,article definit
+DefiniteArticle,label,cs,člen určitý
+DefiniteArticle,label,da,bestemt artikel
+DefiniteArticle,label,de,bestimmter Artikel
+DefiniteArticle,label,el,οριστικό άρθρο
+DefiniteArticle,label,es,artículo definido
+DefiniteArticle,label,et,määrav artikkel
+DefiniteArticle,label,eu,artikulu mugatua
+DefiniteArticle,label,fr,article défini
+DefiniteArticle,label,gl,artigo definido
+DefiniteArticle,label,he,הא הידיעה
+DefiniteArticle,label,hu,határozott névelő
+DefiniteArticle,label,is,ákveðinn greinir
+DefiniteArticle,label,it,articolo determinativo
+DefiniteArticle,label,lt,žymimasis artikelis
+DefiniteArticle,label,pl,przedimek określony
+DefiniteArticle,label,pt,artigo definido
+DefiniteArticle,label,ro,articolul hotărât
+DefiniteArticle,label,ru,определенный артикль
+DefiniteArticle,label,sr,одређени члан
+DefiniteArticle,label,nl,Bepaald lidwoord
+Definiteness,label,cs,určitost
+Definiteness,label,da,bestemthed
+Definiteness,label,de,Definitheit
+Definiteness,label,es,definitud gramatical
+Definiteness,label,fi,määräisyys
+Definiteness,label,he,יידוע
+Definiteness,label,mk,определеност
+Definiteness,label,nb,bestemthet
+Definiteness,label,nn,binding
+Definiteness,label,pl,określoność
+Definiteness,label,ru,определённость
+Definiteness,label,sk,Species
+Definiteness,label,sv,species
+Definiteness,label,uk,визначеність
+DemonstrativeDeterminer,label,es,determinante demostrativo
+DemonstrativeDeterminer,label,eu,determinatzaile erakusle
+DemonstrativePronoun,label,ca,demostratiu
+DemonstrativePronoun,label,cs,ukazovací zájmeno
+DemonstrativePronoun,label,da,demonstrativpronomen
+DemonstrativePronoun,label,de,Demonstrativpronomen
+DemonstrativePronoun,label,es,demostrativo
+DemonstrativePronoun,label,et,näitav asesõna
+DemonstrativePronoun,label,eu,izenordain erakusle
+DemonstrativePronoun,label,fi,demonstratiivipronomini
+DemonstrativePronoun,label,fr,pronom démonstratif
+DemonstrativePronoun,label,gl,demostrativo
+DemonstrativePronoun,label,he,כינוי רמז
+DemonstrativePronoun,label,hr,Pokazne zamjenice
+DemonstrativePronoun,label,hu,mutató névmás
+DemonstrativePronoun,label,is,ábendingarfornafn
+DemonstrativePronoun,label,it,dimostrativo
+DemonstrativePronoun,label,lt,parodomasis
+DemonstrativePronoun,label,nb,demonstrativ
+DemonstrativePronoun,label,nl,Aanwijzend voornaamwoord
+DemonstrativePronoun,label,nn,demonstrativ
+DemonstrativePronoun,label,pl,zaimek wskazujący
+DemonstrativePronoun,label,pt,pronome demonstrativo
+DemonstrativePronoun,label,ro,Pronume demonstrativ
+DemonstrativePronoun,label,ru,указательное местоимение
+DemonstrativePronoun,label,sr,показна заменица
+DemonstrativePronoun,label,sv,demonstrativt pronomen
+DemonstrativePronoun,label,uk,вказівний займенник
+Determiner,label,ca,determinant
+Determiner,label,cs,determinátor
+Determiner,label,da,determinativ
+Determiner,label,de,Determinativ
+Determiner,label,el,προσδιοριστής
+Determiner,label,es,determinante
+Determiner,label,et,määrav artikkel
+Determiner,label,eu,determinatzaile
+Determiner,label,fr,déterminant
+Determiner,label,hu,determináns
+Determiner,label,is,ákvæðisorð
+Determiner,label,it,determinante
+Determiner,label,lt,determinantas
+Determiner,label,mt,determinant
+Determiner,label,nb,determinativ
+Determiner,label,nl,determinator
+Determiner,label,nn,determinativ
+Determiner,label,pl,określnik
+Determiner,label,pt,determinante
+Determiner,label,ro,Determinant
+Determiner,label,ru,определяющее слово
+Determiner,label,sr,детерминатор
+Determiner,label,sv,determinativt pronomen
+Determiner,label,uk,визначник
+Determiner,label,gl,determinante
+DeterminerPOS,label,ca,determinant
+DeterminerPOS,label,cs,determinátor
+DeterminerPOS,label,da,determinativ
+DeterminerPOS,label,de,Determinativ
+DeterminerPOS,label,el,προσδιοριστής
+DeterminerPOS,label,es,determinante
+DeterminerPOS,label,et,määrav artikkel
+DeterminerPOS,label,eu,determinatzaile
+DeterminerPOS,label,fr,déterminant
+DeterminerPOS,label,hu,determináns
+DeterminerPOS,label,is,ákvæðisorð
+DeterminerPOS,label,it,determinante
+DeterminerPOS,label,lt,determinantas
+DeterminerPOS,label,mt,determinant
+DeterminerPOS,label,nb,determinativ
+DeterminerPOS,label,nl,determinator
+DeterminerPOS,label,nn,determinativ
+DeterminerPOS,label,pl,określnik
+DeterminerPOS,label,pt,determinante
+DeterminerPOS,label,ro,Determinant
+DeterminerPOS,label,ru,определяющее слово
+DeterminerPOS,label,sr,детерминатор
+DeterminerPOS,label,sv,determinativt pronomen
+DeterminerPOS,label,uk,визначник
+DeterminerPOS,label,gl,determinante
+DiminutiveNoun,label,cs,deminutivní substantivum
+DiminutiveNoun,label,es,nombre diminutivo
+DiminutiveNoun,label,eu,izen txikigarria
+DiminutiveNoun,label,pl,zdrobniały rzeczownik
+DitransitiveFrame,label,es,marco ditransitivo
+DitransitiveFrame,label,eu,marko ditrantsitibo
+EmphaticPronoun,label,es,pronombre enfático
+EmphaticPronoun,label,eu,izenordain enfatiko
+ExclamativePronoun,label,es,pronombre exclamativo
+ExclamativePronoun,label,eu,harridura-izenordain
+Frequency,label,be,Частата
+Frequency,label,ca,freqüència
+Frequency,label,cs,četnost
+Frequency,label,da,frekvens
+Frequency,label,de,Häufigkeit
+Frequency,label,el,συχνότητα
+Frequency,label,es,frecuencia
+Frequency,label,et,sagedus
+Frequency,label,eu,Maiztasun
+Frequency,label,fr,fréquence
+Frequency,label,gl,frecuencia
+Frequency,label,he,שכיחות
+Frequency,label,hu,gyakoriság
+Frequency,label,is,tíðni
+Frequency,label,it,frequenza
+Frequency,label,lt,dažnumas
+Frequency,label,mk,Релативна фреквенција
+Frequency,label,nb,Hyppighet i statistikk
+Frequency,label,nl,frequentie
+Frequency,label,nn,Frekvens i statistikk
+Frequency,label,pl,frekwencja
+Frequency,label,pt,frequência
+Frequency,label,ro,frecvență
+Frequency,label,ru,частотность
+Frequency,label,sl,frekvenca
+Frequency,label,sr,фреквенција
+Frequency,label,uk,Частота події
+Gender,label,pl,rodzaj gramatyczny
+Gender,label,pt,género gramatical
+Gender,label,ro,gen
+Gender,label,sk,gramatický rod
+Gender,label,sl,slovnični spol
+Gender,label,sq,gjinia gramatikore
+Gender,label,sr,род
+Gender,label,sv,genus
+Gender,label,uk,рід
+Gender,label,ru,категория рода
+Gender,label,be,Граматычны род
+Gender,label,bg,Род
+Gender,label,ca,gènere
+Gender,label,cs,jmenný rod
+Gender,label,da,genus
+Gender,label,de,Genus
+Gender,label,el,Γραμματικό γένος
+Gender,label,es,rasgo de género
+Gender,label,et,sugu
+Gender,label,eu,genero gramatikal
+Gender,label,fi,suku
+Gender,label,fr,genre grammatical
+Gender,label,gl,propiedade de xénero
+Gender,label,he,מין דקדוקי
+Gender,label,hr,Gramatički rod
+Gender,label,hu,nem
+Gender,label,is,kyneiginleiki
+Gender,label,it,proprietà di genere
+Gender,label,lb,Genus
+Gender,label,lt,giminės požymis
+Gender,label,lv,dzimte
+Gender,label,mk,род
+Gender,label,nb,grammatisk kjønn
+Gender,label,nl,geslacht
+Gender,label,nn,grammatisk kjønn
+GerundFrame,label,eu,gerundio-marko
+ImpersonalPronoun,label,es,pronombre impersonal
+ImpersonalPronoun,label,eu,izenordain inpertsonal
+IndefiniteArticle,label,ca,article indefinit
+IndefiniteArticle,label,cs,člen neurčitý
+IndefiniteArticle,label,da,ubestemt artikel
+IndefiniteArticle,label,de,Indefinitartikel
+IndefiniteArticle,label,el,αόριστο άρθρο
+IndefiniteArticle,label,es,artículo indefinido
+IndefiniteArticle,label,et,umbmäärane artikkel
+IndefiniteArticle,label,eu,artikulu mugagabe
+IndefiniteArticle,label,fr,article indéfini
+IndefiniteArticle,label,gl,artigo indefinido
+IndefiniteArticle,label,hu,határozatlan névelő
+IndefiniteArticle,label,is,óákveðinn greinir
+IndefiniteArticle,label,it,articolo indeterminativo
+IndefiniteArticle,label,lt,nežymimasis artikelis
+IndefiniteArticle,label,pl,przedimek nieokreślony
+IndefiniteArticle,label,pt,artigo indefinido
+IndefiniteArticle,label,ro,articolul nehotărât
+IndefiniteArticle,label,ru,неопределенный артикль
+IndefiniteArticle,label,sr,неодређени члан
+IndefiniteArticle,label,nl,Onbepaald lidwoord
+IndefiniteDeterminer,label,es,determinante indefinido
+IndefiniteDeterminer,label,eu,determinatzaile mugagabe
+IndefiniteDeterminer,label,fr,déterminant indéfini
+IndefinitePronoun,label,ca,pronom indefinit
+IndefinitePronoun,label,cs,neurčité zájmeno
+IndefinitePronoun,label,da,indefinit pronomen
+IndefinitePronoun,label,de,Indefinitpronomen
+IndefinitePronoun,label,el,αόριστη αντωνυμία
+IndefinitePronoun,label,es,pronombre indefinido
+IndefinitePronoun,label,et,umbmäärane asesõna
+IndefinitePronoun,label,eu,izenordain mugagabe
+IndefinitePronoun,label,fr,pronom indéfini
+IndefinitePronoun,label,gl,pronome indefinido
+IndefinitePronoun,label,hr,Neodređene zamjenice
+IndefinitePronoun,label,hu,határozatlan névmás
+IndefinitePronoun,label,is,óákveðið fornafn
+IndefinitePronoun,label,it,pronome indefinito
+IndefinitePronoun,label,lt,nežymimasis įvardis
+IndefinitePronoun,label,pl,zaimek nieokreślony
+IndefinitePronoun,label,pt,pronome indefinido
+IndefinitePronoun,label,ro,Pronume nehotărât
+IndefinitePronoun,label,ru,неопределённое местоимение
+IndefinitePronoun,label,sr,неодређена заменица
+IndefinitePronoun,label,sv,indefinit pronomen
+IndefinitePronoun,label,uk,неозначений займенник
+IndefinitePronoun,label,nl,Onbepaald voornaamwoord
+InfinitiveParticle,label,es,partícula de infinitivo
+InfinitiveParticle,label,eu,partikula infinitibo
+Infix,label,bg,Инфикс
+Infix,label,ca,infix
+Infix,label,cs,Vpona
+Infix,label,da,infiks
+Infix,label,de,Infix
+Infix,label,es,infijo
+Infix,label,et,Infiks
+Infix,label,eu,erdizki
+Infix,label,fr,infixe
+Infix,label,gl,Infixo
+Infix,label,is,Innskeyti
+Infix,label,it,infisso
+Infix,label,lt,Intarpas
+Infix,label,nb,infiks
+Infix,label,nl,infix
+Infix,label,pl,wrostek
+Infix,label,pt,infixo
+Infix,label,ru,инфикс
+Infix,label,sr,инфикс
+Infix,label,sv,infix
+Infix,label,uk,інфікс
+Interjection,label,be,выклічнік
+Interjection,label,bg,междуметие
+Interjection,label,ca,interjecció
+Interjection,label,cs,citoslovce
+Interjection,label,da,interjektion
+Interjection,label,de,Interjektion
+Interjection,label,el,επιφώνημα
+Interjection,label,es,interjección
+Interjection,label,et,hüüdsõna
+Interjection,label,eu,interjekzio
+Interjection,label,fi,interjektio
+Interjection,label,fr,interjection
+Interjection,label,ga,intriacht
+Interjection,label,gl,interxección
+Interjection,label,he,מילת קריאה
+Interjection,label,hr,usklici
+Interjection,label,hu,indulatszó
+Interjection,label,is,upphrópun
+Interjection,label,it,interiezione
+Interjection,label,lt,jaustukas
+Interjection,label,lv,izsauksmes vārds
+Interjection,label,mk,извик
+Interjection,label,mt,inteġrezzjoni
+Interjection,label,nb,interjeksjon
+Interjection,label,nl,tussenwerpsel
+Interjection,label,nn,interjeksjon
+Interjection,label,pl,wykrzyknik
+Interjection,label,pt,interjeição
+Interjection,label,ro,interjecție
+Interjection,label,ru,междометие
+Interjection,label,sk,citoslovce
+Interjection,label,sl,medmet
+Interjection,label,sq,pasthirrma - themelet e ngurtësuara të gjuhës
+Interjection,label,sr,узвик
+Interjection,label,sv,interjektion
+Interjection,label,uk,вигук
+InterrogativeParticle,label,de,Fragepartikel
+InterrogativeParticle,label,es,partícula interrogativa
+InterrogativeParticle,label,eu,partikula galdetzaile
+InterrogativeParticle,label,ru,вопросительная частица
+InterrogativePronoun,label,es,pronombre interrogativo
+InterrogativePronoun,label,eu,izenordain galdetzaile
+IntransitiveFrame,label,es,marco instransitivo
+IntransitiveFrame,label,eu,intrantsitibotasun marko
+Letter,label,be,літара
+Letter,label,bg,Буква
+Letter,label,ca,lletra
+Letter,label,cs,písmeno
+Letter,label,da,bogstav
+Letter,label,de,Buchstabe
+Letter,label,el,Γράμμα
+Letter,label,es,letra
+Letter,label,et,täht
+Letter,label,eu,letra
+Letter,label,fi,kirjain
+Letter,label,fr,lettre
+Letter,label,ga,litir
+Letter,label,gl,letra
+Letter,label,he,אות
+Letter,label,hr,Slovo
+Letter,label,hu,betű
+Letter,label,is,Bókstafur
+Letter,label,it,lettera
+Letter,label,lb,Buschtaf
+Letter,label,lt,Raidė
+Letter,label,lv,burts
+Letter,label,mk,буква
+Letter,label,nb,bokstav
+Letter,label,nl,letter
+Letter,label,nn,bokstav
+Letter,label,pl,litera
+Letter,label,pt,letra
+Letter,label,ro,literă
+Letter,label,ru,буква
+Letter,label,sk,písmeno
+Letter,label,sl,Črka
+Letter,label,sq,Shkronja
+Letter,label,sr,слово
+Letter,label,sv,bokstav
+Letter,label,uk,буква
+LightVerb,label,cs,Kategoriální sloveso
+LightVerb,label,de,Funktionsverb
+LightVerb,label,es,verbo ligero
+LightVerb,label,eu,aditz arin
+MainVerb,label,es,verbo principal
+MainVerb,label,eu,aditz nagusi
+MainVerb,label,nl,hoofdwerkwoord
+Modal,label,ca,modal
+Modal,label,cs,způsobové sloveso
+Modal,label,da,modalverbum
+Modal,label,de,Modalverb
+Modal,label,es,modal
+Modal,label,et,modaalverb
+Modal,label,eu,moduzko aditz
+Modal,label,fr,verbe modal
+Modal,label,hu,modális ige
+Modal,label,is,háttarsögn
+Modal,label,it,modale
+Modal,label,lt,modalinis veiksmažodis
+Modal,label,mk,модален глагол
+Modal,label,nb,modalt hjelpeverb
+Modal,label,nl,modaal werkwoord
+Modal,label,nn,modalt hjelpeverb
+Modal,label,pl,czasownik modalny
+Modal,label,pt,verbo modal
+Modal,label,ro,Verb modal
+Modal,label,ru,модальный глагол
+Modal,label,sr,модални глагол
+Modal,label,sv,modalt hjälpverb
+Modal,label,uk,модальній дієслів
+Modal,label,gl,modal
+Mood,label,sl,Glagolski naklon
+Mood,label,sq,Format e shtjelluara të foljes
+Mood,label,sr,глаголски начин
+Mood,label,sv,modus
+Mood,label,uk,способи дієслів
+Mood,label,be,лад дзеяслова
+Mood,label,bg,Наклонение
+Mood,label,ca,mode
+Mood,label,cs,slovesný způsob
+Mood,label,da,modus
+Mood,label,de,Modus
+Mood,label,el,έγκλιση
+Mood,label,es,modo gramatical
+Mood,label,et,Kõneviis
+Mood,label,eu,modu gramatikal
+Mood,label,fi,tapaluokka
+Mood,label,fr,mode
+Mood,label,gl,modo gramatical
+Mood,label,he,מודוס
+Mood,label,hu,igemód
+Mood,label,is,Hættir sagna
+Mood,label,it,modo
+Mood,label,lt,Nuosaka
+Mood,label,lv,gramatiskā izteiksme
+Mood,label,mk,глаголски начин
+Mood,label,nb,grammatisk modus
+Mood,label,nl,wijs
+Mood,label,nn,Modus
+Mood,label,pl,tryb
+Mood,label,pt,modo verbal
+Mood,label,ro,mod al verbului
+Mood,label,ru,наклонение глагола
+Mood,label,sk,slovesný spôsob
+NegativeParticle,label,es,partícula negativa
+NegativeParticle,label,eu,ezeztapen partikula
+NegativePronoun,label,es,pronombre negativo
+NegativePronoun,label,eu,ezeztapen izenordain
+Noun,label,be,назоўнік
+Noun,label,bg,съществително име
+Noun,label,ca,substantiu
+Noun,label,cs,podstatné jméno
+Noun,label,da,substantiv
+Noun,label,de,Substantiv
+Noun,label,el,ουσιαστικό
+Noun,label,es,sustantivo
+Noun,label,et,nimisõna
+Noun,label,eu,izen
+Noun,label,fi,substantiivi
+Noun,label,fr,nom
+Noun,label,ga,ainmfhocal
+Noun,label,gl,substantivo
+Noun,label,he,שם עצם
+Noun,label,hr,imenice
+Noun,label,hu,főnév
+Noun,label,is,nafnorð
+Noun,label,it,sostantivo
+Noun,label,lb,Substantiv
+Noun,label,lt,daiktavardis
+Noun,label,lv,lietvārds
+Noun,label,mk,именка
+Noun,label,mt,nom
+Noun,label,nb,substantiv
+Noun,label,nl,zelfstandig naamwoord
+Noun,label,nn,substantiv
+Noun,label,pl,rzeczownik
+Noun,label,pt,substantivo
+Noun,label,ro,nume
+Noun,label,ru,имя существительное
+Noun,label,sk,podstatné meno
+Noun,label,sl,samostalnik
+Noun,label,sq,emër
+Noun,label,sr,супстантив
+Noun,label,sv,substantiv
+Noun,label,uk,іменник
+NounFrame,label,es,marco nominal
+NounFrame,label,eu,izen-marko
+NounPOS,label,be,назоўнік
+NounPOS,label,bg,съществително име
+NounPOS,label,ca,substantiu
+NounPOS,label,cs,podstatné jméno
+NounPOS,label,da,substantiv
+NounPOS,label,de,Substantiv
+NounPOS,label,el,ουσιαστικό
+NounPOS,label,es,sustantivo
+NounPOS,label,et,nimisõna
+NounPOS,label,eu,izen
+NounPOS,label,fi,substantiivi
+NounPOS,label,fr,nom
+NounPOS,label,ga,ainmfhocal
+NounPOS,label,gl,substantivo
+NounPOS,label,he,שם עצם
+NounPOS,label,hr,imenice
+NounPOS,label,hu,főnév
+NounPOS,label,is,nafnorð
+NounPOS,label,it,sostantivo
+NounPOS,label,lb,Substantiv
+NounPOS,label,lt,daiktavardis
+NounPOS,label,lv,lietvārds
+NounPOS,label,mk,именка
+NounPOS,label,mt,nom
+NounPOS,label,nb,substantiv
+NounPOS,label,nl,zelfstandig naamwoord
+NounPOS,label,nn,substantiv
+NounPOS,label,pl,rzeczownik
+NounPOS,label,pt,substantivo
+NounPOS,label,ro,nume
+NounPOS,label,ru,имя существительное
+NounPOS,label,sk,podstatné meno
+NounPOS,label,sl,samostalnik
+NounPOS,label,sq,emër
+NounPOS,label,sr,супстантив
+NounPOS,label,sv,substantiv
+NounPOS,label,uk,іменник
+NounPPFrame,label,eu,izen-partizipio-marko
+NounPhrase,label,ca,sintagma nominal
+NounPhrase,label,cs,jmenná fráze
+NounPhrase,label,da,nominalfrase
+NounPhrase,label,de,Nominalphrase
+NounPhrase,label,es,sintagma nominal
+NounPhrase,label,et,Nimisõnafraas
+NounPhrase,label,eu,izen-sintagma
+NounPhrase,label,fr,phrase nominale
+NounPhrase,label,gl,Sintagma nominal
+NounPhrase,label,mk,именски израз
+NounPhrase,label,nb,nominalfrase
+NounPhrase,label,nl,naamwoordgroep
+NounPhrase,label,pl,fraza nominalna
+NounPhrase,label,pt,frase nominal
+NounPhrase,label,ru,именная группа
+NounPhrase,label,sl,samostalniška fraza
+NounPhrase,label,sv,Nominalfras
+NounPhrase,label,uk,іменна група
+Number,label,be,лік
+Number,label,bg,число
+Number,label,ca,nombre
+Number,label,cs,číslo
+Number,label,da,numerus
+Number,label,de,Numerus
+Number,label,el,Αριθμός
+Number,label,es,rasgo de número
+Number,label,et,arvukategooria
+Number,label,eu,numero gramatikal
+Number,label,fi,Kieliopillinen luku
+Number,label,fr,nombre grammatical
+Number,label,he,מספר
+Number,label,hu,szám
+Number,label,is,tala
+Number,label,it,proprietà di numero
+Number,label,lt,skaičiaus požymis
+Number,label,lv,gramatiskais skaitlis
+Number,label,mk,број
+Number,label,nb,grammatisk tall
+Number,label,nl,getal
+Number,label,nn,tal
+Number,label,pl,liczba
+Number,label,pt,número gramatical
+Number,label,sk,číslo
+Number,label,sl,Slovnično število
+Number,label,sq,numër gramatikor
+Number,label,sr,број
+Number,label,sv,numerus
+Number,label,uk,число
+Number,label,gl,propiedade de número
+Number,label,ro,proprietate morfosintactică a numărului
+Number,label,ru,свойство числа
+Numeral,label,fr,numéral
+Numeral,label,gl,numeral
+Numeral,label,he,מספר
+Numeral,label,hr,brojevi
+Numeral,label,hu,számnév
+Numeral,label,is,töluorð
+Numeral,label,it,numerale
+Numeral,label,lt,skaitvardis
+Numeral,label,lv,skaitļa vārds
+Numeral,label,mk,број
+Numeral,label,mt,numeral
+Numeral,label,nb,tallord
+Numeral,label,nl,telwoord
+Numeral,label,nn,talord
+Numeral,label,pl,liczebnik
+Numeral,label,pt,Numeral
+Numeral,label,ro,Numeral
+Numeral,label,ru,имя числительное
+Numeral,label,sk,číslovka
+Numeral,label,sl,števnik
+Numeral,label,sr,нумерал
+Numeral,label,sv,räkneord
+Numeral,label,uk,числівник
+Numeral,label,be,лічэбнік
+Numeral,label,bg,числително име
+Numeral,label,ca,numeral
+Numeral,label,cs,číslovka
+Numeral,label,da,numerale
+Numeral,label,de,Numerale
+Numeral,label,el,αριθμητικό
+Numeral,label,es,numeral
+Numeral,label,et,arvsõna
+Numeral,label,eu,zenbatzaile
+Numeral,label,fi,numeraali
+NumeralPOS,label,fr,numéral
+NumeralPOS,label,gl,numeral
+NumeralPOS,label,he,מספר
+NumeralPOS,label,hr,brojevi
+NumeralPOS,label,hu,számnév
+NumeralPOS,label,is,töluorð
+NumeralPOS,label,it,numerale
+NumeralPOS,label,lt,skaitvardis
+NumeralPOS,label,lv,skaitļa vārds
+NumeralPOS,label,mk,број
+NumeralPOS,label,mt,numeral
+NumeralPOS,label,nb,tallord
+NumeralPOS,label,nl,telwoord
+NumeralPOS,label,nn,talord
+NumeralPOS,label,pl,liczebnik
+NumeralPOS,label,pt,Numeral
+NumeralPOS,label,ro,Numeral
+NumeralPOS,label,ru,имя числительное
+NumeralPOS,label,sk,číslovka
+NumeralPOS,label,sl,števnik
+NumeralPOS,label,sr,нумерал
+NumeralPOS,label,sv,räkneord
+NumeralPOS,label,uk,числівник
+NumeralPOS,label,be,лічэбнік
+NumeralPOS,label,bg,числително име
+NumeralPOS,label,ca,numeral
+NumeralPOS,label,cs,číslovka
+NumeralPOS,label,da,numerale
+NumeralPOS,label,de,Numerale
+NumeralPOS,label,el,αριθμητικό
+NumeralPOS,label,es,numeral
+NumeralPOS,label,et,arvsõna
+NumeralPOS,label,eu,zenbatzaile
+NumeralPOS,label,fi,numeraali
+OrdinalAdjective,label,es,adjetivo ordinal
+OrdinalAdjective,label,eu,adjektibo ordinal
+PPFrame,label,eu,lehenaldiko partizipio marko
+PartOfSpeech,label,be,часціны мовы
+PartOfSpeech,label,bg,част на речта
+PartOfSpeech,label,ca,categoria gramatical
+PartOfSpeech,label,cs,slovní druh
+PartOfSpeech,label,da,ordklasse
+PartOfSpeech,label,de,Wortart
+PartOfSpeech,label,el,γραμματική κατηγορία
+PartOfSpeech,label,es,categoría gramatical
+PartOfSpeech,label,et,sõnaliik
+PartOfSpeech,label,eu,kategoria morfosintaktiko
+PartOfSpeech,label,fi,sanaluokka
+PartOfSpeech,label,fr,nature
+PartOfSpeech,label,gl,categoría gramatical
+PartOfSpeech,label,he,חלקי הדיבר
+PartOfSpeech,label,hu,szófaj
+PartOfSpeech,label,is,orðflokkur
+PartOfSpeech,label,it,parte del discorso
+PartOfSpeech,label,lt,kalbos dalis
+PartOfSpeech,label,lv,vārdšķira
+PartOfSpeech,label,mk,зборовна група
+PartOfSpeech,label,nb,ordklasse
+PartOfSpeech,label,nl,woordsoort
+PartOfSpeech,label,nn,ordklasse
+PartOfSpeech,label,pl,część mowy
+PartOfSpeech,label,pt,classe gramatical
+PartOfSpeech,label,ro,parte de vorbire
+PartOfSpeech,label,ru,часть речи
+PartOfSpeech,label,sk,slovný druh
+PartOfSpeech,label,sl,besedna vrsta
+PartOfSpeech,label,sq,klasë e fjalëve
+PartOfSpeech,label,sr,врста речи
+PartOfSpeech,label,sv,ordklass
+PartOfSpeech,label,uk,частина мови
+ParticipleAdjective,label,es,adjetivo participio
+ParticipleAdjective,label,eu,partizipio-adjektibo
+ParticlePOS,label,be,Часціца
+ParticlePOS,label,bg,частица
+ParticlePOS,label,ca,partícula
+ParticlePOS,label,cs,částice
+ParticlePOS,label,da,partikel
+ParticlePOS,label,de,Partikel
+ParticlePOS,label,el,μόριο
+ParticlePOS,label,es,partícula
+ParticlePOS,label,et,abisõna
+ParticlePOS,label,eu,partikula
+ParticlePOS,label,fi,partikkeli
+ParticlePOS,label,fr,particule
+ParticlePOS,label,ga,mír
+ParticlePOS,label,gl,partícula
+ParticlePOS,label,he,מילית
+ParticlePOS,label,hr,Čestice
+ParticlePOS,label,hu,partikula
+ParticlePOS,label,is,ögn
+ParticlePOS,label,it,particella
+ParticlePOS,label,lt,dalelytė
+ParticlePOS,label,lv,partikula
+ParticlePOS,label,mk,честичка
+ParticlePOS,label,nl,grammaticaal partikel
+ParticlePOS,label,nn,partikkel
+ParticlePOS,label,pl,partykuła
+ParticlePOS,label,pt,partícula gramatical
+ParticlePOS,label,ro,particulă
+ParticlePOS,label,ru,частица
+ParticlePOS,label,sk,častica
+ParticlePOS,label,sl,Členek
+ParticlePOS,label,sr,речца
+ParticlePOS,label,sv,partikel
+ParticlePOS,label,uk,частка
+PastParticipleAdjective,label,es,adjetivo de participio pasado
+PastParticipleAdjective,label,eu,lehenaldiko partizipio-adjektibo
+Person,label,nn,grammatisk person
+Person,label,pl,osoba
+Person,label,pt,pessoa gramatical
+Person,label,ru,лицо
+Person,label,sk,Osoba
+Person,label,sl,Slovnična oseba
+Person,label,sq,Veta gramatikore
+Person,label,sr,лице
+Person,label,sv,grammatisk person
+Person,label,uk,граматична особа
+Person,label,el,ιδιότητα του προσώπου
+Person,label,ro,proprietate morfosintactică a persoanei
+Person,label,ca,persona
+Person,label,cs,osoba
+Person,label,da,person
+Person,label,de,Person
+Person,label,es,persona gramatical
+Person,label,et,isik
+Person,label,eu,pertsona gramatikal
+Person,label,fi,persoona
+Person,label,fr,personne
+Person,label,gl,persoa gramatical
+Person,label,he,גוף
+Person,label,hu,személy
+Person,label,is,persóna
+Person,label,it,proprietà di persona
+Person,label,lt,asmens požymis
+Person,label,lv,darbības vārda persona
+Person,label,mk,лице
+Person,label,nb,grammatisk person
+Person,label,nl,persoon
+PersonalPronoun,label,bg,лично местоимение
+PersonalPronoun,label,ca,pronom personal
+PersonalPronoun,label,cs,osobní zájmeno
+PersonalPronoun,label,da,personligt pronomen
+PersonalPronoun,label,de,Personalpronomen
+PersonalPronoun,label,el,προσωπική αντωνυμία
+PersonalPronoun,label,es,pronombre personal
+PersonalPronoun,label,et,isikuline asesõna
+PersonalPronoun,label,eu,pertsona-izenordain
+PersonalPronoun,label,fi,persoonapronomini
+PersonalPronoun,label,fr,pronom personnel
+PersonalPronoun,label,gl,pronome persoal
+PersonalPronoun,label,he,כינוי גוף
+PersonalPronoun,label,hr,osobna zamjenica
+PersonalPronoun,label,hu,személyes névmás
+PersonalPronoun,label,is,persónufornafn
+PersonalPronoun,label,it,pronome personale
+PersonalPronoun,label,lt,asmeninis įvardis
+PersonalPronoun,label,nl,persoonlijk voornaamwoord
+PersonalPronoun,label,nn,personleg pronomen
+PersonalPronoun,label,pl,zaimek osobowy
+PersonalPronoun,label,pt,pronome pessoal
+PersonalPronoun,label,ro,Pronume personal
+PersonalPronoun,label,ru,личное местоимение
+PersonalPronoun,label,sl,osebni zaimek
+PersonalPronoun,label,sr,лична заменица
+PersonalPronoun,label,sv,personligt pronomen
+PersonalPronoun,label,uk,особовий займенник
+PlainVerb,label,es,verbo común
+PlainVerb,label,eu,aditz arrunt
+PossessiveAdjective,label,es,adjetivo posesivo
+PossessiveAdjective,label,eu,adjektibo posesibo
+PossessiveDeterminer,label,es,determinante posesivo
+PossessiveDeterminer,label,eu,determinatzaile posesibo
+PossessiveDeterminer,label,fr,déterminant possessif
+PossessiveDeterminer,label,it,aggettivo possessivo
+PossessiveDeterminer,label,ro,adjectiv posesiv
+PossessiveDeterminer,label,ru,притяжательный детерминатив
+PossessiveDeterminer,label,sr,присвојни придеви
+PossessivePronoun,label,ca,pronom possessiu
+PossessivePronoun,label,cs,přivlastňovací zájmeno
+PossessivePronoun,label,da,possessivt pronomen
+PossessivePronoun,label,de,Possessivpronomen
+PossessivePronoun,label,el,Κτητική αντωνυμία
+PossessivePronoun,label,es,pronombre posesivo
+PossessivePronoun,label,et,possessiivpronoomen
+PossessivePronoun,label,eu,izenordain posesibo
+PossessivePronoun,label,fi,possessiivipronomini
+PossessivePronoun,label,fr,pronom possessif
+PossessivePronoun,label,hr,posvojne zamjenice
+PossessivePronoun,label,hu,birtokos névmás
+PossessivePronoun,label,is,eignarfornafn
+PossessivePronoun,label,it,pronome possessivo
+PossessivePronoun,label,lt,savybinis įvardis
+PossessivePronoun,label,nl,bezittelijk voornaamwoord
+PossessivePronoun,label,pt,pronome possessivo
+PossessivePronoun,label,ro,pronume posesiv
+PossessivePronoun,label,ru,притяжательное местоимение
+PossessivePronoun,label,sr,присвојна заменица
+PossessivePronoun,label,sv,possessivt pronomen
+PossessivePronoun,label,uk,присвійний займенник
+PossessivePronoun,label,gl,pronome posesivo
+Postposition,label,ca,posposició
+Postposition,label,da,postposition
+Postposition,label,de,Postposition
+Postposition,label,el,μετά-θεση
+Postposition,label,es,posposición
+Postposition,label,et,tagasõna
+Postposition,label,eu,postposizio
+Postposition,label,fi,postpositio
+Postposition,label,fr,postposition
+Postposition,label,hu,névutó
+Postposition,label,is,eftirsetning
+Postposition,label,it,posposizione
+Postposition,label,lt,postpozicija
+Postposition,label,lv,postpozīcija
+Postposition,label,nb,postposisjon
+Postposition,label,nl,achterzetsel
+Postposition,label,nn,postposisjon
+Postposition,label,pl,poimek
+Postposition,label,pt,posposição
+Postposition,label,ro,postpoziție
+Postposition,label,ru,постпозиция
+Postposition,label,sr,постпозиција
+Postposition,label,sv,postposition
+Postposition,label,uk,післяйменник
+Postposition,label,gl,posposición
+Preposition,label,be,прыназоўнік
+Preposition,label,bg,предлог
+Preposition,label,ca,preposició
+Preposition,label,cs,předložka
+Preposition,label,da,præposition
+Preposition,label,de,Präposition
+Preposition,label,el,πρόθεση
+Preposition,label,es,preposición
+Preposition,label,et,eessõna
+Preposition,label,eu,preposizio
+Preposition,label,fi,prepositio
+Preposition,label,fr,préposition
+Preposition,label,gl,preposición
+Preposition,label,he,מילת יחס
+Preposition,label,hr,prijedlozi
+Preposition,label,hu,prepozíció
+Preposition,label,is,forsetning
+Preposition,label,it,preposizione
+Preposition,label,lb,Prepositioun
+Preposition,label,lt,prepozicija
+Preposition,label,lv,prievārds
+Preposition,label,mk,предлог
+Preposition,label,mt,preposizzjoni
+Preposition,label,nb,preposisjon
+Preposition,label,nl,voorzetsel
+Preposition,label,nn,preposisjon
+Preposition,label,pl,przyimek
+Preposition,label,pt,preposição
+Preposition,label,ro,prepoziție
+Preposition,label,ru,предлог
+Preposition,label,sk,predložka
+Preposition,label,sl,predlog
+Preposition,label,sr,предлог
+Preposition,label,sv,preposition
+Preposition,label,uk,прийменник
+PrepositionFrame,label,es,marco preposicional
+PrepositionFrame,label,eu,preposizio-marko
+PrepositionPhrase,label,be,прыназоўнік
+PrepositionPhrase,label,bg,предлог
+PrepositionPhrase,label,ca,preposició
+PrepositionPhrase,label,cs,předložka
+PrepositionPhrase,label,da,forholdsord
+PrepositionPhrase,label,de,Präposition
+PrepositionPhrase,label,es,sintagma preposicional
+PrepositionPhrase,label,eu,preposizio-sintagma
+PrepositionPhrase,label,fi,prepositio
+PrepositionPhrase,label,fr,préposition
+PrepositionPhrase,label,gl,preposición
+PrepositionPhrase,label,he,מילת יחס
+PrepositionPhrase,label,hr,prijedlozi
+PrepositionPhrase,label,hu,elöljáró
+PrepositionPhrase,label,is,forsetning
+PrepositionPhrase,label,it,preposizione
+PrepositionPhrase,label,lb,Prepositioun
+PrepositionPhrase,label,lt,prielinksnis
+PrepositionPhrase,label,lv,prievārds
+PrepositionPhrase,label,mk,предлог
+PrepositionPhrase,label,mt,preposizzjoni
+PrepositionPhrase,label,nb,preposisjon
+PrepositionPhrase,label,nl,voorzetsel
+PrepositionPhrase,label,nn,preposisjon
+PrepositionPhrase,label,pl,przyimek
+PrepositionPhrase,label,pt,preposição
+PrepositionPhrase,label,ro,prepoziție
+PrepositionPhrase,label,ru,предлог
+PrepositionPhrase,label,sk,predložka
+PrepositionPhrase,label,sl,predlog
+PrepositionPhrase,label,sr,предлог
+PrepositionPhrase,label,sv,preposition
+PrepositionPhrase,label,uk,прийменник
+PrepositionalAdverb,label,es,adverbio preposicional
+PrepositionalAdverb,label,eu,preposizio-adberbio
+PrepositionalAdverb,label,nl,voorzetselbijwoord
+PrepositionalPhraseFrame,label,eu,preposizio-sintagma marko
+PresentParticipleAdjective,label,es,adjetivo de participio presente
+PresentParticipleAdjective,label,eu,orainaldiko partizipio-adjektibo
+PronominalAdverb,label,da,pronominaladverbium
+PronominalAdverb,label,de,Pronominaladverb
+PronominalAdverb,label,es,adverbio pronominal
+PronominalAdverb,label,eu,izenordain-adberbio
+PronominalAdverb,label,fr,adverbe pronominal
+PronominalAdverb,label,nl,voornaamwoordelijk bijwoord
+PronominalAdverb,label,ru,местоименное наречие
+PronominalAdverb,label,sv,pronominaladverb
+Pronoun,label,be,займеннік
+Pronoun,label,bg,местоимение
+Pronoun,label,ca,pronominal
+Pronoun,label,cs,zájmeno
+Pronoun,label,da,pronominal
+Pronoun,label,de,Pronomen
+Pronoun,label,el,αντωνυμία
+Pronoun,label,es,pronominal
+Pronoun,label,et,asesõnaline
+Pronoun,label,eu,izenordain
+Pronoun,label,fi,pronomini
+Pronoun,label,fr,pronom
+Pronoun,label,ga,forainm
+Pronoun,label,he,כינוי גוף
+Pronoun,label,hr,zamjenice
+Pronoun,label,hu,névmás
+Pronoun,label,is,fornafn
+Pronoun,label,it,pronominale
+Pronoun,label,lt,"įvardinis, įvardžiuotinis"
+Pronoun,label,lv,vietniekvārds
+Pronoun,label,mk,заменка
+Pronoun,label,mt,pronom
+Pronoun,label,nb,pronomen
+Pronoun,label,nl,voornaamwoord
+Pronoun,label,nn,pronomen
+Pronoun,label,pl,zaimkowy
+Pronoun,label,pt,pronome
+Pronoun,label,ro,pronominal
+Pronoun,label,ru,местоимённый
+Pronoun,label,sk,zámeno
+Pronoun,label,sl,zaimek
+Pronoun,label,sq,përemër
+Pronoun,label,sr,заменица
+Pronoun,label,sv,pronomen
+Pronoun,label,uk,займенник
+Pronoun,label,gl,pronominal
+PronounPOS,label,be,займеннік
+PronounPOS,label,bg,местоимение
+PronounPOS,label,ca,pronominal
+PronounPOS,label,cs,zájmeno
+PronounPOS,label,da,pronominal
+PronounPOS,label,de,Pronomen
+PronounPOS,label,el,αντωνυμία
+PronounPOS,label,es,pronominal
+PronounPOS,label,et,asesõnaline
+PronounPOS,label,eu,izenordain
+PronounPOS,label,fi,pronomini
+PronounPOS,label,fr,pronom
+PronounPOS,label,ga,forainm
+PronounPOS,label,he,כינוי גוף
+PronounPOS,label,hr,zamjenice
+PronounPOS,label,hu,névmás
+PronounPOS,label,is,fornafn
+PronounPOS,label,it,pronominale
+PronounPOS,label,lt,"įvardinis, įvardžiuotinis"
+PronounPOS,label,lv,vietniekvārds
+PronounPOS,label,mk,заменка
+PronounPOS,label,mt,pronom
+PronounPOS,label,nb,pronomen
+PronounPOS,label,nl,voornaamwoord
+PronounPOS,label,nn,pronomen
+PronounPOS,label,pl,zaimkowy
+PronounPOS,label,pt,pronome
+PronounPOS,label,ro,pronominal
+PronounPOS,label,ru,местоимённый
+PronounPOS,label,sk,zámeno
+PronounPOS,label,sl,zaimek
+PronounPOS,label,sq,përemër
+PronounPOS,label,sr,заменица
+PronounPOS,label,sv,pronomen
+PronounPOS,label,uk,займенник
+PronounPOS,label,gl,pronominal
+ProperNoun,label,be,уласнае імя
+ProperNoun,label,ca,nom propi
+ProperNoun,label,cs,vlastní jméno
+ProperNoun,label,da,proprium
+ProperNoun,label,de,Eigenname
+ProperNoun,label,el,κύριο όνομα
+ProperNoun,label,es,nombre propio
+ProperNoun,label,et,pärisnimi
+ProperNoun,label,eu,izen propio
+ProperNoun,label,fi,erisnimi
+ProperNoun,label,fr,nom propre
+ProperNoun,label,ga,ainmfhocal dílis
+ProperNoun,label,gl,nome propio
+ProperNoun,label,he,שם עצם פרטי
+ProperNoun,label,hu,tulajdonnév
+ProperNoun,label,is,sérnafn
+ProperNoun,label,it,nome proprio
+ProperNoun,label,lt,tikrinis daiktavardis
+ProperNoun,label,lv,īpašvārds
+ProperNoun,label,mk,лична именка
+ProperNoun,label,mt,nom propju
+ProperNoun,label,nb,egennavn
+ProperNoun,label,nl,eigennaam
+ProperNoun,label,nn,særnamn
+ProperNoun,label,pl,rzeczownik własny
+ProperNoun,label,pt,substantivo próprio
+ProperNoun,label,ro,nume propriu
+ProperNoun,label,ru,имя собственное
+ProperNoun,label,sk,vlastné podstatné meno
+ProperNoun,label,sl,Lastno ime
+ProperNoun,label,sr,властита именица
+ProperNoun,label,sv,egennamn
+ProperNoun,label,uk,власна назва
+Punctuation,label,be,geнктуацыя
+Punctuation,label,bg,пунктуация
+Punctuation,label,ca,puntuació
+Punctuation,label,cs,interpunkce
+Punctuation,label,da,tegnsætning
+Punctuation,label,de,Zeichensetzung
+Punctuation,label,el,Σημείο στίξης
+Punctuation,label,es,puntuación
+Punctuation,label,et,Interpunktsioon
+Punctuation,label,eu,puntuazio
+Punctuation,label,fi,välimerkkejä
+Punctuation,label,fr,ponctuation
+Punctuation,label,ga,poncaíocht
+Punctuation,label,gl,puntuación
+Punctuation,label,he,פיסוק
+Punctuation,label,hr,razgodak
+Punctuation,label,it,punteggiatura
+Punctuation,label,lt,skyryba
+Punctuation,label,lv,interpunkcija
+Punctuation,label,mk,интерпункција
+Punctuation,label,nb,tegnsetting
+Punctuation,label,nl,interpunctie
+Punctuation,label,nn,teiknsetjing
+Punctuation,label,pl,interpunkcja
+Punctuation,label,pt,pontuação
+Punctuation,label,ro,punctuație
+Punctuation,label,ru,пунктуация
+Punctuation,label,sk,interpunkcia
+Punctuation,label,sl,ločilo
+Punctuation,label,sr,интерпункција
+Punctuation,label,sv,interpunktion
+Punctuation,label,uk,пунктуація
+QuestionMark,label,be,Пытальнік
+QuestionMark,label,bg,Въпросителен знак
+QuestionMark,label,ca,signe d'interrogació
+QuestionMark,label,cs,otazník
+QuestionMark,label,da,spørgsmålstegn
+QuestionMark,label,de,Fragezeichen
+QuestionMark,label,el,ερωτηματικό
+QuestionMark,label,es,signo de interrogación
+QuestionMark,label,et,Küsimärk
+QuestionMark,label,eu,galdera-marka
+QuestionMark,label,fi,Kysymysmerkki
+QuestionMark,label,fr,point d'interrogation
+QuestionMark,label,ga,Comhartha ceiste
+QuestionMark,label,gl,signo de interrogación
+QuestionMark,label,he,סימן שאלה
+QuestionMark,label,hr,Upitnik
+QuestionMark,label,hu,kérdőjel
+QuestionMark,label,is,Spurningarmerki
+QuestionMark,label,it,punto interrogativo
+QuestionMark,label,lt,Klaustukas
+QuestionMark,label,lv,Jautājuma zīme
+QuestionMark,label,mk,Прашалник
+QuestionMark,label,nb,Spørsmålstegn
+QuestionMark,label,nl,vraagteken
+QuestionMark,label,nn,spørsmålsteikn
+QuestionMark,label,pl,Znak zapytania
+QuestionMark,label,pt,ponto de interrogação
+QuestionMark,label,ro,Semnul întrebării
+QuestionMark,label,ru,вопросительный знак
+QuestionMark,label,sk,Otáznik
+QuestionMark,label,sl,Vprašaj
+QuestionMark,label,sq,?
+QuestionMark,label,sr,Знак питања
+QuestionMark,label,sv,frågetecken
+QuestionMark,label,uk,Знак питання
+ReciprocalPronoun,label,ca,pronom recíproc
+ReciprocalPronoun,label,da,reciprokt pronomen
+ReciprocalPronoun,label,de,Reziprokpronomen
+ReciprocalPronoun,label,el,αλληλοπαθής αντωνυμία
+ReciprocalPronoun,label,es,pronombre recíproco
+ReciprocalPronoun,label,et,vastastikune asesõna
+ReciprocalPronoun,label,eu,izenordain elkarkari
+ReciprocalPronoun,label,hu,kölcsönös névmás
+ReciprocalPronoun,label,is,gagnverkandi fornafn
+ReciprocalPronoun,label,it,pronome reciproco
+ReciprocalPronoun,label,lt,reciprokinis įvardis
+ReciprocalPronoun,label,nb,resiprokt pronomen
+ReciprocalPronoun,label,nl,wederkerig voornaamwoord
+ReciprocalPronoun,label,sr,реципрочна заменица
+ReciprocalPronoun,label,uk,Взаємні займенники
+ReciprocalPronoun,label,gl,pronome recíproco
+ReciprocalPronoun,label,ru,взаимное местоимение
+ReflexiveDeterminer,label,es,determinante reflexivo
+ReflexiveDeterminer,label,eu,determinatzaile bihurkari
+ReflexivePersonalPronoun,label,es,pronombre personal reflexivo
+ReflexivePersonalPronoun,label,eu,pertsona-izenordain bihurkai
+Register,label,ca,registre
+Register,label,da,stilleje
+Register,label,de,Sprachebene
+Register,label,es,registro lingüístico
+Register,label,et,register
+Register,label,eu,Hizkuntza-erregistro
+Register,label,fi,rekisteri
+Register,label,fr,registre de langue
+Register,label,he,משלב
+Register,label,hu,regiszter
+Register,label,is,málsnið
+Register,label,it,registro
+Register,label,lt,registras
+Register,label,nl,register
+Register,label,pl,rejestr
+Register,label,pt,registo linguístico
+Register,label,ro,Registru de limbă
+Register,label,ru,языковой регистр
+Register,label,sr,регистар
+Register,label,sv,Register
+Register,label,gl,rexistro
+RelationNoun,label,es,nombre de relación
+RelationNoun,label,eu,erlazio-izen
+RelativePronoun,label,ca,pronom relatiu
+RelativePronoun,label,cs,zájmeno vztažné
+RelativePronoun,label,da,relativt pronomen
+RelativePronoun,label,de,Relativpronomen
+RelativePronoun,label,el,αναφορική αντωνυμία
+RelativePronoun,label,es,pronombre relativo
+RelativePronoun,label,et,siduv asesõna
+RelativePronoun,label,eu,izenordain erlatibo
+RelativePronoun,label,fi,relatiivipronomini
+RelativePronoun,label,fr,pronom relatif
+RelativePronoun,label,hr,odnosne zamjenice
+RelativePronoun,label,hu,vonatkozó névmás
+RelativePronoun,label,is,tilvísunarfornafn
+RelativePronoun,label,it,pronome relativo
+RelativePronoun,label,lt,santykinis įvardis
+RelativePronoun,label,nb,relativt pronomen
+RelativePronoun,label,nl,betrekkelijk voornaamwoord
+RelativePronoun,label,pl,zaimek względny
+RelativePronoun,label,pt,pronome relativo
+RelativePronoun,label,ro,Pronume relativ
+RelativePronoun,label,sr,односна заменица
+RelativePronoun,label,sv,relativpronomen
+RelativePronoun,label,uk,відносний займенник
+RelativePronoun,label,gl,pronome relativo
+RelativePronoun,label,ru,относительное местоимение
+Slash,label,sr,Коса црта
+Slash,label,sv,snedstreck
+Slash,label,uk,Скісна риска
+Slash,label,ca,barra obliqua
+Slash,label,cs,lomítko
+Slash,label,da,Skråstreg
+Slash,label,de,Schrägstrich
+Slash,label,es,barra
+Slash,label,eu,Barra
+Slash,label,fi,Vinoviiva
+Slash,label,fr,barre oblique
+Slash,label,gl,Barra diagonal
+Slash,label,he,לוכסן
+Slash,label,hr,Kosa crta
+Slash,label,hu,ferde vonal
+Slash,label,it,barra obliqua
+Slash,label,lt,Pasvirasis brūkšnys
+Slash,label,mk,Коса црта
+Slash,label,nb,skråstrek
+Slash,label,nl,Schuine streep
+Slash,label,pl,Ukośnik
+Slash,label,pt,barra
+Slash,label,ro,Bară oblică spre dreapta
+Slash,label,ru,косая черта
+Slash,label,sk,Lomka
+Slash,label,sl,Poševnica
+SubordinatingConjunction,label,cs,podřízená spojka
+SubordinatingConjunction,label,da,underordnende bindeord
+SubordinatingConjunction,label,de,unterordnende Konjunktion
+SubordinatingConjunction,label,es,conjunción subordinante
+SubordinatingConjunction,label,eu,konkunkzio subordinatzaile
+SubordinatingConjunction,label,fi,alistuskonjunktio
+SubordinatingConjunction,label,fr,conjonction de subordination
+SubordinatingConjunction,label,it,congiunzione subordinante
+SubordinatingConjunction,label,nb,subjunksjon
+SubordinatingConjunction,label,nl,betrekkelijk voegwoord
+SubordinatingConjunction,label,nn,subjunksjon
+SubordinatingConjunction,label,pt,conjunção subordinativa
+SubordinatingConjunction,label,ru,подчинительный союз
+SubordinatingConjunction,label,sk,Podraďovacia spojka
+SubordinatingConjunction,label,sv,subjunktion
+Suffix,label,be,суфікс
+Suffix,label,bg,Наставка
+Suffix,label,ca,sufix
+Suffix,label,cs,sufix
+Suffix,label,da,suffiks
+Suffix,label,de,Suffix
+Suffix,label,el,επίθημα
+Suffix,label,es,sufijo
+Suffix,label,et,sufiks
+Suffix,label,eu,atzizki
+Suffix,label,fi,suffiksi
+Suffix,label,fr,suffixe
+Suffix,label,ga,Iarmhír
+Suffix,label,gl,Sufixo
+Suffix,label,he,סיומת
+Suffix,label,hr,Sufiks
+Suffix,label,is,Viðskeyti
+Suffix,label,it,suffisso
+Suffix,label,lt,Priesaga
+Suffix,label,lv,piedēklis
+Suffix,label,mk,наставка
+Suffix,label,mt,suffiss
+Suffix,label,nb,suffiks
+Suffix,label,nl,suffix
+Suffix,label,nn,suffiks
+Suffix,label,pl,przyrostek
+Suffix,label,pt,sufixo
+Suffix,label,ru,суффикс
+Suffix,label,sk,prípona
+Suffix,label,sl,Pripona
+Suffix,label,sq,prapashtesa
+Suffix,label,sr,суфикс
+Suffix,label,sv,suffix
+Suffix,label,uk,суфікс
+SuspensionPoints,label,bg,Многоточие
+SuspensionPoints,label,ca,punts suspensius
+SuspensionPoints,label,cs,výpustka
+SuspensionPoints,label,da,Udeladelsesprikker
+SuspensionPoints,label,de,Auslassungspunkte
+SuspensionPoints,label,el,Αποσιωπητικά
+SuspensionPoints,label,es,puntos suspensivos
+SuspensionPoints,label,et,Mõttepunktid
+SuspensionPoints,label,eu,etenpuntuak
+SuspensionPoints,label,fi,Kolme pistettä
+SuspensionPoints,label,fr,points de suspension
+SuspensionPoints,label,ga,Focalbhá
+SuspensionPoints,label,gl,puntos suspensivos
+SuspensionPoints,label,he,שלוש נקודות
+SuspensionPoints,label,hr,Trotočje
+SuspensionPoints,label,hu,három pont
+SuspensionPoints,label,it,punti di sospensione
+SuspensionPoints,label,lt,Daugtaškis
+SuspensionPoints,label,lv,Daudzpunkte
+SuspensionPoints,label,mk,Три точки
+SuspensionPoints,label,nb,ellipse
+SuspensionPoints,label,nl,beletselteken
+SuspensionPoints,label,nn,ellipse
+SuspensionPoints,label,pl,Wielokropek
+SuspensionPoints,label,pt,reticências
+SuspensionPoints,label,ro,Puncte de suspensie
+SuspensionPoints,label,ru,многоточие
+SuspensionPoints,label,sk,Tri bodky
+SuspensionPoints,label,sl,Tripičje
+SuspensionPoints,label,sq,Zënia e Hënës (Eklipsi)
+SuspensionPoints,label,sr,Три тачке (знак)
+SuspensionPoints,label,sv,uteslutningstecken
+SuspensionPoints,label,uk,три крапки
+Symbol,label,hr,simbol
+Symbol,label,hu,szimbólum
+Symbol,label,is,Tákn
+Symbol,label,it,simbolo
+Symbol,label,lt,Simbolis
+Symbol,label,lv,simbols
+Symbol,label,mk,симбол
+Symbol,label,nb,symbol
+Symbol,label,nl,symbool
+Symbol,label,nn,symbol
+Symbol,label,pl,symbol
+Symbol,label,pt,símbolo
+Symbol,label,ro,Simbol
+Symbol,label,ru,символ
+Symbol,label,sk,symbol
+Symbol,label,sl,Simbol
+Symbol,label,sq,Simboli
+Symbol,label,sr,симбол
+Symbol,label,sv,symbol
+Symbol,label,uk,символ
+Symbol,label,be,сімвал
+Symbol,label,bg,Символ
+Symbol,label,ca,símbol
+Symbol,label,cs,symbol
+Symbol,label,da,symbol
+Symbol,label,de,Symbol
+Symbol,label,el,σύμβολο
+Symbol,label,es,símbolo
+Symbol,label,et,sümbol
+Symbol,label,eu,ikur
+Symbol,label,fi,symboli
+Symbol,label,fr,symbole
+Symbol,label,ga,siombail
+Symbol,label,gl,símbolo
+Symbol,label,he,סמל
+SymbolPOS,label,he,סמל
+SymbolPOS,label,hr,simbol
+SymbolPOS,label,hu,szimbólum
+SymbolPOS,label,is,Tákn
+SymbolPOS,label,it,simbolo
+SymbolPOS,label,lt,Simbolis
+SymbolPOS,label,lv,simbols
+SymbolPOS,label,mk,симбол
+SymbolPOS,label,nb,symbol
+SymbolPOS,label,nl,symbool
+SymbolPOS,label,nn,symbol
+SymbolPOS,label,pl,symbol
+SymbolPOS,label,pt,símbolo
+SymbolPOS,label,ro,Simbol
+SymbolPOS,label,ru,символ
+SymbolPOS,label,sk,symbol
+SymbolPOS,label,sl,Simbol
+SymbolPOS,label,sq,Simboli
+SymbolPOS,label,sr,симбол
+SymbolPOS,label,sv,symbol
+SymbolPOS,label,uk,символ
+SymbolPOS,label,be,сімвал
+SymbolPOS,label,bg,Символ
+SymbolPOS,label,ca,símbol
+SymbolPOS,label,cs,symbol
+SymbolPOS,label,da,symbol
+SymbolPOS,label,de,Symbol
+SymbolPOS,label,el,σύμβολο
+SymbolPOS,label,es,símbolo
+SymbolPOS,label,et,sümbol
+SymbolPOS,label,eu,ikur
+SymbolPOS,label,fi,symboli
+SymbolPOS,label,fr,symbole
+SymbolPOS,label,ga,siombail
+SymbolPOS,label,gl,símbolo
+Tense,label,be,час
+Tense,label,bg,Време
+Tense,label,ca,temps gramatical
+Tense,label,cs,čas
+Tense,label,da,tempus
+Tense,label,de,Tempus
+Tense,label,el,γραμματικός χρόνος
+Tense,label,es,tiempo gramatical
+Tense,label,et,Aeg
+Tense,label,eu,denbora gramatikal
+Tense,label,fi,aikamuoto
+Tense,label,fr,temps
+Tense,label,gl,tempo gramatical
+Tense,label,he,זמן
+Tense,label,hu,igeidő
+Tense,label,is,Tíðbeyging sagna
+Tense,label,it,tempo
+Tense,label,lt,Gramatinis laikas
+Tense,label,lv,darbības vārda laiks
+Tense,label,mk,време
+Tense,label,nb,tid
+Tense,label,nl,werkwoordstijd
+Tense,label,nn,tid
+Tense,label,pl,czas
+Tense,label,pt,tempo gramatical
+Tense,label,ro,Timp
+Tense,label,ru,время
+Tense,label,sk,Gramatická kategória času
+Tense,label,sl,Glagolski čas
+Tense,label,sr,глаголско време
+Tense,label,sv,tempus
+Tense,label,uk,час
+TransitiveFrame,label,es,marco transitivo
+TransitiveFrame,label,eu,marku trantsitibo
+Verb,label,be,дзеяслоў
+Verb,label,bg,глагол
+Verb,label,ca,verb
+Verb,label,cs,sloveso
+Verb,label,da,udsagnsord
+Verb,label,de,Verb
+Verb,label,el,ρήμα
+Verb,label,es,verbo
+Verb,label,et,tegusõna
+Verb,label,eu,aditz
+Verb,label,fi,verbi
+Verb,label,fr,verbe
+Verb,label,ga,briathar
+Verb,label,gl,verbo
+Verb,label,he,פועל
+Verb,label,hr,glagoli
+Verb,label,hu,ige
+Verb,label,is,sagnorð
+Verb,label,it,verbo
+Verb,label,lb,Verb
+Verb,label,lt,veiksmažodis
+Verb,label,lv,darbības vārds
+Verb,label,mk,глагол
+Verb,label,mt,verb
+Verb,label,nb,verb
+Verb,label,nl,werkwoord
+Verb,label,nn,verb
+Verb,label,pl,czasownik
+Verb,label,pt,verbo
+Verb,label,ro,verb
+Verb,label,ru,глагол
+Verb,label,sk,sloveso
+Verb,label,sl,glagol
+Verb,label,sq,folje
+Verb,label,sr,глагол
+Verb,label,sv,verb
+Verb,label,uk,дієслово
+VerbFrame,label,es,marco verbal
+VerbFrame,label,eu,aditz-marko
+VerbPOS,label,be,дзеяслоў
+VerbPOS,label,bg,глагол
+VerbPOS,label,ca,verb
+VerbPOS,label,cs,sloveso
+VerbPOS,label,da,udsagnsord
+VerbPOS,label,de,Verb
+VerbPOS,label,el,ρήμα
+VerbPOS,label,es,verbo
+VerbPOS,label,et,tegusõna
+VerbPOS,label,eu,aditz
+VerbPOS,label,fi,verbi
+VerbPOS,label,fr,verbe
+VerbPOS,label,ga,briathar
+VerbPOS,label,gl,verbo
+VerbPOS,label,he,פועל
+VerbPOS,label,hr,glagoli
+VerbPOS,label,hu,ige
+VerbPOS,label,is,sagnorð
+VerbPOS,label,it,verbo
+VerbPOS,label,lb,Verb
+VerbPOS,label,lt,veiksmažodis
+VerbPOS,label,lv,darbības vārds
+VerbPOS,label,mk,глагол
+VerbPOS,label,mt,verb
+VerbPOS,label,nb,verb
+VerbPOS,label,nl,werkwoord
+VerbPOS,label,nn,verb
+VerbPOS,label,pl,czasownik
+VerbPOS,label,pt,verbo
+VerbPOS,label,ro,verb
+VerbPOS,label,ru,глагол
+VerbPOS,label,sk,sloveso
+VerbPOS,label,sl,glagol
+VerbPOS,label,sq,folje
+VerbPOS,label,sr,глагол
+VerbPOS,label,sv,verb
+VerbPOS,label,uk,дієслово
+VerbPhrase,label,ca,sintagma verbal
+VerbPhrase,label,de,Verbalphrase
+VerbPhrase,label,es,sintagma verbal
+VerbPhrase,label,et,tegusõnafraas
+VerbPhrase,label,eu,aditz-sintagma
+VerbPhrase,label,fi,verbifraasi
+VerbPhrase,label,it,sintagma verbale
+VerbPhrase,label,nl,verbale constituent
+VerbPhrase,label,pl,fraza werbalna
+VerbPhrase,label,pt,frase verbal
+VerbPhrase,label,ru,глагольная группа
+VerbPhrase,label,sv,verbfras
+Voice,label,bg,Залог
+Voice,label,ca,veu gramatical
+Voice,label,cs,slovesný rod
+Voice,label,da,Diatese
+Voice,label,de,Diathese
+Voice,label,el,Φωνή
+Voice,label,es,voz gramatical
+Voice,label,et,Tegumood
+Voice,label,fi,Pääluokka
+Voice,label,fr,diathèse
+Voice,label,gl,voz
+Voice,label,he,מעמד דקדוקי
+Voice,label,hu,igenem
+Voice,label,is,Sagnmyndir
+Voice,label,it,diatesi
+Voice,label,lt,rūšis
+Voice,label,lv,Darbības vārda kārta
+Voice,label,mk,Залог
+Voice,label,nb,diatese
+Voice,label,nl,actief/passief
+Voice,label,nn,diatese
+Voice,label,pl,strona
+Voice,label,pt,voz verbal
+Voice,label,ro,Diateză
+Voice,label,ru,грамматический залог
+Voice,label,sk,slovesný rod
+Voice,label,sl,Glagolski način
+Voice,label,sq,Diateza
+Voice,label,sv,diates
+Voice,label,uk,стан

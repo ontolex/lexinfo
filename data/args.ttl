@@ -46,7 +46,7 @@
         owl:hasValue :genitiveCase ] ) ] .
 
 :AccusativePostPositiveArg
-  owl:subClassOf :PostPositiveArg ;
+  rdfs:subClassOf :PostPositiveArg ;
   owl:equivalentClass [
     owl:intersectionOf (
         :PostPositiveArg
@@ -55,7 +55,7 @@
           owl:hasValue :accusativeCase ] ) ] .
 
 :DativePostPositiveArg
-  owl:subClassOf :PostPositiveArg ;
+  rdfs:subClassOf :PostPositiveArg ;
   owl:equivalentClass [
     owl:intersectionOf (
         :PostPositiveArg
@@ -64,7 +64,7 @@
           owl:hasValue :dativeCase ] ) ] .
 
 :GenitivePostPositiveArg
-  owl:subClassOf :PostPositiveArg ;
+  rdfs:subClassOf :PostPositiveArg ;
   owl:equivalentClass [
     owl:intersectionOf (
         :PostPositiveArg
