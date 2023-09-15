@@ -61,7 +61,7 @@ PrepositionalInterrogativeFrame,VerbFrame,
 PrepositionalPhraseFrame,PrepositionFrame,
 RaisingSubject,Control,Indicates the syntactic subject of the main clause is in fact the subject of the subclause. The main clause should then be interpreted as being impersonal.
 ReciprocalFrame,VerbFrame,
-ReflexiveDativeTransitiveFrame,ReflexiveFrame,ist diese frame echt?
+ReflexiveDativeTransitiveFrame,ReflexiveFrame,
 ReflexiveDitransitiveFrame,ReflexiveFrame,
 ReflexiveFrame,VerbFrame,
 ReflexiveReciprocalFrame,ReflexiveFrame,
