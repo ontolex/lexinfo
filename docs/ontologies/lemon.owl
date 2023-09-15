@@ -1,0 +1,995 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY gold "http://purl.org/linguistics/gold#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY lemon "http://www.monnet-project.eu/lemon#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.monnet-project.eu/lemon#"
+     xml:base="http://www.monnet-project.eu/lemon"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:gold="http://purl.org/linguistics/gold#"
+     xmlns:lemon="http://www.monnet-project.eu/lemon#">
+    <owl:Ontology rdf:about="">
+        <rdfs:label xml:lang="en">lemon</rdfs:label>
+        <rdfs:comment xml:lang="en"
+            >Lemon: The lexicon model for ontologies is designed to allow  for descriptions of lexical information regarding ontological elements and other RDF resources. Lemon covers mapping of lexical decomposition, phrase structure, syntax,  variation, morphology, and lexicon-ontology mapping.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#abstractForm -->
+
+    <owl:ObjectProperty rdf:about="#abstractForm">
+        <rdfs:comment xml:lang="en"
+            >A representation of a lexical entry that should not be considered canonical. This is primarily from a linguistic view for non-realisable forms such as stems but may also include misspellings and other unusual forms</rdfs:comment>
+        <rdfs:range rdf:resource="#Form"/>
+        <rdfs:domain rdf:resource="#LexicalEntry"/>
+        <rdfs:subPropertyOf rdf:resource="#lexicalForm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#altSem -->
+
+    <owl:ObjectProperty rdf:about="#altSem">
+        <rdfs:comment xml:lang="en"
+            >The sense of a non-preferred but admissible lexicalization of a given ontology entity</rdfs:comment>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#sememe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#broader -->
+
+    <owl:ObjectProperty rdf:about="#broader">
+        <rdfs:comment xml:lang="en"
+            >Denotes that one sense is broader than another. From a lexical point of view  this means replacing one lexical entry with another generalizes the meaning of the phrase. From an ontological point of view this property makes not strong assertions. From a mapping point of view if the broader sense applies the narrower sense must also</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+        <owl:inverseOf rdf:resource="#narrower"/>
+        <rdfs:subPropertyOf rdf:resource="#senseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#canonicalForm -->
+
+    <owl:ObjectProperty rdf:about="#canonicalForm">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment xml:lang="en"
+            >The canonical (&quot;dictionary&quot;) form of the lexical entry. This can be used to indicate the &quot;lemma&quot; form of a lexical entry</rdfs:comment>
+        <rdfs:range rdf:resource="#Form"/>
+        <rdfs:domain rdf:resource="#LexicalEntry"/>
+        <rdfs:subPropertyOf rdf:resource="#lexicalForm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#condition -->
+
+    <owl:ObjectProperty rdf:about="#condition">
+        <rdfs:comment xml:lang="en"
+            >Indicates an evaluable test, the is necessary for this sense to apply</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#context -->
+
+    <owl:ObjectProperty rdf:about="#context">
+        <rdfs:comment xml:lang="en"
+            >Denotes the pragmatic or discursive context of a sense mapping or a constraint on the mapping by syntactic or semantic properites</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#decomposition -->
+
+    <owl:ObjectProperty rdf:about="#decomposition">
+        <rdfs:comment xml:lang="en"
+            >Denotes a component of a lexical entry</rdfs:comment>
+        <rdfs:range rdf:resource="#ComponentList"/>
+        <rdfs:domain rdf:resource="#LexicalEntry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#definition -->
+
+    <owl:ObjectProperty rdf:about="#definition">
+        <rdfs:comment xml:lang="en"
+            >Indicates a natural language definition. Note there is a pseudo-node to allow for further description of the definition (e.g., source, creation date etc.). The value property should be used to indicate the string value of the definition.</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:range rdf:resource="#SemDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#edge -->
+
+    <owl:ObjectProperty rdf:about="#edge">
+        <rdfs:comment xml:lang="en"
+            >Denotes the relation between a node in a multi-word expression structure and an edge</rdfs:comment>
+        <rdfs:range rdf:resource="#Node"/>
+        <rdfs:domain rdf:resource="#Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#element -->
+
+    <owl:ObjectProperty rdf:about="#element">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment xml:lang="en"
+            >Denotes the lexical entry represented by the component</rdfs:comment>
+        <rdfs:domain rdf:resource="#Component"/>
+        <rdfs:range rdf:resource="#LexicalEntry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#entry -->
+
+    <owl:ObjectProperty rdf:about="#entry">
+        <rdfs:comment xml:lang="en"
+            >Indicates an entry in a lexicon</rdfs:comment>
+        <rdfs:range rdf:resource="#LexicalEntry"/>
+        <rdfs:domain rdf:resource="#Lexicon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#equivalent -->
+
+    <owl:ObjectProperty rdf:about="#equivalent">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:comment xml:lang="en"
+            >Indicates that two senses are equivalent. From a lexical point of view , this indicates that the lexical entries can be substituted for each other with no change in meaning. From an ontological point of view it means that the two references are not disjoint. From a mapping point of view it means if one mapping apply the other must necessarily apply</rdfs:comment>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#senseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#example -->
+
+    <owl:ObjectProperty rdf:about="#example">
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:range rdf:resource="#UsageExample"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#hiddenSem -->
+
+    <owl:ObjectProperty rdf:about="#hiddenSem">
+        <rdfs:comment xml:lang="en"
+            >The sense of a non-admissible lexicalization for a ontology entity. This is used to denote incorrect or deprecated language that may be useful for information extraction but not generation</rdfs:comment>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#sememe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#incompatible -->
+
+    <owl:ObjectProperty rdf:about="#incompatible">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:comment xml:lang="en"
+            >Says that the two senses are disjoint. From a lexical point of view, this means substituting the lexical entries must change the meaning of the phrase. From an ontological point of view, this property is implied if both references are also disjoint, but does not imply disjointness, but non-equivalence of the references. For the mapping point of view  there is not instance when both mappings are valid.</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#senseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#isA -->
+
+    <owl:ObjectProperty rdf:about="#isA">
+        <rdfs:comment xml:lang="en"
+            >Denotes the the single argument of a class predicate is represented in the lexicon by the given semantic argument. That is Class(?x) or ?x rdf:type Class</rdfs:comment>
+        <rdfs:range rdf:resource="#Argument"/>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#semArg"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#leaf -->
+
+    <owl:ObjectProperty rdf:about="#leaf">
+        <rdfs:comment xml:lang="en"
+            >Denotes the component referred to by the lex (pre-terminal) of the phrase structure</rdfs:comment>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="#PhraseElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#lexeme -->
+
+    <owl:ObjectProperty rdf:about="#lexeme">
+        <rdfs:comment xml:lang="en"
+            >Indicate that a sense is realised by the given lexical entry</rdfs:comment>
+        <rdfs:range rdf:resource="#LexicalEntry"/>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <owl:inverseOf rdf:resource="#sense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#lexicalForm -->
+
+    <owl:ObjectProperty rdf:about="#lexicalForm">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment xml:lang="en"
+            >Denotes a written representation of a lexical entry</rdfs:comment>
+        <rdfs:range rdf:resource="#Form"/>
+        <rdfs:domain rdf:resource="#LexicalEntry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#lexicalVariant -->
+
+    <owl:ObjectProperty rdf:about="#lexicalVariant">
+        <rdfs:comment xml:lang="en"
+            >Indicates a non-semantic relationship between two lexical entries. E.g., a term is derived from another term, such as &quot;lexical&quot; and &quot;lexicalize&quot;</rdfs:comment>
+        <rdfs:range rdf:resource="#LexicalEntry"/>
+        <rdfs:domain rdf:resource="#LexicalEntry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#marker -->
+
+    <owl:ObjectProperty rdf:about="#marker">
+        <rdfs:comment xml:lang="en"
+            >Denotes the marker of a semantic argument. This should generally either be a semantic property i.e., case or another lexical entry e.g., a preposition or particle</rdfs:comment>
+        <rdfs:domain rdf:resource="#Argument"/>
+        <rdfs:range rdf:resource="#SynRoleMarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#narrower -->
+
+    <owl:ObjectProperty rdf:about="#narrower">
+        <rdfs:comment xml:lang="en"
+            >Denotes that one sense is broader than another. From a lexical point of view  this means replacing one lexical entry with another specializes the meaning of the phrase. From an ontological point of view this property makes not strong assertions. From a mapping point of view if the broader sense applies the narrower sense must also</rdfs:comment>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#senseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#objOfProp -->
+
+    <owl:ObjectProperty rdf:about="#objOfProp">
+        <rdfs:comment xml:lang="en"
+            >Indicates the semantic argument with represents the objects (ranges) of the property referred to by this sense</rdfs:comment>
+        <rdfs:range rdf:resource="#Argument"/>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#semArg"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#otherForm -->
+
+    <owl:ObjectProperty rdf:about="#otherForm">
+        <rdfs:comment xml:lang="en"
+            >A non-preferred (&quot;non-dictionary&quot;) representation of a lexical entry. This should be variant that is either a morphological variant, an abbreviation, short form or acronym</rdfs:comment>
+        <rdfs:range rdf:resource="#Form"/>
+        <rdfs:domain rdf:resource="#LexicalEntry"/>
+        <rdfs:subPropertyOf rdf:resource="#lexicalForm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#phraseRoot -->
+
+    <owl:ObjectProperty rdf:about="#phraseRoot">
+        <rdfs:comment xml:lang="en"
+            >Indicates the head node of a phrase structure or dependency parse graph</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalEntry"/>
+        <rdfs:range rdf:resource="#Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#prefSem -->
+
+    <owl:ObjectProperty rdf:about="#prefSem">
+        <rdfs:comment xml:lang="en"
+            >The sense of the preferred lexicalization of a given ontology entity</rdfs:comment>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#sememe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#property -->
+
+    <owl:ObjectProperty rdf:about="#property">
+        <rdfs:comment xml:lang="en"
+            >Denotes a lexical property of a lexical entry, form, component or MWE node. For the lexical entry this is assumed to be static properties e.g., part of speech and gender and for the others this is assumed to be specific properties e.g., case, number</rdfs:comment>
+        <rdfs:domain rdf:resource="#LemonElement"/>
+        <rdfs:range rdf:resource="#PropertyValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#propertyDomain -->
+
+    <owl:ObjectProperty rdf:about="#propertyDomain">
+        <rdfs:comment xml:lang="en"
+            >Indicates a restrictions on the domain of the property. That is, this sense only applies if the property the sense refers to has a subject in the class referred to by this property</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#propertyRange -->
+
+    <owl:ObjectProperty rdf:about="#propertyRange">
+        <rdfs:comment xml:lang="en"
+            >Indicates a restrictions on the range of the property. That is, this sense only applies if the property the sense refers to has a object in the class referred to by this property</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#reference -->
+
+    <owl:ObjectProperty rdf:about="#reference">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment xml:lang="en"
+            >A reference to an external resource</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#semArg -->
+
+    <owl:ObjectProperty rdf:about="#semArg">
+        <rdfs:comment xml:lang="en"
+            >Denotes a semantic argument slot of a semantic unit</rdfs:comment>
+        <rdfs:range rdf:resource="#Argument"/>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#sememe -->
+
+    <owl:ObjectProperty rdf:about="#sememe">
+        <rdfs:comment xml:lang="en"
+            >Indicate that a reference has a given sense</rdfs:comment>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+        <owl:inverseOf rdf:resource="#reference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#sense -->
+
+    <owl:ObjectProperty rdf:about="#sense">
+        <rdfs:comment xml:lang="en"
+            >Indicates the sense of a lexical entry</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalEntry"/>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#senseRelation -->
+
+    <owl:ObjectProperty rdf:about="#senseRelation">
+        <rdfs:comment xml:lang="en"
+            >Denotes a relationship between senses</rdfs:comment>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#subjOfProp -->
+
+    <owl:ObjectProperty rdf:about="#subjOfProp">
+        <rdfs:comment xml:lang="en"
+            >Indicates the semantic argument with represents the subjects (domain) of the property referred to by this sense</rdfs:comment>
+        <rdfs:range rdf:resource="#Argument"/>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+        <rdfs:subPropertyOf rdf:resource="#semArg"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#subsense -->
+
+    <owl:ObjectProperty rdf:about="#subsense">
+        <rdfs:comment xml:lang="en"
+            >Indicates that the relation between a compound senses and its atomic subsenses</rdfs:comment>
+        <rdfs:range rdf:resource="#LexicalSense"/>
+        <rdfs:domain rdf:resource="#LexicalSense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#synArg -->
+
+    <owl:ObjectProperty rdf:about="#synArg">
+        <rdfs:comment xml:lang="en"
+            >Indicates a slot in a syntactic frame</rdfs:comment>
+        <rdfs:range rdf:resource="#Argument"/>
+        <rdfs:domain rdf:resource="#Frame"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#synBehavior -->
+
+    <owl:ObjectProperty rdf:about="#synBehavior">
+        <rdfs:comment xml:lang="en"
+            >Indicates a syntactic behavior of a lexical entry</rdfs:comment>
+        <rdfs:range rdf:resource="#Frame"/>
+        <rdfs:domain rdf:resource="#LexicalEntry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#topic -->
+
+    <owl:ObjectProperty rdf:about="#topic">
+        <rdfs:comment xml:lang="en"
+            >Indicates the topic of the overrall lexicon, this is property is sometimes called &quot;subject field&quot;. Note that in addition to the topic of a lexicon each lexical entry may belong to a given domain, this can be modelled as equal or not equal to the topic of the associated lexicon</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#LexicalEntry"/>
+                    <rdf:Description rdf:about="#Lexicon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#first -->
+
+    <owl:ObjectProperty rdf:about="&rdf;first"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#rest -->
+
+    <owl:ObjectProperty rdf:about="&rdf;rest"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#language -->
+
+    <owl:DatatypeProperty rdf:about="#language">
+        <rdfs:comment xml:lang="en"
+            >The language of a given lexicon. This should be some ISO-639 string</rdfs:comment>
+        <rdfs:domain rdf:resource="#Lexicon"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#optional -->
+
+    <owl:DatatypeProperty rdf:about="#optional">
+        <rdfs:comment xml:lang="en"
+            >Denotes that the syntactic argument is optional (may be omitted)</rdfs:comment>
+        <rdfs:domain rdf:resource="#Argument"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#representation -->
+
+    <owl:DatatypeProperty rdf:about="#representation">
+        <rdfs:comment xml:lang="en"
+            >A realisation of a given form</rdfs:comment>
+        <rdfs:domain rdf:resource="#Form"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#separator -->
+
+    <owl:DatatypeProperty rdf:about="#separator">
+        <rdfs:comment xml:lang="en"
+            >Indicates the graphical element used to seperate the subnodes of this phrase structure. It is generally recommended that you use a string value with the language tag used to indicate script, (i.e., using ISO-15924 codes, such as &quot;Latn&quot;), as orthographic features may change with script.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Node"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#value -->
+
+    <owl:DatatypeProperty rdf:about="#value">
+        <rdfs:comment xml:lang="en"
+            >This indicates the value of a pseudo-data node. An example of this is definition where the value would generally be a string but it would not be possible to add further annotations, such as source or creation date.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#writtenRep -->
+
+    <owl:DatatypeProperty rdf:about="#writtenRep">
+        <rdfs:comment xml:lang="en"
+            >Gives the written representation of a given form</rdfs:comment>
+        <rdfs:domain rdf:resource="#Form"/>
+        <rdfs:subPropertyOf rdf:resource="#representation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#Argument -->
+
+    <owl:Class rdf:about="#Argument">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:subClassOf rdf:resource="#PhraseElement"/>
+        <owl:disjointWith rdf:resource="#Component"/>
+        <owl:disjointWith rdf:resource="#Form"/>
+        <owl:disjointWith rdf:resource="#Frame"/>
+        <owl:disjointWith rdf:resource="#LexicalEntry"/>
+        <owl:disjointWith rdf:resource="#LexicalSense"/>
+        <owl:disjointWith rdf:resource="#Lexicon"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#PropertyValue"/>
+        <owl:disjointWith rdf:resource="#SemDefinition"/>
+        <owl:disjointWith rdf:resource="#SynRoleMarker"/>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >A slot representing a gap that must be filled in realising a lexical entry in a given projection</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#Component -->
+
+    <owl:Class rdf:about="#Component">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:subClassOf rdf:resource="#PhraseElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#element"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Form"/>
+        <owl:disjointWith rdf:resource="#Frame"/>
+        <owl:disjointWith rdf:resource="#LexicalEntry"/>
+        <owl:disjointWith rdf:resource="#LexicalSense"/>
+        <owl:disjointWith rdf:resource="#Lexicon"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#PropertyValue"/>
+        <owl:disjointWith rdf:resource="#SemDefinition"/>
+        <owl:disjointWith rdf:resource="#SynRoleMarker"/>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >A constituent element of a lexical entry. This may be a word in a multi-word lexical element or a constituent of a compound word</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#ComponentList -->
+
+    <owl:Class rdf:about="#ComponentList">
+        <rdfs:subClassOf rdf:resource="&rdf;List"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rdf;rest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#ComponentList"/>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&rdf;nil"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rdf;first"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rdf;rest"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rdf;first"/>
+                <owl:allValuesFrom rdf:resource="#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A node within a list of components. This should generally be a blank node,see rdf:List</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#Form -->
+
+    <owl:Class rdf:about="#Form">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#representation"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Frame"/>
+        <owl:disjointWith rdf:resource="#LexicalEntry"/>
+        <owl:disjointWith rdf:resource="#LexicalSense"/>
+        <owl:disjointWith rdf:resource="#Lexicon"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#PropertyValue"/>
+        <owl:disjointWith rdf:resource="#SemDefinition"/>
+        <owl:disjointWith rdf:resource="#SynRoleMarker"/>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >A given written or spoken realisation of a lexical entry</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#Frame -->
+
+    <owl:Class rdf:about="#Frame">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <owl:disjointWith rdf:resource="#LexicalEntry"/>
+        <owl:disjointWith rdf:resource="#LexicalSense"/>
+        <owl:disjointWith rdf:resource="#Lexicon"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#PropertyValue"/>
+        <owl:disjointWith rdf:resource="#SemDefinition"/>
+        <owl:disjointWith rdf:resource="#SynRoleMarker"/>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >A stereotypical example of the usage of a given lexical entry. The most common example of projections are subcategorization frames which describe the slots taken by the arguments of a verb.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#LemonElement -->
+
+    <owl:Class rdf:about="#LemonElement"/>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#LexicalEntry -->
+
+    <owl:Class rdf:about="#LexicalEntry">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#canonicalForm"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#lexicalForm"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#LexicalSense"/>
+        <owl:disjointWith rdf:resource="#Lexicon"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#PropertyValue"/>
+        <owl:disjointWith rdf:resource="#SemDefinition"/>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >An entry in the lexicon. This may be any morpheme, word, compound, phrase or clause that is included in the lexicon</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#LexicalSense -->
+
+    <owl:Class rdf:about="#LexicalSense">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#subsense"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#reference"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Lexicon"/>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#PropertyValue"/>
+        <owl:disjointWith rdf:resource="#SemDefinition"/>
+        <owl:disjointWith rdf:resource="#SynRoleMarker"/>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >Represents the intersection in meaning between the lexical entry and the ontology entity. This is used as the ontology entity and lexical entry may not be in one-to-one correspondence as such the existence of a sense between them states meerly that there are some cases when this lexical entry refer to the ontology entity and vica versa. Mapping elements can be used to further specify this relation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#Lexicon -->
+
+    <owl:Class rdf:about="#Lexicon">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#language"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#entry"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Node"/>
+        <owl:disjointWith rdf:resource="#PropertyValue"/>
+        <owl:disjointWith rdf:resource="#SemDefinition"/>
+        <owl:disjointWith rdf:resource="#SynRoleMarker"/>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >The lexicon object. This object is specific to the given language and/or domain it describes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#Node -->
+
+    <owl:Class rdf:about="#Node">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#edge"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#leaf"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#PropertyValue"/>
+        <owl:disjointWith rdf:resource="#SemDefinition"/>
+        <owl:disjointWith rdf:resource="#SynRoleMarker"/>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >A node in a phrase structure or dependency parse graph</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#Part -->
+
+    <owl:Class rdf:about="#Part">
+        <rdfs:subClassOf rdf:resource="#LexicalEntry"/>
+        <rdfs:comment xml:lang="en"
+            >An affix is a morpheme that is attached to a word stem to form a new word.  Use this for lexical entries with only abstract forms</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#Phrase -->
+
+    <owl:Class rdf:about="#Phrase">
+        <rdfs:subClassOf rdf:resource="#LexicalEntry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#decomposition"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A phrase in lemon is defined in the looser sense of a sequence of words, it does not have to a fully grammatical phrase</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#PhraseElement -->
+
+    <owl:Class rdf:about="#PhraseElement">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:comment xml:lang="en"
+            >A terminal node in a phrase structure graph, i.e., a realisable, lexical element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#PropertyValue -->
+
+    <owl:Class rdf:about="#PropertyValue">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <owl:disjointWith rdf:resource="#SemDefinition"/>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >A value that can be used in the range of linguistic property</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#SemDefinition -->
+
+    <owl:Class rdf:about="#SemDefinition">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#value"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#SynRoleMarker"/>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >A definition of a sememe, that is the a text describing the exact meaning of the lexical entry when its sense is the given ontology reference</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#SynRoleMarker -->
+
+    <owl:Class rdf:about="#SynRoleMarker">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#LexicalEntry"/>
+                    <rdf:Description rdf:about="#PropertyValue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#UsageExample"/>
+        <rdfs:comment xml:lang="en"
+            >The indicator of a given syntactic argument, normally a preposition or other particle marker or a linguistic property such as case</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#UsageExample -->
+
+    <owl:Class rdf:about="#UsageExample">
+        <rdfs:subClassOf rdf:resource="#LemonElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#value"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >An example of the usage of a lexical entry when refering to the ontology entity given by the sememe&#39;s reference. This should in effect be an example of the form used in context. E.g., &quot;this is a *usage example*&quot;</rdfs:comment>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#UsageExample"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.monnet-project.eu/lemon#Word -->
+
+    <owl:Class rdf:about="#Word">
+        <rdfs:subClassOf rdf:resource="#LexicalEntry"/>
+        <rdfs:comment xml:lang="en"
+            >A word is a single unit of writing or speech. In languages written in Latin, Cyrillic, Greek, Arabic scripts etc. these are assumed to be separated by white-space characters. For Chinese, Japanese, Korean this should correspond to some agreed segmentation scheme.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
+
+    <owl:Class rdf:about="&rdf;List"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#nil -->
+
+    <owl:Thing rdf:about="&rdf;nil"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

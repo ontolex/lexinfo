@@ -114,6 +114,35 @@
   rdfs:label "suffix"@en ;
   rdfs:subClassOf ontolex:Affix .
 
-
 :morphosyntacticProperty a owl:ObjectProperty ;
   rdfs:label "morphosyntactic property"@en .
+
+# OntoLex-Morph addenda, cf. https://github.com/ontolex/morph/blob/master/doc/diagrams/module_draft_4_12.png
+# agreement for the transition between draft 4.12 and 4.13 was to move subclasses of morph:Morph into LexInfo
+
+lexinfo:TransfixMorph a owl:Class ;
+  rdfs:label "transfix"@en ;
+  rdfs:comment "A transfix is a discontinuous affix that disrupts the base to which it is attached. The term is reserved for true single affixes, rather than combinations of an infix with an independent prefix or suffix. (Broselow, E., 2000. Transfixation. In G. Booij, et al. (eds.), Ein internationales Handbuch zur Flexion und Wortbildung. 1. Halbband. Mouton De Gruyter, New York, Berlin, p. 552-557.) Examples include discontinuous affixes inserted into a word root, as in root-and-pattern systems of several Semitic languages, e.g., in the Arabic word kitaba "writing" from the root k-t-b."@en ;
+  rdfs:subClassOf ontolex:Affix .
+
+lexinfo:SimulfixMorph a owl:Class ;
+  rdfs:label "simulfix"@en ;
+  rdfs:comment "A simulfix is a change or replacement of vowels or consonants (usually vowels) which changes the meaning of a word (as defined by the SIL Glossary of Linguistic Terms, https://glossary.sil.org/term/simulfix). Examples include umlaut in Germanic languages, e.g., in the formation of the English plural feet from the singular foot."@en ;
+  rdfs:subClassOf ontolex:Affix .
+
+lexinfo:ZeroMorph a owl:Class ;
+  rdfs:label "zero morph"@en ;
+  rdfs:comment "A zero morph is a morph, consisting of no phonetic form, that is proposed in some analyses as an allomorph of a morpheme that is ordinarily realized by a morph having some phonetic form (as defined by the SIL Glossary of Linguistic Terms, https://glossary.sil.org/term/zero-morph). Examples include the English plural sheep along with the singular sheep."@en ;
+  rdfs:subClassOf ontolex:Affix .
+
+lexinfo:StemMorph a owl:Class ;
+  rdfs:label "morphological stem"@en ;
+  rdfs:subClassOf ontolex:LexicalEntry ;
+  rdfs:comment "A stem is the root or roots of a word, together with any derivational affixes, to which inflectional affixes are added (as defined by the SIL Glossary of Linguistic Terms, https://glossary.sil.org/term/stem). A stem consists minimally of a root, but may be analyzable into a root plus derivational morphemes."@en ;
+  rdfs:comment "After publishing OntoLex-Morph, this should be re-defined as subclass of morph:Morph."@en .
+
+lexinfo:RootMorph a owl:Class ;
+  rdfs:label "morphological root"@en ;
+  rdfs:subClassOf ontolex:LexicalEntry ;
+  rdfs:comment "A root is the portion of a word that (a) is common to a set of derived or inflected forms, (b) is not further analyzable into meaningful elements, and (c) carries the principle portion of meaning of the words in which it functions (as defined by the SIL Glossary of Linguistic Terms, https://glossary.sil.org/term/root)."@en ;
+  rdfs:comment "After publishing OntoLex-Morph, this should be re-defined as subclass of morph:Morph."@en .

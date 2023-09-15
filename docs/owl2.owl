@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY a 'http://www.lexinfo.net/owl2#'>
+<!ENTITY owl 'http://www.w3.org/2002/07/owl#'>
+<!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#'>
+]>
+
+<rdf:RDF
+xml:base="http://www.lexinfo.net/owl2"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<owl:Ontology rdf:about=""/>
+
+<owl:DatatypeProperty rdf:about="&a;value"/>
+
+<owl:DatatypeProperty rdf:about="&a;lexicalValue"/>
+
+<owl:DatatypeProperty rdf:about="&a;arity"/>
+
+<owl:DatatypeProperty rdf:about="&a;cardinality"/>
+
+<owl:DatatypeProperty rdf:about="&a;facet"/>
+
+<owl:DatatypeProperty rdf:about="&a;iri"/>
+
+<owl:DatatypeProperty rdf:about="&a;localName"/>
+
+<owl:DatatypeProperty rdf:about="&a;nodeID"/>
+
+<owl:Class rdf:about="&a;Assertion">
+<rdfs:subClassOf rdf:resource="&a;Axiom"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;Axiom">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;axiomAnnotations"/>
+<owl:allValuesFrom rdf:resource="&a;Annotation"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;Annotation">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;annotationProperty"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;AnnotationProperty"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;AnnotationProperty">
+<rdfs:subClassOf rdf:resource="&a;Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;Entity">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;entityURI"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;URI"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;URI">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;Constant">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;datatype"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Datatype"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;Datatype">
+<rdfs:subClassOf rdf:resource="&a;DataRange"/>
+<rdfs:subClassOf rdf:resource="&a;Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataRange">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataPropertyAxiom">
+<rdfs:subClassOf rdf:resource="&a;Axiom"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectPropertyAxiom">
+<rdfs:subClassOf rdf:resource="&a;Axiom"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ClassExpression">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ClassAxiom">
+<rdfs:subClassOf rdf:resource="&a;Axiom"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataPropertyExpression">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectPropertyExpression">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;AsymmetricObjectProperty">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectProperty">
+<rdfs:subClassOf rdf:resource="&a;Entity"/>
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;InverseObjectProperty">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectProperty"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectProperty"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;Class">
+<rdfs:subClassOf rdf:resource="&a;Entity"/>
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectIntersectionOf">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;classExpressions"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectUnionOf">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;classExpressions"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectOneOf">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;individuals"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;Individual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;Individual">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;NamedIndividual">
+<rdfs:subClassOf rdf:resource="&a;Entity"/>
+<rdfs:subClassOf rdf:resource="&a;Individual"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectSomeValuesFrom">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;classExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<owl:Class rdf:about="&a;ObjectAllValuesFrom">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;classExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectExistsSelf">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectHasValue">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;individual"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Individual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectMinCardinality">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;classExpression"/>
+<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectMaxCardinality">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;classExpression"/>
+<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataSomeValuesFrom">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataRange"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpressions"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataProperty">
+<rdfs:subClassOf rdf:resource="&a;Entity"/>
+<rdfs:subClassOf rdf:resource="&a;DataPropertyExpression"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataOneOf">
+<rdfs:subClassOf rdf:resource="&a;DataRange"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;constants"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;Constant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DatatypeRestriction">
+<rdfs:subClassOf rdf:resource="&a;DataRange"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;datatype"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Datatype"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;restrictions"/>
+<owl:allValuesFrom rdf:resource="&a;FacetConstantPair"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;FacetConstantPair">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;constant"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Constant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataAllValuesFrom">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataRange"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpressions"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataHasValue">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;constant"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Constant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataMinCardinality">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataRange"/>
+<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+<owl11:onClass rdf:resource="&a;DataRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataMaxCardinality">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataRange"/>
+<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+<owl11:onClass rdf:resource="&a;DataRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<owl:Class rdf:about="&a;DataExactCardinality">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataRange"/>
+<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+<owl11:onClass rdf:resource="&a;DataRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;NegativeDataPropertyAssertion">
+<rdfs:subClassOf rdf:resource="&a;Assertion"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;targetValue"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Constant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;sourceIndividual"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Individual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataPropertyDomain">
+<rdfs:subClassOf rdf:resource="&a;DataPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;domain"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataPropertyRange">
+<rdfs:subClassOf rdf:resource="&a;DataPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;range"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DifferentIndividuals">
+<rdfs:subClassOf rdf:resource="&a;Assertion"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;differentIndividuals"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;NamedIndividual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DisjointClasses">
+<rdfs:subClassOf rdf:resource="&a;ClassAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;disjointClassExpressions"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DisjointDataProperties">
+<rdfs:subClassOf rdf:resource="&a;DataPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpressions"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DisjointObjectProperties">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpressions"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DisjointUnion">
+<rdfs:subClassOf rdf:resource="&a;ClassAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;unionClass"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Class"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;disjointClassExpressions"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;EquivalentClasses">
+<rdfs:subClassOf rdf:resource="&a;ClassAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;equivalentClassExpressions"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;EquivalentDataProperties">
+<rdfs:subClassOf rdf:resource="&a;DataPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpressions"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;FunctionalDataProperty">
+<rdfs:subClassOf rdf:resource="&a;DataPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;EquivalentObjectProperties">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpressions"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;FunctionalObjectProperty">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;InverseFunctionalObjectProperty">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<owl:Class rdf:about="&a;ObjectPropertyAssertion">
+<rdfs:subClassOf rdf:resource="&a;Assertion"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;sourceIndividual"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Individual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;targetIndividual"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Individual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;NegativeObjectPropertyAssertion">
+<rdfs:subClassOf rdf:resource="&a;Assertion"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;sourceIndividual"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Individual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;targetIndividual"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Individual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectPropertyDomain">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;domain"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;SymmetricObjectProperty">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ReflexiveObjectProperty">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;SubDataPropertyOf">
+<rdfs:subClassOf rdf:resource="&a;DataPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;superDataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;subDataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;SameIndividual">
+<rdfs:subClassOf rdf:resource="&a;Assertion"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;sameIndividuals"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;NamedIndividual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;SubObjectPropertyOf">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;superObjectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;subObjectPropertyExpressions"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectComplementOf">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;classExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;Ontology">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;ontologyAnnotations"/>
+<owl:allValuesFrom rdf:resource="&a;Annotation"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;axioms"/>
+<owl:allValuesFrom rdf:resource="&a;Axiom"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;importedOntologies"/>
+<owl:allValuesFrom rdf:resource="&a;Ontology"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;ontologyURI"/>
+<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+<owl11:onClass rdf:resource="&a;URI"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;versionURI"/>
+<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+<owl11:onClass rdf:resource="&a;URI"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectPropertyRange">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;range"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<owl:Class rdf:about="&a;DataPropertyAssertion">
+<rdfs:subClassOf rdf:resource="&a;Assertion"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;targetValue"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Constant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;sourceIndividual"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Individual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ClassAssertion">
+<rdfs:subClassOf rdf:resource="&a;Assertion"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;individual"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;NamedIndividual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;classExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;IrreflexiveObjectProperty">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;ObjectExactCardinality">
+<rdfs:subClassOf rdf:resource="&a;ClassExpression"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;classExpression"/>
+<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;DataComplementOf">
+<rdfs:subClassOf rdf:resource="&a;DataRange"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataRange"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;DataRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;SubClassOf">
+<rdfs:subClassOf rdf:resource="&a;ClassAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;subClassExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;superClassExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;SubObjectProperty">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;TransitiveObjectProperty">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;EntityAnnotation">
+<rdfs:subClassOf rdf:resource="&a;Axiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;entity"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Entity"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;entityAnnotations"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;Annotation"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;FullURI">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;AbbreviatedURI">
+<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;InverseObjectProperties">
+<rdfs:subClassOf rdf:resource="&a;ObjectPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;inverseObjectProperties"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;AnnotationByConstant">
+<rdfs:subClassOf rdf:resource="&a;Annotation"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;annotationValue"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Constant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;AnnotationByEntity">
+<rdfs:subClassOf rdf:resource="&a;Annotation"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;annotationValue"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Entity"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;AnnotationByAnonymousIndividual">
+<rdfs:subClassOf rdf:resource="&a;Annotation"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;annotationValue"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;AnonymousIndividual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;AnonymousIndividual">
+<rdfs:subClassOf rdf:resource="&a;Individual"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;Declaration">
+<rdfs:subClassOf rdf:resource="&a;Axiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;entity"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;Entity"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+
+<owl:Class rdf:about="&a;ObjectAndDataPropertyAxiom">
+<rdfs:subClassOf rdf:resource="&a;Axiom"/>
+</owl:Class>
+
+<owl:Class rdf:about="&a;KeyFor">
+<rdfs:subClassOf rdf:resource="&a;ObjectAndDataPropertyAxiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;classExpression"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;ClassExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;dataPropertyExpressions"/>
+<owl:allValuesFrom rdf:resource="&a;DataPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;objectPropertyExpressions"/>
+<owl:allValuesFrom rdf:resource="&a;ObjectPropertyExpression"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="&a;AnonymousIndividualAnnotation">
+<rdfs:subClassOf rdf:resource="&a;Axiom"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;anonymousIndividual"/>
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+<owl11:onClass rdf:resource="&a;AnonymousIndividual"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="&a;anonymousIndiviudalAnnotations"/>
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+<owl11:onClass rdf:resource="&a;Annotation"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+
+<owl:DatatypeProperty rdf:about="&a;value">
+<rdfs:range rdf:resource="&xsd;string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;lexicalValue">
+<rdfs:range rdf:resource="&xsd;string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;arity">
+<rdfs:range rdf:resource="&xsd;int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;cardinality">
+<rdfs:range rdf:resource="&xsd;int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;facet">
+<rdfs:range rdf:resource="&xsd;string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;iri">
+<rdfs:range rdf:resource="&xsd;string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;localName">
+<rdfs:range rdf:resource="&xsd;string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;nodeID">
+<rdfs:range rdf:resource="&xsd;string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;value">
+<rdfs:domain rdf:resource="&a;URI"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;lexicalValue">
+<rdfs:domain rdf:resource="&a;Constant"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;arity">
+<rdfs:domain rdf:resource="&a;DataRange"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;cardinality">
+<rdfs:domain rdf:resource="&a;ObjectMinCardinality"/>
+<rdfs:domain rdf:resource="&a;ObjectMaxCardinality"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;facet">
+<rdfs:domain rdf:resource="&a;FacetConstantPair"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;cardinality">
+<rdfs:domain rdf:resource="&a;DataMinCardinality"/>
+<rdfs:domain rdf:resource="&a;DataMaxCardinality"/>
+<rdfs:domain rdf:resource="&a;DataExactCardinality"/>
+<rdfs:domain rdf:resource="&a;ObjectExactCardinality"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;iri">
+<rdfs:domain rdf:resource="&a;FullURI"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;localName">
+<rdfs:domain rdf:resource="&a;AbbreviatedURI"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="&a;nodeID">
+<rdfs:domain rdf:resource="&a;AnonymousIndividual"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="&owl;Thing"/>
+
+<owl:Datatype rdf:about="&xsd;int"/>
+
+<owl:Datatype rdf:about="&xsd;string"/>
+
+<owl:ObjectProperty rdf:about="&a;annotationProperty"/>
+
+<owl:ObjectProperty rdf:about="&a;annotationValue"/>
+
+<owl:ObjectProperty rdf:about="&a;anonymousIndividual"/>
+
+<owl:ObjectProperty rdf:about="&a;anonymousIndiviudalAnnotations"/>
+
+<owl:ObjectProperty rdf:about="&a;axiomAnnotations"/>
+
+<owl:ObjectProperty rdf:about="&a;axioms"/>
+
+<owl:ObjectProperty rdf:about="&a;classExpression"/>
+
+<owl:ObjectProperty rdf:about="&a;classExpressions"/>
+
+<owl:ObjectProperty rdf:about="&a;constant"/>
+
+<owl:ObjectProperty rdf:about="&a;constants"/>
+
+<owl:ObjectProperty rdf:about="&a;dataPropertyExpression"/>
+
+<owl:ObjectProperty rdf:about="&a;dataPropertyExpressions"/>
+
+<owl:ObjectProperty rdf:about="&a;dataRange"/>
+
+<owl:ObjectProperty rdf:about="&a;datatype"/>
+
+<owl:ObjectProperty rdf:about="&a;differentIndividuals"/>
+
+<owl:ObjectProperty rdf:about="&a;disjointClassExpressions"/>
+
+<owl:ObjectProperty rdf:about="&a;domain"/>
+
+<owl:ObjectProperty rdf:about="&a;entity"/>
+
+<owl:ObjectProperty rdf:about="&a;entityAnnotations"/>
+
+<owl:ObjectProperty rdf:about="&a;entityURI"/>
+
+<owl:ObjectProperty rdf:about="&a;equivalentClassExpressions"/>
+
+<owl:ObjectProperty rdf:about="&a;importedOntologies"/>
+
+<owl:ObjectProperty rdf:about="&a;individual"/>
+
+<owl:ObjectProperty rdf:about="&a;individuals"/>
+
+<owl:ObjectProperty rdf:about="&a;inverseObjectProperties"/>
+
+<owl:ObjectProperty rdf:about="&a;objectProperty"/>
+
+<owl:ObjectProperty rdf:about="&a;objectPropertyExpression"/>
+
+<owl:ObjectProperty rdf:about="&a;objectPropertyExpressions"/>
+
+<owl:ObjectProperty rdf:about="&a;ontologyAnnotations"/>
+
+<owl:ObjectProperty rdf:about="&a;ontologyURI"/>
+
+<owl:ObjectProperty rdf:about="&a;range"/>
+
+<owl:ObjectProperty rdf:about="&a;restrictions"/>
+
+<owl:ObjectProperty rdf:about="&a;sameIndividuals"/>
+
+<owl:ObjectProperty rdf:about="&a;sourceIndividual"/>
+
+<owl:ObjectProperty rdf:about="&a;subClassExpression"/>
+
+<owl:ObjectProperty rdf:about="&a;subDataPropertyExpression"/>
+
+<owl:ObjectProperty rdf:about="&a;subObjectPropertyExpressions"/>
+
+<owl:ObjectProperty rdf:about="&a;superClassExpression"/>
+
+<owl:ObjectProperty rdf:about="&a;superDataPropertyExpression"/>
+
+
+<owl:ObjectProperty rdf:about="&a;superObjectPropertyExpression"/>
+
+<owl:ObjectProperty rdf:about="&a;targetIndividual"/>
+
+<owl:ObjectProperty rdf:about="&a;targetValue"/>
+
+<owl:ObjectProperty rdf:about="&a;unionClass"/>
+
+<owl:ObjectProperty rdf:about="&a;versionURI"/>
+
+</rdf:RDF>

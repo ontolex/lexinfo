@@ -257,5 +257,6 @@ with open("data/backlinks.csv") as inp:
         else:
             sys.stderr.write("Backlink from non-existant value: " + row[0] + "\n")
 
-sys.stdout.buffer.write(g.serialize(format="pretty-xml"))
+#sys.stdout.buffer.write(g.serialize(format="pretty-xml"))
+print(g.serialize(format="pretty-xml"))
 

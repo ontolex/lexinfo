@@ -42,7 +42,7 @@ IntransitiveFrame,VerbFrame,
 IntransitiveInfinitiveACFrame,InfinitiveFrame,
 IntransitiveInfinitiveRSFrame,InfinitiveFrame,
 IntransitiveInfinitiveSCFrame,InfinitiveFrame,
-IntransitiveInterrogativeFrame,InterrogativeFrame,he ASKED [what he should do]
+IntransitiveInterrogativeFrame,InterrogativeFrame,
 IntransitiveInterrogativeInfinitiveFrame,InterrogativeInfinitiveFrame,
 IntransitiveNominalComplementFrame,IntransitiveFrame,
 IntransitivePPDeclarativeFrame,DeclarativeFrame,

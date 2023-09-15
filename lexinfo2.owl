@@ -1778,7 +1778,7 @@ In 1951: Any editorial comment.</rdfs:comment>
     </owl:equivalentClass>
   </owl:Class>
   <owl:Class rdf:about="http://www.lexinfo.net/ontology/3.0/lexinfo#IntransitiveInterrogativeFrame">
-    <rdfs:comment xml:lang="en">he ASKED [what he should do]</rdfs:comment>
+    <example xml:lang="en">he ASKED [what he should do]</example>
     <rdfs:subClassOf rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo#InterrogativeFrame"/>
     <owl:equivalentClass>
       <owl:Class rdf:nodeID="ub1bL552C25">
