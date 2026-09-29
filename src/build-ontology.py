@@ -164,11 +164,16 @@ with open("data/usages.csv") as inp:
 non_leaf_poses = set()
 pos_types = set()
 
+# Value classes whose property is defined outside LexInfo (e.g. morph:baseType),
+# so no `lexinfo:x rdfs:range lexinfo:X` should be generated for them
+external_properties = {"BaseType"}
+
 for f in glob("data/values/*.csv"):
     classname = f[12:-4]
     g.add((lexinfo[classname], RDF.type, OWL.Class))
     g.add((lexinfo[classname], RDFS.label, Literal(decamelcase(classname), lang="en")))
-    g.add((lexinfo[classname[0].lower() + classname[1:]], RDFS.range, lexinfo[classname]))
+    if classname not in external_properties:
+        g.add((lexinfo[classname[0].lower() + classname[1:]], RDFS.range, lexinfo[classname]))
     lexinfo_ids.add(classname)
     with open(f) as inp:
         reader = csv.reader(inp)

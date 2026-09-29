@@ -1,0 +1,12 @@
+ID,Type,Definition
+aoristStem,,"Stem from which the aorist forms of a verb are built, as in Greek, where it often differs from the present stem (e.g. Ancient Greek λείπ- 'leave', aorist λιπ-)."
+futureStem,,"Stem from which the future (and, where applicable, conditional) forms of a verb are built, as in Romance languages where it may be irregular (e.g. French pourr- from pouvoir, Spanish tendr- from tener)."
+infinitiveStem,,"Stem from which the infinitive and related forms of a verb are built, where it differs from the present stem (e.g. Russian писа- in писать, against present пиш-)."
+obliqueStem,,"Stem from which the non-nominative (oblique) case forms of a nominal are built, where it differs from the citation form (e.g. Latin rēg- in rēgis, against nominative rēx)."
+pastParticipleStem,,"Stem from which the past participle of a verb is built, where it cannot be predicted from the other stems (e.g. German -sungen in gesungen, French pri- in pris)."
+pastStem,,"Stem from which the simple past or preterite forms of a verb are built, where it differs from the present stem (e.g. German sang- in sangen, against present sing-)."
+perfectStem,,"Stem from which the perfect forms of a verb are built, where it differs from the present stem (e.g. Latin rūp- in rūpī, against present rump-)."
+presentStem,,"Stem from which the present forms of a verb are built (e.g. Latin rump- in rumpō)."
+strongStem,,"Stem allomorph in the strong grade of an alternation between stems, such as consonant gradation (e.g. Finnish katu 'street', with strong grade -t-)."
+thirdStem,,"Stem of a Latin verb found in the supine and the perfect passive participle, and from which the future active participle and many derivatives are formed (e.g. Latin rupt- in ruptum)."
+weakStem,,"Stem allomorph in the weak grade of an alternation between stems, such as consonant gradation (e.g. Finnish kadu- in kadun 'of the street')."
