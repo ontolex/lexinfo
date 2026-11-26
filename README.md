@@ -89,7 +89,8 @@ The ontology is generated from a selection of CSV and Turtle files:
 
 The list of the morphosyntactic properties is available in `data/morphosyntactic_properties.csv`.
 The values for each of these properties are listed in individual CSV files in 
-the `data/values` folder.
+the `data/values` folder. Each file defines a class of values (e.g. `Case` for
+`data/values/Case.csv`), which is a subclass of `lexinfo:LinguisticCategory`.
 
 ### Definitions
 
@@ -127,6 +128,8 @@ list in `data/frame_examples.csv`
 
 Relations extend the vartrans module of OntoLex
 
-The relations are listed in the file `data/relations.csv`
+The relations are listed in the file `data/relations.csv`. The optional
+`Label` column gives the English label where it differs from the one derived
+from the ID (e.g. "holonym" for `holonymTerm`).
 
 

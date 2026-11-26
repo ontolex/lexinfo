@@ -17,14 +17,23 @@ frozen, at `http://www.lexinfo.net/ontology/<version>/lexinfo`.
   `pmi2`, `pmi3`, `pmiLogFreq`, `dice`, `logDice`, `minSensitivity`, `logLikelihood`, `tScore`,
   `chi2`, `support`, `lift` and `conviction` (#50)
 - Segmentation units `tokens`, `types` and `sentences` for `frac:unit` (#50)
+- `reliabilityCode` usage with the IATE reliability codes `downgradedReliability`,
+  `reliabilityNotVerified`, `minimumReliability`, `reliable` and `veryReliable` (#46)
+- `LinguisticCategory`, the superclass of all classes of values, such as `PartOfSpeech` and `Case` (#1)
 
 ### Changed
 
 - `verbFormMood` and `mood` are combined into `mood`, and `VerbFormMood` into `Mood` (#39, #40)
+- `head` is defined as the syntactic head of a phrase (#41)
+- The conceptual relations `relatedTerm`, `holonymTerm`, `meronymTerm` and their sub-properties are
+  defined in terms of concepts, and `relatedTerm`, `holonymTerm`, `meronymTerm`, `associativeRelation`
+  and `coordinateConcept` are labelled "related", "holonym", "meronym", "association" and
+  "cohyponym" (#2)
 
 ### Deprecated
 
 - `verbFormMood` and `VerbFormMood`, replaced by `mood` and `Mood`
+- `confidence`, replaced by `ontolex:confidence` from the OntoLex core model (#49)
 
 ### Release process
 
