@@ -31,3 +31,4 @@ string,,"A chunk of text used in a software interface, documentation, help file,
 stringCategory,,A type value assigned to a string.
 symbol,,
 transcribedForm,,"A form of a term or lexeme resulting from an operation whereby the characters of one writing system are represented by characters from another writing system, taking into account the pronunciation of the characters converted."
+lookupForm,,a variant form such as a term or spelling variation to enable the entry to be found by search
