@@ -1,0 +1,6 @@
+ID,Type,Definition
+downgradedReliability,,"The record has been downgraded prior to deletion (IATE reliability code 0)."
+reliabilityNotVerified,,"The reliability of the record has not been verified (IATE reliability code 1)."
+minimumReliability,,"The record has minimum reliability (IATE reliability code 2)."
+reliable,,"The record is reliable (IATE reliability code 3)."
+veryReliable,,"The record is very reliable (IATE reliability code 4)."

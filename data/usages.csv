@@ -11,3 +11,4 @@ normativity,"usage marker which identifies the use of a given lexical unit which
 meaningType,"usage marker which identifies a semantic extension of the sense of a given lexical unit"
 textType,"usage marker which identifies the typical use of a lexical unit in a particular discourse type or genre"
 hint,"usage marker which cannot be classified otherwise"
+reliabilityCode,"An indication of how reliable the information in a record, such as a term entry, is, following the reliability codes of IATE."

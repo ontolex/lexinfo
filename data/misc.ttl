@@ -42,7 +42,10 @@
 :confidence
   a owl:DatatypeProperty ;
   rdfs:label "confidence"@en ;
-  rdfs:comment "The confidence in a given relationship."@en .
+  rdfs:comment "The confidence in a given relationship. Deprecated: use ontolex:confidence, which OntoLex now defines in its core model."@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ontolex:confidence ;
+  terms:isReplacedBy ontolex:confidence .
 
 :translationConfidence
   a owl:DatatypeProperty ;
@@ -159,3 +162,15 @@ lexinfo:VerbFormMood a owl:Class ;
   owl:deprecated true ;
   owl:equivalentClass lexinfo:Mood ;
   terms:isReplacedBy lexinfo:Mood .
+
+# Reliability of a record, following the reliability codes of IATE (#46). The
+# administrative status of a term is given by normativeAuthorization.
+:reliabilityCode
+  rdfs:seeAlso <https://iate.europa.eu/assets/handbook.pdf> .
+
+# Superclass of the classes of values of LexInfo (#1); the value classes are
+# declared as its subclasses by src/build-ontology.py
+:LinguisticCategory
+  a owl:Class ;
+  rdfs:label "linguistic category"@en ;
+  rdfs:comment "A category of linguistic description, such as part of speech, case or gender. Its subclasses are the classes of values of LexInfo, whose instances are the values of the category."@en .

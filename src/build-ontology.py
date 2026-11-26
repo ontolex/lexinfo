@@ -118,7 +118,9 @@ with open("data/relations.csv") as inp:
     next(reader)
     for row in reader:
         g.add((lexinfo[row[0]], RDF.type, OWL.ObjectProperty))
-        g.add((lexinfo[row[0]], RDFS.label, Literal(decamelcase(row[0]), lang="en")))
+        # The optional Label column overrides the label derived from the ID
+        label = row[7] if len(row) > 7 and row[7] else decamelcase(row[0])
+        g.add((lexinfo[row[0]], RDFS.label, Literal(label, lang="en")))
         if row[1]:
             g.add((lexinfo[row[0]], RDFS.subPropertyOf, lexinfo[row[1]]))
         elif row[2] == "LexicalEntry":
@@ -204,10 +206,16 @@ pos_types = set()
 # so no `lexinfo:x rdfs:range lexinfo:X` should be generated for them
 external_properties = {"BaseType", "SegmentationUnit"}
 
+# Value classes that are not categories of linguistic description, and so are
+# not subclasses of lexinfo:LinguisticCategory
+non_categories = {"SegmentationUnit"}
+
 for f in glob("data/values/*.csv"):
     classname = f[12:-4]
     g.add((lexinfo[classname], RDF.type, OWL.Class))
     g.add((lexinfo[classname], RDFS.label, Literal(decamelcase(classname), lang="en")))
+    if classname not in non_categories:
+        g.add((lexinfo[classname], RDFS.subClassOf, lexinfo.LinguisticCategory))
     if classname not in external_properties:
         g.add((lexinfo[classname[0].lower() + classname[1:]], RDFS.range, lexinfo[classname]))
     lexinfo_ids.add(classname)
