@@ -1,0 +1,4 @@
+ID,Type,Definition
+tokens,,"Units of text as delimited by tokenization, such as words and punctuation marks, counted with repetition."
+types,,"Distinct tokens, counted once however often they occur."
+sentences,,"Sentences of a text."
