@@ -18,19 +18,68 @@ For subsequent usages rerun the following command
 
 ## Building
 
-The ontology can be built with the following command
+The ontology can be built with the following command, which prints a
+development build in RDF/XML
 
     python src/build-ontology.py
 
-The most recent ontology is available at `ontology/3.0/lexinfo.owl`
+To write all formats (RDF/XML, Turtle, N-Triples and JSON-LD) for a given
+version, plus an HTML overview of the classes, properties and values
 
-## Deploying
+    python src/build-ontology.py --version 3.1 --prior 3.0 -o build/3.1
+    python src/make-docs.py build/3.1/lexinfo.ttl build/3.1/index.html
 
-The following are the steps to deploy the ontology
+Before opening a pull request, run the checks that CI runs
 
-    python src/build-ontology.py > ontology/3.0/lexinfo.owl
-    cp ontology/3.0/lexinfo.owl docs/ontology/3.0/lexinfo.owl
-    rapper -o turtle docs/ontology/3.0/lexinfo.owl > docs/ontology/3.0/lexinfo.ttl
+    python src/check-release.py --base origin/master
+
+## Versions
+
+Every version of LexInfo is a [GitHub release](https://github.com/ontolex/lexinfo/releases)
+and is published on lexinfo.net under its own path, which never changes after
+release:
+
+| URL | Contents |
+| --- | --- |
+| `http://www.lexinfo.net/ontology/3.0/lexinfo` | LexInfo 3.0, frozen |
+| `http://www.lexinfo.net/ontology/3.1/lexinfo` | LexInfo 3.1, frozen |
+| `http://www.lexinfo.net/ontology/latest/lexinfo` | the most recent release |
+
+Each file is available as `lexinfo.owl`, `lexinfo.ttl`, `lexinfo.nt` and
+`lexinfo.jsonld`, and `index.html` documents the release.
+
+All 3.x releases share the namespace `http://www.lexinfo.net/ontology/3.0/lexinfo#`
+and the ontology IRI `http://www.lexinfo.net/ontology/3.0/lexinfo`; each release
+is identified by its `owl:versionIRI` (e.g. `http://www.lexinfo.net/ontology/3.1/lexinfo`)
+and links to the release before it with `owl:priorVersion`. As the namespace
+resolves to the frozen 3.0 file, terms added after 3.0 are only defined in the
+later versioned files and in `latest`.
+
+Within 3.x, changes are backwards compatible: terms may be added, and
+definitions improved, but no term is removed or renamed. A term that should no
+longer be used is marked `owl:deprecated true`, with `dct:isReplacedBy` its
+replacement where there is one. CI enforces this against the latest release.
+Removing terms requires a new major version with a new namespace.
+
+Changes are listed in [CHANGELOG.md](CHANGELOG.md).
+
+## Releasing
+
+1. Move the "Unreleased" section of `CHANGELOG.md` to a new version heading,
+   e.g. `## [3.2] - 2027-03-01`, and merge this into `master`.
+2. Tag the release and push the tag
+
+        git tag -a v3.2 -m "LexInfo 3.2"
+        git push origin v3.2
+
+3. The [release workflow](.github/workflows/release.yml) builds the release,
+   creates the GitHub release with the built files attached and opens a pull
+   request `release/3.2` that adds `docs/ontology/3.2/` and updates
+   `docs/ontology/latest/`.
+4. Merge that pull request. GitHub Pages then publishes it on lexinfo.net.
+
+The published directories under `docs/ontology/` must never be edited by hand;
+CI rejects pull requests that change them.
 
 ## Editing
 

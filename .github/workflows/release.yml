@@ -1,0 +1,118 @@
+name: Release
+
+# Builds a LexInfo release from a tag v<version> (e.g. v3.1):
+#   1. builds lexinfo.{owl,ttl,nt,jsonld} and index.html for that version,
+#   2. creates (or updates) the GitHub Release for the tag with these files,
+#   3. opens a pull request release/<version> that adds docs/ontology/<version>/
+#      and updates docs/ontology/latest/. Merging it publishes the release on
+#      lexinfo.net (GitHub Pages serves master:/docs).
+#
+# The data files come from the tag; the build scripts come from master, so tags
+# made before this workflow existed (v3.0) can be released with workflow_dispatch.
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to release, e.g. v3.0"
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Work out version, date and prior version
+        run: |
+          git rev-parse --verify "refs/tags/$TAG" >/dev/null
+          VERSION="${TAG#v}"
+          DATE="$(git log -1 --format=%cs "$TAG")"
+          # The previous release is the highest published version below this one
+          PRIOR="$(ls docs/ontology | grep -E '^[0-9]+(\.[0-9]+)*$' \
+                   | (cat; echo "$VERSION") | sort -V | uniq \
+                   | grep -B1 -x -F "$VERSION" | grep -v -x -F "$VERSION" || true)"
+          LATEST="$(ls docs/ontology | grep -E '^[0-9]+(\.[0-9]+)*$' \
+                    | (cat; echo "$VERSION") | sort -V | tail -1)"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          echo "PRIOR=$PRIOR" >> "$GITHUB_ENV"
+          echo "IS_LATEST=$([ "$LATEST" = "$VERSION" ] && echo true || echo false)" >> "$GITHUB_ENV"
+          echo "Releasing $VERSION ($DATE), prior version: ${PRIOR:-none}, latest: $LATEST"
+
+      - name: Build
+        run: |
+          rm -rf data && git checkout "$TAG" -- data
+          OUT="docs/ontology/$VERSION"
+          rm -rf "$OUT"
+          python src/build-ontology.py --version "$VERSION" --date "$DATE" \
+            ${PRIOR:+--prior "$PRIOR"} -o "$OUT"
+          cp "$OUT/lexinfo.owl" "$OUT/lexinfo"
+          python src/make-docs.py "$OUT/lexinfo.ttl" "$OUT/index.html"
+          if [ "$IS_LATEST" = true ]; then
+            rm -rf docs/ontology/latest
+            cp -r "$OUT" docs/ontology/latest
+          fi
+          # Restore master's data files; only the build output goes in the PR
+          rm -rf data && git checkout HEAD -- data
+
+      - name: Check
+        run: python src/check-release.py --base origin/master --release "$VERSION"
+
+      - name: Create or update the GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Release notes: the CHANGELOG.md section for this version
+          awk -v v="$VERSION" '
+            /^## / { on = ($0 ~ "^## \\[?" v "\\]?([ ]|$)") ; next }
+            on && !/^\[[^]]*\]: /' CHANGELOG.md > notes.md
+          [ -s notes.md ] || echo "LexInfo $VERSION" > notes.md
+          cd "docs/ontology/$VERSION"
+          zip -q "lexinfo-$VERSION.zip" lexinfo.owl lexinfo.ttl lexinfo.nt lexinfo.jsonld index.html
+          FILES="lexinfo.owl lexinfo.ttl lexinfo.nt lexinfo.jsonld lexinfo-$VERSION.zip"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" $FILES --clobber
+            gh release edit "$TAG" --notes-file ../../../notes.md
+          else
+            gh release create "$TAG" $FILES --title "LexInfo $VERSION" \
+              --notes-file ../../../notes.md --latest="$IS_LATEST"
+          fi
+          rm "lexinfo-$VERSION.zip"
+          rm ../../../notes.md
+
+      - name: Open the release pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          # Pull requests opened with the default token do not trigger CI. Set a
+          # RELEASE_TOKEN secret (fine-grained PAT: contents + pull requests)
+          # to have CI run on them, or close and reopen the PR.
+          token: ${{ secrets.RELEASE_TOKEN || github.token }}
+          branch: release/${{ env.VERSION }}
+          base: master
+          add-paths: docs/ontology
+          commit-message: "Publish LexInfo ${{ env.VERSION }}"
+          title: "Publish LexInfo ${{ env.VERSION }}"
+          body: |
+            Publishes the [${{ env.TAG }} release](https://github.com/${{ github.repository }}/releases/tag/${{ env.TAG }}) on lexinfo.net:
+
+            - adds `docs/ontology/${{ env.VERSION }}/` (frozen once merged)
+            - updates `docs/ontology/latest/`: ${{ env.IS_LATEST }}
+
+            Generated by the release workflow.

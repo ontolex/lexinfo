@@ -1,11 +1,32 @@
 """
 Generates the LexInfo Ontology from the relevant CSV and Turtle Fragments
+
+    python src/build-ontology.py                  # RDF/XML to stdout (dev build)
+    python src/build-ontology.py --version 3.1 --prior 3.0 -o build/3.1
 """
-from rdflib import Graph, RDF, RDFS, OWL, Literal, Namespace, BNode
+from rdflib import Graph, RDF, RDFS, OWL, XSD, Literal, Namespace, BNode, URIRef
+import argparse
 import csv
+import datetime
+import os
 import re
 import sys
 from glob import glob
+
+ONTOLOGY_BASE = "http://www.lexinfo.net/ontology/"
+
+parser = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+parser.add_argument("--version", default="dev",
+                    help="Version of this build, e.g. 3.1 (default: dev)")
+parser.add_argument("--date", default=datetime.date.today().isoformat(),
+                    help="Release date for dct:modified (default: today)")
+parser.add_argument("--prior", default=None,
+                    help="Previous release, e.g. 3.0, recorded as owl:priorVersion")
+parser.add_argument("-o", "--out-dir", default=None,
+                    help="Write lexinfo.{owl,ttl,nt,jsonld} to this directory "
+                         "instead of printing RDF/XML to stdout")
+args = parser.parse_args()
 
 g = Graph()
 
@@ -118,8 +139,10 @@ with open("data/relations.csv") as inp:
         lexinfo_ids.add(row[0])
 
 # Collocation metrics, defined as sub-properties of the collocation score
-# property of the OntoLex FrAC module
-with open("data/collocation_metrics.csv") as inp:
+# property of the OntoLex FrAC module (added in 3.1; optional so that the
+# release workflow can rebuild older tags with this script)
+if os.path.exists("data/collocation_metrics.csv"):
+  with open("data/collocation_metrics.csv") as inp:
     reader = csv.reader(inp)
     next(reader)
     for row in reader:
@@ -276,6 +299,24 @@ with open("data/backlinks.csv") as inp:
         else:
             sys.stderr.write("Backlink from non-existant value: " + row[0] + "\n")
 
-#sys.stdout.buffer.write(g.serialize(format="pretty-xml"))
-print(g.serialize(format="pretty-xml"))
+# Version metadata of the ontology header. The ontology IRI (and the namespace)
+# stays at 3.0; each release is identified by its own owl:versionIRI.
+ontology = URIRef(ONTOLOGY_BASE + "3.0/lexinfo")
+for p in (OWL.versionIRI, OWL.versionInfo, OWL.priorVersion, DCT.modified):
+    g.remove((ontology, p, None))
+g.add((ontology, OWL.versionInfo, Literal(args.version)))
+g.add((ontology, DCT.modified, Literal(args.date, datatype=XSD.date)))
+if args.version != "dev":
+    g.add((ontology, OWL.versionIRI, URIRef(ONTOLOGY_BASE + args.version + "/lexinfo")))
+if args.prior:
+    g.add((ontology, OWL.priorVersion, URIRef(ONTOLOGY_BASE + args.prior + "/lexinfo")))
+
+if args.out_dir:
+    os.makedirs(args.out_dir, exist_ok=True)
+    for ext, fmt in (("owl", "pretty-xml"), ("ttl", "turtle"),
+                     ("nt", "nt"), ("jsonld", "json-ld")):
+        g.serialize(destination=os.path.join(args.out_dir, "lexinfo." + ext),
+                    format=fmt, encoding="utf-8")
+else:
+    print(g.serialize(format="pretty-xml"))
 
