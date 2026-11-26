@@ -18,5 +18,5 @@ referentType,Type of concrete object or concept (the referent) that an expressio
 tense,Property referring to the way the grammar marks the time at which the action denoted by the verb took place.,Yes
 termElement,Any logically significant portion of a larger term or lexeme.,No
 termType,An attribute assigned to a lexeme or a term.,No
-mood,"One of a set of distinctive forms that are used to signal modality. Modality is a facet of illocutionary point or general intent of a speaker, or a speaker's degree of commitment to the expressed proposition's believability, obligatoriness, desirability or reality.",No
+mood,"One of a set of distinctive forms that are used to signal modality. Modality is a facet of illocutionary point or general intent of a speaker, or a speaker's degree of commitment to the expressed proposition's believability, obligatoriness, desirability or reality.",Yes
 voice,"Way sentences may alter the relationship between the subject and object of a verb, without changing the meaning of the sentence.",No

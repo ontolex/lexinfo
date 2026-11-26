@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Build and check
+        env:
+          EVENT: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          ARGS=()
+          # Pull requests must not change published releases (docs/ontology/<version>/).
+          # Release PRs opened by the release workflow (branch release/<version>) may
+          # write their own version directory.
+          if [ "$EVENT" = "pull_request" ]; then
+            ARGS+=(--base "origin/$BASE_REF")
+            case "$HEAD_REF" in
+              release/*) ARGS+=(--release "${HEAD_REF#release/}") ;;
+            esac
+          fi
+          python src/check-release.py "${ARGS[@]}"
