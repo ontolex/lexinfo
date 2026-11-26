@@ -15,6 +15,7 @@ lexinfo2 = Namespace("http://www.lexinfo.net/ontology/2.0/lexinfo#")
 ontolex = Namespace("http://www.w3.org/ns/lemon/ontolex#")
 synsem = Namespace("http://www.w3.org/ns/lemon/synsem#")
 vartrans = Namespace("http://www.w3.org/ns/lemon/vartrans#")
+frac = Namespace("http://www.w3.org/ns/lemon/frac#")
 SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
 DCT = Namespace("http://purl.org/dc/terms/")
 g.namespace_manager.bind("owl", OWL)
@@ -116,6 +117,18 @@ with open("data/relations.csv") as inp:
             g.add((lexinfo[row[0]], OWL.inverseOf, lexinfo[row[6]]))
         lexinfo_ids.add(row[0])
 
+# Collocation metrics, defined as sub-properties of the collocation score
+# property of the OntoLex FrAC module
+with open("data/collocation_metrics.csv") as inp:
+    reader = csv.reader(inp)
+    next(reader)
+    for row in reader:
+        g.add((lexinfo[row[0]], RDF.type, OWL.DatatypeProperty))
+        g.add((lexinfo[row[0]], RDFS.label, Literal(row[1], lang="en")))
+        g.add((lexinfo[row[0]], RDFS.comment, Literal(row[2], lang="en")))
+        g.add((lexinfo[row[0]], RDFS.subPropertyOf, frac.cScore))
+        lexinfo_ids.add(row[0])
+
 with open("data/representations.csv") as inp:
     reader = csv.reader(inp)
     next(reader)
@@ -166,7 +179,7 @@ pos_types = set()
 
 # Value classes whose property is defined outside LexInfo (e.g. morph:baseType),
 # so no `lexinfo:x rdfs:range lexinfo:X` should be generated for them
-external_properties = {"BaseType"}
+external_properties = {"BaseType", "SegmentationUnit"}
 
 for f in glob("data/values/*.csv"):
     classname = f[12:-4]

@@ -56,6 +56,13 @@ in place of the default `writtenRep` and `phoneticRep` properties in OntoLex
 
 The usages give usage restrictions on a sense and are listed in `data/usages.csv`.
 
+### Collocation Metrics
+
+The collocation metrics are listed in `data/collocation_metrics.csv` (ID, label
+and definition). They are datatype properties and sub-properties of the
+collocation score property (`frac:cScore`) of the OntoLex module for Frequency,
+Attestation and Corpus Information (FrAC).
+
 ### Arguments and Frames
 
 These extend the synsem module of OntoLex
