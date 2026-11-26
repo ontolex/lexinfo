@@ -6,3 +6,6 @@ preferredTerm,,A term rated according to the scale of a term acceptability ratin
 regulatedTerm,,A term defined by law or government regulation.
 standardizedTerm,,A term that has been standardized by a standardizing body.
 supersededTerm,,A term that is no longer preferred or admitted.
+historicalTerm,,A term no longer in use
+proposedTerm,,A term that has been proposed but not yet adopted
+abandonedTerm,,A term that was proposed but not adopted in the end
